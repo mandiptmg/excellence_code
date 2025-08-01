@@ -1,0 +1,175 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+.navbar {
+  position: fixed;
+  padding-inline: 1rem;
+  top: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid #e5e7eb;
+  border-radius: 2rem;
+  z-index: 50;
+  color: #000;
+  transition: $transition;
+
+  @include responsive(xl) {
+    width: 80vw;
+  }
+
+  &.scrolled {
+    background-color: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  .navbar-container {
+    @include flex-center;
+    justify-content: space-between;
+    height: 5rem;
+    padding-inline: 1.25rem;
+
+    .logo-link {
+      @include flex-center;
+      gap: 0.25rem;
+
+      .logo-text {
+        font-size: 1.125rem;
+        @include text-semibold;
+        text-transform: capitalize;
+        color: #000;
+      }
+    }
+
+    .nav-links {
+      display: none;
+      list-style: none;
+      gap: 2rem;
+
+      @include responsive(xl) {
+        display: flex;
+      }
+
+      li a {
+        text-transform: capitalize;
+        font-size: 1rem;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+    }
+
+    .nav-controls {
+      @include flex-center;
+      gap: 1rem;
+
+      .consult-btn {
+        display: none;
+
+        @include responsive(xl) {
+          display: inline-block;
+        }
+
+        background: $color-primary;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        transition: $transition;
+
+        &:hover {
+          background: white;
+          color: $color-primary;
+          border: 1px solid $color-primary;
+        }
+      }
+
+      .menu-toggle {
+        font-size: 1.5rem;
+        background: transparent;
+        border: none;
+        color: $color-primary;
+        cursor: pointer;
+        display: block;
+
+        &:hover {
+          color: $color-secondary;
+          scale: 1.1;
+          transition: $transition;
+        }
+
+        @include responsive(xl) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 35%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.95;
+  transition: $transition-slow;
+  z-index: 9900;
+  padding: 20px;
+    box-shadow: $shadow-large;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+/* Close button */
+.close-btn {
+  background: $color-error;
+  border: 1px solid transparent;
+  color: white;
+  border-radius: 9999px;
+  font-size: 24px;
+  cursor: pointer;
+  float: right;
+  padding: 10px;
+  margin-bottom: 30px;
+  transition: $transition;
+}
+
+.close-btn:hover {
+  color: $color-error;
+  transform: scale(1.1);
+  background-color: white;
+  border-color: $color-error;
+}
+
+/* Menu list */
+.mobile-menu ul {
+  list-style: none;
+  clear: both;
+  padding-top: 40px;
+}
+
+.mobile-menu li {
+  margin: 20px 0;
+}
+
+.mobile-menu a {
+  color: $color-secondary;
+  font-size: 18px;
+  display: block;
+  padding: 15px 20px;
+  @include text-semibold;
+  border-radius: 5px;
+  transition: $transition;
+  text-transform: capitalize;
+  &:hover {
+    background-color: $color-primary;
+    color: white;
+  }
+}

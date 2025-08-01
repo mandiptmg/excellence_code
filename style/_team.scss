@@ -1,0 +1,119 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+// team section
+.team-section {
+  padding: 8rem 1rem;
+  width: 90vw;
+  margin: 0 auto;
+  text-align: center;
+
+  @include responsive(lg) {
+    width: 80vw;
+  }
+
+  .section-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+  }
+
+  .swiper {
+    max-width: 900px;
+
+  }
+
+  .swiper-slide {
+    border-radius: 0.75rem;
+    transition: all 0.5s ease;
+    width: 260px;
+    flex-shrink: 0;
+    position: relative;
+    cursor: pointer;
+     
+
+}
+
+  .swiper-slide:hover {
+    background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+  }
+
+  .hiden-overflow {
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .swiper-slide:hover img {
+    transform: scale(1.25);
+   
+  }
+
+  .linkedin-icon {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #d1d5db;
+    padding: 0.75rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease;
+  }
+
+  .swiper-slide:hover .linkedin-icon {
+    background: #fb923c;
+    transform: scale(1.1);
+  }
+
+  .linkedin-icon i {
+    color: #374151;
+    font-size: 1.25rem;
+  }
+
+  .swiper-slide:hover .linkedin-icon i {
+    color: #ffffff;
+  }
+
+  .slide-info {
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .slide-info p:first-child {
+    font-weight: bold;
+  }
+
+  .slide-info p:last-child {
+    color: #6b7280; // gray-500
+    font-size: 0.875rem; // text-sm
+  }
+  .swiper-nav {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .swiper-btn {
+    padding: 0.5rem;
+    border: 2px solid #d1d5db;
+    border-radius: 9999px;
+    background: #f9fafb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.25rem;
+  }
+
+  .swiper-btn:hover {
+    background: #e5e7eb;
+    transform: scale(1.1);
+  }
+}
