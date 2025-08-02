@@ -10,9 +10,12 @@ export default function initTeam() {
 
   const swiperWrapper = document.getElementById("teamSwiperWrapper");
   if (swiperWrapper) {
-    swiperWrapper.innerHTML = teamMembers.map(member => `
+    swiperWrapper.innerHTML = teamMembers
+      .map(
+        (member) => `
       <div class="swiper-slide">
-        <div class="hiden-overflow">
+       <div class="team-card">
+        <div class="image-container">
           <img src="assets/image.png" alt="${member.name}"  />
           <a href="${member.linkedin}" target="_blank" class="linkedin-icon">
             <i class="fab fa-linkedin-in"></i>
@@ -22,28 +25,40 @@ export default function initTeam() {
           <p>${member.name}</p>
           <p>${member.title}</p>
         </div>
+        </div>
       </div>
-    `).join("");
+    `
+      )
+      .join("");
   }
 
-  let slidesPerView = 2;
-  const updateSlides = () => {
-    slidesPerView = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+  // Responsive slides configuration
+  const getResponsiveConfig = () => {
+    return {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        676: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    };
   };
 
-  updateSlides();
-  window.addEventListener("resize", () => {
-    updateSlides();
-    if (window.myTeamSwiper) {
-      window.myTeamSwiper.params.slidesPerView = slidesPerView;
-      window.myTeamSwiper.update();
-    }
-  });
-
-  window.myTeamSwiper = new Swiper(".swiper", {
-    slidesPerView: slidesPerView,
-    spaceBetween: 30,
+  // Store swiper instance globally for potential external access
+  window.myTeamSwiper = new Swiper(".team-swiper", {
+    ...getResponsiveConfig(),
     loop: true,
+    centeredSlides: false,
+    grabCursor: true,
+    autoHeight: false,
+    effect: "slide",
+    speed: 600,
     navigation: {
       nextEl: "#teamNextBtn",
       prevEl: "#teamPrevBtn",

@@ -153,7 +153,7 @@
 
 // Submit Section
 .submit-group {
-@include flex-center;
+  @include flex-center;
   gap: 0.5rem;
   transition: $transition;
 
@@ -165,8 +165,7 @@
     }
 
     .submit-icon {
-      background-color: #1f2937;
-      border-color: #d1fae5;
+      scale: 1.10;
     }
   }
 }
@@ -198,7 +197,7 @@
   transform: rotate(45deg);
   font-size: 1rem;
   border-radius: 9999px;
-  width: 2.7rem;
+  width: 2.8rem;
   height: 2.7rem;
   @include grid-center;
   border: 1px solid transparent;

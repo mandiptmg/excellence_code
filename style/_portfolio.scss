@@ -9,10 +9,6 @@
     width: 80vw;
   }
 
-  .portfolio-container {
-    max-width: 80rem;
-  }
-
   // Header Section
   .portfolio-header {
     display: grid;
@@ -23,16 +19,16 @@
 
   .intro-text .subtitle {
     font-size: 1rem;
-    font-weight: 500;
-    color: #6b7280;
-    margin-bottom: 8px;
+    @include text-semibold;
+
+    color: $color-text-muted;
   }
 
   .intro-text .title {
     font-size: 1.875rem;
-    font-weight: 500;
+    @include text-semibold;
+
     line-height: 1.25;
-    margin-bottom: 1.5rem;
 
     @include responsive(lg) {
       font-size: 3rem;
@@ -45,16 +41,17 @@
 
   .description {
     @include responsive(md) {
-      padding: 1.5rem;
       margin-top: 1.75;
     }
     p {
       font-size: 1rem;
-      color: #374151; /* text-color */
+      color: $color-text-base; /* text-color */
       margin-bottom: 16px;
       line-height: 1.5;
+      text-justify: auto;
     }
   }
+
   .read-more-group {
     display: flex;
     align-items: center;
@@ -62,7 +59,7 @@
   }
 
   .read-more-btn {
-    background-color: #e5e7eb;
+    background-color: $bg-gray-lighter;
     color: $color-secondary;
     padding: 12px 24px;
     border-radius: 9999px;
@@ -101,7 +98,7 @@
 
   /* Projects grid */
   .projects-grid {
-    margin-top: 28px;
+    margin-top: 5rem;
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -131,7 +128,7 @@
   }
 
   .project-card:hover {
-    box-shadow: $shadow-medium;
+    box-shadow: $shadow-md;
   }
 
   .image-wrapper {
@@ -186,14 +183,11 @@
   .arrow-btn {
     color: white;
     background-color: $color-secondary;
-    border: 1px solid transparent;
     transition: $transition-slow;
     cursor: pointer;
-    @include text-bold;
     border-radius: 9999px;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
+    width: 50px;
+    height: 45px;
     text-align: center;
     cursor: pointer;
   }

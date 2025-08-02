@@ -26,41 +26,52 @@ export default function initClients() {
     },
   ];
 
-  const slidesContainer = document.getElementById("slidesContainer");
+  const slidesContainer = document.getElementById("testimonialSwiperWrapper");
   if (slidesContainer) {
     slidesContainer.innerHTML = clients
       .map(
         (client) => `
         <div class="swiper-slide hover">
+          <div class="testimonial-card">
           <p class="testimonial-text">"${client.paragraph}"</p>
           <div class="testimonial-footer">
             <h3 class="testimonial-title">${client.title}</h3>
             <hr class="testimonial-divider" />
             <p class="testimonial-subtitle">${client.subtitle}</p>
           </div>
+          </div>
         </div>
       `
       )
       .join("");
   }
-window.myClientsSwiper = new Swiper(".clients-swiper", {
-  spaceBetween: 30,
-  loop: true,
-  navigation: {
-    nextEl: "#clientsNextBtn",
-    prevEl: "#clientsPrevBtn",
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    768: {
-      slidesPerView: 2,
-    },
-    1024: {
-      slidesPerView: 2, // ✅ prevent 3 on large screens
-    },
-  },
-});
 
+  // Responsive slides configuration
+  const getResponsiveConfig = () => {
+    return {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      breakpoints: {
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 25,
+        },
+      
+      },
+    };
+  };
+
+  window.myClientsSwiper = new Swiper(".testimonial-swiper", {
+    ...getResponsiveConfig(),
+    loop: true,
+    centeredSlides: false,
+    grabCursor: true,
+    autoHeight: false,
+    effect: "slide",
+    speed: 600,
+    navigation: {
+      nextEl: "#NextBtn",
+      prevEl: "#PrevBtn",
+    },
+  });
 }
