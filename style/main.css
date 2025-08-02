@@ -560,15 +560,15 @@
 }
 .portfolio-section .read-more-group:hover .icon-wrapper {
   background-color: white;
-  color: #fb923c;
-  border: 1px solid #fb923c;
+  color: #ff7f50;
+  border: 1px solid #ff7f50;
 }
 .portfolio-section .projects-grid {
   margin-top: 5rem;
   display: grid;
+  place-items: center;
   gap: 1.5rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
-  place-items: center;
 }
 @media (min-width: 48rem) {
   .portfolio-section .projects-grid {
@@ -1593,7 +1593,7 @@
 * {
   margin: 0;
   padding: 0;
-  margin-inline: auto;
+  scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
@@ -1602,7 +1602,6 @@ body {
   background-color: #fff;
   color: #111;
   line-height: 1.6;
-  scroll-behavior: smooth;
   overflow-x: hidden;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
