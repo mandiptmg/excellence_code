@@ -40,55 +40,64 @@ export default function initMilestone() {
   const generateStepIndicator = () => {
     const steps = milestones
       .map(
-        (_, index) =>
-          `<div class="step-dot ${
-            index === activeIndex ? "active" : ""
-          }" data-step="${index}"></div>`
+        (_, index) => `
+          <div 
+            class="step-dot ${index === activeIndex ? "active" : ""}" 
+            data-step="${index}" 
+            role="button" tabindex="0" 
+            aria-label="Step ${index + 1}"
+          ></div>
+        `
       )
       .join("");
 
+    const arrowClass = activeIndex >= 2 ? "step-arrow active" : "step-arrow";
+
     return `
       ${steps}
-      <i class="fas fa-chevron-right step-arrow"></i>
+      <i class="fas fa-chevron-right ${arrowClass}"></i>
       <div class="step-line"></div>
     `;
   };
 
-  // Generate milestones HTML
   const generateMilestones = () => {
     return milestones
       .map(
         (milestone, index) => `
-      <div class="milestone-item ${index === activeIndex ? "active" : ""}" 
-           data-index="${index}" tabindex="0" role="button" 
-           aria-pressed="${index === activeIndex}">
-        
-        <!-- Left Section -->
-        <div class="milestone-left">
-          <div class="milestone-header">
-            <img src="${milestone.icon}" 
-                 alt="${milestone.title} icon" 
-                 class="milestone-icon"
-                 onerror="this.style.display='none'">
-            <p class="milestone-year">${milestone.year}</p>
+        <div 
+          class="milestone-item ${index === activeIndex ? "active" : ""}" 
+          data-index="${index}" 
+          tabindex="0" 
+          role="button" 
+          aria-pressed="${index === activeIndex}"
+        >
+          <!-- Left Section -->
+          <div class="milestone-left">
+            <div class="milestone-header">
+              <img 
+                src="${milestone.icon}" 
+                alt="${milestone.title} icon" 
+                class="milestone-icon"
+                onerror="this.style.display='none'"
+              >
+              <p class="milestone-year">${milestone.year}</p>
+            </div>
+            <div class="milestone-titles">
+              <p class="milestone-title">${milestone.title}</p>
+              <h4 class="milestone-subtitle">${milestone.subtitle}</h4>
+            </div>
           </div>
-          <div class="milestone-titles">
-            <p class="milestone-title">${milestone.title}</p>
-            <h4 class="milestone-subtitle">${milestone.subtitle}</h4>
-          </div>
-        </div>
 
-        <!-- Right Section -->
-        <div class="milestone-right">
-          <p class="milestone-description">${milestone.description}</p>
+          <!-- Right Section -->
+          <div class="milestone-right">
+            <p class="milestone-description">${milestone.description}</p>
+          </div>
         </div>
-      </div>
-    `
+      `
       )
       .join("");
   };
 
-  // Update step indicator
   const updateStepIndicator = () => {
     const stepIndicator = document.getElementById("stepIndicator");
     if (stepIndicator) {
@@ -96,61 +105,78 @@ export default function initMilestone() {
     }
   };
 
-  // Update milestone states
   const updateMilestoneStates = () => {
     const items = document.querySelectorAll(".milestone-item");
     items.forEach((item, index) => {
-      if (index === activeIndex) {
-        item.classList.add("active");
-        item.setAttribute("aria-pressed", "true");
-      } else {
-        item.classList.remove("active");
-        item.setAttribute("aria-pressed", "false");
-      }
+      item.classList.toggle("active", index === activeIndex);
+      item.setAttribute("aria-pressed", index === activeIndex ? "true" : "false");
     });
   };
 
-  // Set active milestone
   const setActiveIndex = (index) => {
-    if (index === activeIndex || index < 0 || index >= milestones.length)
-      return;
+  if (index === activeIndex || index < 0 || index >= milestones.length) return;
 
-    activeIndex = index;
-    updateStepIndicator();
-    updateMilestoneStates();
+  activeIndex = index;
+  updateStepIndicator();
+  updateMilestoneStates();
 
-    // Smooth scroll to active milestone
-    const activeItem = document.querySelector(
-      `.milestone-item[data-index="${index}"]`
-    );
-    if (activeItem) {
-      activeItem.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
+  const container = document.getElementById("milestonesContainer");
+  const toggleIcon = document.getElementById("toggleIcon");
+  const toggleButton = document.getElementById("toggleButton");
+
+  if (activeIndex >= 2) {
+    // ✅ Auto-expand
+    showAll = true;
+
+    if (container) {
+      container.classList.add("expanded");
+      container.classList.remove("collapsed");
     }
-  };
 
-  // Toggle show all milestones
+    if (toggleIcon) {
+      toggleIcon.classList.add("active", "rotated");
+    }
+
+    if (toggleButton) {
+      toggleButton.classList.add("active");
+    }
+  } else {
+    // Collapse view if going back to earlier milestones
+    showAll = false;
+
+    if (container) {
+      container.classList.remove("expanded");
+      container.classList.add("collapsed");
+    }
+
+    if (toggleIcon) {
+      toggleIcon.classList.remove("active", "rotated");
+    }
+
+    if (toggleButton) {
+      toggleButton.classList.remove("active");
+    }
+  }
+
+  const activeItem = document.querySelector(`.milestone-item[data-index="${index}"]`);
+  if (activeItem) {
+    activeItem.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+};
+
+
   const toggleShowAll = () => {
     showAll = !showAll;
     const container = document.getElementById("milestonesContainer");
     const icon = document.getElementById("toggleIcon");
 
     if (container && icon) {
-      if (showAll) {
-        container.classList.remove("collapsed");
-        container.classList.add("expanded");
-        icon.classList.add("rotated");
-      } else {
-        container.classList.remove("expanded");
-        container.classList.add("collapsed");
-        icon.classList.remove("rotated");
-      }
+      container.classList.toggle("expanded", showAll);
+      container.classList.toggle("collapsed", !showAll);
+      icon.classList.toggle("rotated", showAll);
     }
   };
 
-  // Handle milestone clicks
   const handleMilestoneClick = (e) => {
     const milestoneItem = e.target.closest(".milestone-item");
     if (milestoneItem) {
@@ -159,7 +185,6 @@ export default function initMilestone() {
     }
   };
 
-  // Handle step indicator clicks
   const handleStepClick = (e) => {
     if (e.target.classList.contains("step-dot")) {
       const step = parseInt(e.target.dataset.step);
@@ -167,9 +192,7 @@ export default function initMilestone() {
     }
   };
 
-  // Handle keyboard navigation
   const handleKeyDown = (e) => {
-    // Handle milestone item keyboard events
     if (e.target.classList.contains("milestone-item")) {
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
@@ -178,7 +201,6 @@ export default function initMilestone() {
       }
     }
 
-    // Arrow key navigation
     if (e.key === "ArrowUp" && activeIndex > 0) {
       e.preventDefault();
       setActiveIndex(activeIndex - 1);
@@ -188,7 +210,7 @@ export default function initMilestone() {
     }
   };
 
-  // Initialize DOM elements
+  // Element references
   const stepIndicator = document.getElementById("stepIndicator");
   const milestonesList = document.getElementById("milestonesList");
   const toggleButton = document.getElementById("toggleButton");
@@ -198,18 +220,17 @@ export default function initMilestone() {
     return null;
   }
 
-  // Render initial content
+  // Initial render
   stepIndicator.innerHTML = generateStepIndicator();
   milestonesList.innerHTML = generateMilestones();
 
-  // Bind event listeners
+  // Event bindings
   document.addEventListener("click", handleMilestoneClick);
   document.addEventListener("click", handleStepClick);
   document.addEventListener("keydown", handleKeyDown);
-
   toggleButton.addEventListener("click", toggleShowAll);
 
-  // Step indicator click events
+  // Add individual step-dot event listeners (for accessibility)
   stepIndicator.querySelectorAll(".step-dot").forEach((dot) => {
     dot.addEventListener("click", (e) => {
       const step = parseInt(e.target.dataset.step);
@@ -217,7 +238,7 @@ export default function initMilestone() {
     });
   });
 
-  // Auto-advance functionality (optional)
+  // Auto advance feature
   let autoAdvanceInterval = null;
 
   const startAutoAdvance = () => {
@@ -234,7 +255,6 @@ export default function initMilestone() {
     }
   };
 
-  // Cleanup function
   const destroy = () => {
     stopAutoAdvance();
     document.removeEventListener("click", handleMilestoneClick);
@@ -243,11 +263,10 @@ export default function initMilestone() {
     toggleButton.removeEventListener("click", toggleShowAll);
   };
 
-  // Public API
   const timelineAPI = {
     setActive: setActiveIndex,
     toggle: toggleShowAll,
-    destroy: destroy,
+    destroy,
     getCurrentIndex: () => activeIndex,
     getMilestones: () => milestones,
     addMilestone: (milestone) => {
@@ -266,7 +285,7 @@ export default function initMilestone() {
     stopAutoAdvance,
   };
 
-  // Store API globally for external access
+  // Expose API globally for debugging or external control
   window.timelineAPI = timelineAPI;
 
   return timelineAPI;
