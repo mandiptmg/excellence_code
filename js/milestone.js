@@ -71,7 +71,6 @@ export default function initMilestone() {
           role="button" 
           aria-pressed="${index === activeIndex}"
         >
-          <!-- Left Section -->
           <div class="milestone-left">
             <div class="milestone-header">
               <img 
@@ -88,7 +87,6 @@ export default function initMilestone() {
             </div>
           </div>
 
-          <!-- Right Section -->
           <div class="milestone-right">
             <p class="milestone-description">${milestone.description}</p>
           </div>
@@ -109,71 +107,76 @@ export default function initMilestone() {
     const items = document.querySelectorAll(".milestone-item");
     items.forEach((item, index) => {
       item.classList.toggle("active", index === activeIndex);
-      item.setAttribute("aria-pressed", index === activeIndex ? "true" : "false");
+      item.setAttribute(
+        "aria-pressed",
+        index === activeIndex ? "true" : "false"
+      );
     });
   };
 
   const setActiveIndex = (index) => {
-  if (index === activeIndex || index < 0 || index >= milestones.length) return;
+    if (index === activeIndex || index < 0 || index >= milestones.length)
+      return;
 
-  activeIndex = index;
-  updateStepIndicator();
-  updateMilestoneStates();
+    activeIndex = index;
+    updateStepIndicator();
+    updateMilestoneStates();
 
-  const container = document.getElementById("milestonesContainer");
-  const toggleIcon = document.getElementById("toggleIcon");
-  const toggleButton = document.getElementById("toggleButton");
+    const container = document.getElementById("milestonesContainer");
+    const toggleIcon = document.getElementById("toggleIcon");
+    const toggleButton = document.getElementById("toggleButton");
 
-  if (activeIndex >= 2) {
-    // ✅ Auto-expand
-    showAll = true;
+    if (activeIndex >= 2) {
+      showAll = true;
 
-    if (container) {
-      container.classList.add("expanded");
-      container.classList.remove("collapsed");
+      if (container) {
+        container.classList.add("expanded");
+        container.classList.remove("collapsed");
+      }
+
+      if (toggleIcon) {
+        toggleIcon.classList.add("active", "rotated");
+      }
+
+      if (toggleButton) {
+        toggleButton.classList.add("active");
+      }
+    } else {
+      showAll = false;
+
+      if (container) {
+        container.classList.remove("expanded");
+        container.classList.add("collapsed");
+      }
+
+      if (toggleIcon) {
+        toggleIcon.classList.remove("active", "rotated");
+      }
+
+      if (toggleButton) {
+        toggleButton.classList.remove("active");
+      }
     }
 
-    if (toggleIcon) {
-      toggleIcon.classList.add("active", "rotated");
+    const activeItem = document.querySelector(
+      `.milestone-item[data-index="${index}"]`
+    );
+    if (activeItem) {
+      activeItem.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-
-    if (toggleButton) {
-      toggleButton.classList.add("active");
-    }
-  } else {
-    // Collapse view if going back to earlier milestones
-    showAll = false;
-
-    if (container) {
-      container.classList.remove("expanded");
-      container.classList.add("collapsed");
-    }
-
-    if (toggleIcon) {
-      toggleIcon.classList.remove("active", "rotated");
-    }
-
-    if (toggleButton) {
-      toggleButton.classList.remove("active");
-    }
-  }
-
-  const activeItem = document.querySelector(`.milestone-item[data-index="${index}"]`);
-  if (activeItem) {
-    activeItem.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
-};
-
+  };
 
   const toggleShowAll = () => {
     showAll = !showAll;
     const container = document.getElementById("milestonesContainer");
     const icon = document.getElementById("toggleIcon");
+    const button = document.getElementById("toggleButton");
 
-    if (container && icon) {
+    if (container && icon && button) {
       container.classList.toggle("expanded", showAll);
       container.classList.toggle("collapsed", !showAll);
       icon.classList.toggle("rotated", showAll);
+      button.classList.toggle("active", showAll);
     }
   };
 
@@ -210,7 +213,7 @@ export default function initMilestone() {
     }
   };
 
-  // Element references
+  // DOM Elements
   const stepIndicator = document.getElementById("stepIndicator");
   const milestonesList = document.getElementById("milestonesList");
   const toggleButton = document.getElementById("toggleButton");
@@ -230,15 +233,7 @@ export default function initMilestone() {
   document.addEventListener("keydown", handleKeyDown);
   toggleButton.addEventListener("click", toggleShowAll);
 
-  // Add individual step-dot event listeners (for accessibility)
-  stepIndicator.querySelectorAll(".step-dot").forEach((dot) => {
-    dot.addEventListener("click", (e) => {
-      const step = parseInt(e.target.dataset.step);
-      setActiveIndex(step);
-    });
-  });
-
-  // Auto advance feature
+  // Auto advance (optional)
   let autoAdvanceInterval = null;
 
   const startAutoAdvance = () => {
@@ -285,7 +280,6 @@ export default function initMilestone() {
     stopAutoAdvance,
   };
 
-  // Expose API globally for debugging or external control
   window.timelineAPI = timelineAPI;
 
   return timelineAPI;

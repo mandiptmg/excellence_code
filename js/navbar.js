@@ -16,6 +16,15 @@ export default function initNavbar() {
     mobileMenu?.classList.remove("active");
   });
 
+  // Close mobile menu when a nav link is clicked
+const menuLinks = mobileMenu?.querySelectorAll("a");
+menuLinks?.forEach((link) => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+  });
+});
+
+
   window.addEventListener("scroll", () => {
     if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 50);
   });
