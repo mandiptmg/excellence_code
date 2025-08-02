@@ -20,13 +20,16 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
+    <!-- aos animate  -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="navbar-container">
+    <nav class="navbar" >
+      <div class="navbar-container" data-aos="fade-down">
         <a href="/" class="logo-link">
           <span class="logo-text">your company logo</span>
         </a>
@@ -67,7 +70,7 @@
       <div class="hero-container">
         <div class="hero-grid">
           <!-- left -->
-          <div class="hero-text">
+          <div data-aos="fade-right" class="hero-text">
             <h1>driving growth with innovative marketing strategies</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
@@ -108,14 +111,15 @@
 
     <!-- //services section -->
     <section id="service" class="vas-section">
-      <p class="vas-heading">
+      <p data-aos="fade-up" class="vas-heading">
         We exist to redefine marketing by combining creativity, strategy, and
         technology to build brands that stand out and succeed.
       </p>
 
       <div class="vas-grid">
         <!-- LEFT: Key Values -->
-        <div
+        <div 
+        data-aos="fade-right"
           class="vas-left"
           style="background-image: url('./assets/Layer2.png')"
         >
@@ -143,7 +147,9 @@
         </div>
 
         <!-- RIGHT: Services -->
-        <div class="vas-right">
+        <div 
+        data-aos="fade-left"
+         class="vas-right">
           <ul class="vas-service-list" id="serviceList">
             <!-- Injected by JS -->
           </ul>
@@ -181,7 +187,8 @@
 
         <!-- Projects Grid -->
         <div class="projects-grid">
-          <div class="project-card" data-aos="fade-up">
+          <div 
+           class="project-card" data-aos="fade-up">
             <div class="image-wrapper">
               <img
                 src="assets/portfolio/portfolio1.png"
@@ -201,7 +208,8 @@
             </div>
           </div>
 
-          <div class="project-card" data-aos="fade-up">
+          <div 
+           class="project-card" data-aos="fade-up">
             <div class="image-wrapper">
               <img
                 src="assets/portfolio/portfolio2.png"
@@ -221,7 +229,8 @@
             </div>
           </div>
 
-          <div class="project-card" data-aos="fade-up">
+          <div 
+           class="project-card" data-aos="fade-up">
             <div class="image-wrapper">
               <img
                 src="assets/portfolio/portfolio3.png"
@@ -248,8 +257,8 @@
     <section id="testimonial" class="testimonial-section">
       <div class="testimonial-header">
         <div class="testimonial-left">
-          <p class="subheading">See from our clients</p>
-          <h2 class="main-heading">
+          <p data-aos="fade-up"  class="subheading">See from our clients</p>
+          <h2  data-aos="fade-up" class="main-heading">
             What Our <br />
             Clients Says
           </h2>
@@ -469,5 +478,6 @@
 
     <script type="module" src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>

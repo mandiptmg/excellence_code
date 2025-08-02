@@ -1,4 +1,4 @@
-export default function initTimeline() {
+export default function initMilestone() {
   const milestones = [
     {
       year: "2012",
@@ -269,6 +269,5 @@ export default function initTimeline() {
   // Store API globally for external access
   window.timelineAPI = timelineAPI;
 
-  console.log("Timeline initialized successfully");
   return timelineAPI;
 }

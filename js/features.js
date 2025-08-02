@@ -35,7 +35,7 @@ export default function initFeatures() {
         isHeading: true,
         html: `
           <div class="heading" data-aos="fade-right">
-            <h2>
+            <h2 >
               What makes us <br />
               the right choice <br />
               for you?

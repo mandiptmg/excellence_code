@@ -285,6 +285,7 @@
 
 .vas-section {
   width: 90vw;
+  padding: 8rem 0;
   margin: auto;
   display: grid;
   place-items: center;
@@ -633,7 +634,6 @@
 /* Timeline Section */
 .timeline-section {
   width: 90vw;
-  max-width: 1400px;
   margin: 0 auto;
   padding: 8rem 0;
   position: relative;
@@ -807,6 +807,10 @@
   color: #fff;
 }
 
+.milestone-item.active .milestone-description {
+  color: #fff;
+}
+
 .milestone-titles {
   display: flex;
   flex-direction: column;
@@ -894,32 +898,6 @@
   }
   .milestone-right {
     margin-top: 0;
-  }
-}
-@media (min-width: 48rem) {
-  .timeline-section {
-    width: 80vw;
-    padding: 4rem 0;
-  }
-  .container {
-    padding: 0 1rem;
-  }
-  .header-section {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-  }
-  .header-content h3 {
-    font-size: 2rem;
-  }
-  .milestone-item {
-    padding: 1.25rem;
-  }
-  .milestone-year {
-    font-size: 1.25rem;
-  }
-  .milestone-description {
-    font-size: 0.875rem;
   }
 }
 /* Animation Classes */

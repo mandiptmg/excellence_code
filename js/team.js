@@ -21,7 +21,7 @@ export default function initTeam() {
             <i class="fab fa-linkedin-in"></i>
           </a>
         </div>
-        <div class="slide-info">
+        <div class="slide-info" data-aos="fade-right">
           <p>${member.name}</p>
           <p>${member.title}</p>
         </div>
