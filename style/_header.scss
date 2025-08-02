@@ -2,7 +2,6 @@
 @use "variables" as *;
 
 .navbar {
-
   position: fixed;
   padding-inline: 1rem;
   top: 2.5rem;
@@ -41,9 +40,8 @@
       text-transform: capitalize;
       color: #000;
 
-      @include responsive(lg){
-      font-size: 1.125rem;
-
+      @include responsive(lg) {
+        font-size: 1.125rem;
       }
     }
   }

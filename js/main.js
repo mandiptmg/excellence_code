@@ -7,10 +7,7 @@ import initServices from "./services.js";
 import initMilestone from "./milestone.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Initialize AOS
-  AOS.init({
-    duration: 1000,
-  });
+ 
 
   initNavbar();
   initProjects();
