@@ -20,13 +20,12 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-  
     <!-- CSS -->
     <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar" >
+    <nav class="navbar">
       <div class="navbar-container">
         <a href="/" class="logo-link">
           <span class="logo-text">your company logo</span>
@@ -46,7 +45,7 @@
             <i class="fas fa-bars"></i>
           </button>
         </div>
-      </div>  
+      </div>
     </nav>
 
     <!-- Mobile Menu -->
@@ -116,8 +115,8 @@
 
       <div class="vas-grid">
         <!-- LEFT: Key Values -->
-        <div 
-        data-aos="fade-right"
+        <div
+          data-aos="fade-right"
           class="vas-left"
           style="background-image: url('./assets/Layer2.png')"
         >
@@ -131,13 +130,19 @@
             </div>
             <div class="vas-value-item">
               <span class="vas-icon">
-                <img src="./assets/serviceIcon/icon2.png" alt="Creative Excellence" />
-              </i></span>
+                <img
+                  src="./assets/serviceIcon/icon2.png"
+                  alt="Creative Excellence"
+                />
+              </span>
               <p class="vas-value-title">Creative Excellence</p>
             </div>
             <div class="vas-value-item">
               <span class="vas-icon">
-                <img src="./assets/serviceIcon/icon3.png" alt="Innovative Solutions" />
+                <img
+                  src="./assets/serviceIcon/icon3.png"
+                  alt="Innovative Solutions"
+                />
               </span>
               <p class="vas-value-title">Client-Centric</p>
             </div>
@@ -145,9 +150,7 @@
         </div>
 
         <!-- RIGHT: Services -->
-        <div 
-        data-aos="fade-left"
-         class="vas-right">
+        <div data-aos="fade-left" class="vas-right">
           <ul class="vas-service-list" id="serviceList">
             <!-- Injected by JS -->
           </ul>
@@ -185,8 +188,7 @@
 
         <!-- Projects Grid -->
         <div class="projects-grid">
-          <div 
-           class="project-card" data-aos="fade-up">
+          <div class="project-card" data-aos="fade-up">
             <div class="image-wrapper">
               <img
                 src="assets/portfolio/portfolio1.png"
@@ -206,8 +208,7 @@
             </div>
           </div>
 
-          <div 
-           class="project-card" data-aos="fade-up">
+          <div class="project-card" data-aos="fade-up">
             <div class="image-wrapper">
               <img
                 src="assets/portfolio/portfolio2.png"
@@ -227,8 +228,7 @@
             </div>
           </div>
 
-          <div 
-           class="project-card" data-aos="fade-up">
+          <div class="project-card" data-aos="fade-up">
             <div class="image-wrapper">
               <img
                 src="assets/portfolio/portfolio3.png"
@@ -255,68 +255,69 @@
     <section id="testimonial" class="testimonial-section">
       <div class="testimonial-header">
         <div class="testimonial-left">
-          <p data-aos="fade-up"  class="subheading">See from our clients</p>
-          <h2  data-aos="fade-up" class="main-heading">
+          <p data-aos="fade-up" class="subheading">See from our clients</p>
+          <h2 data-aos="fade-up" class="main-heading">
             What Our <br />
             Clients Says
           </h2>
         </div>
       </div>
       <div class="testimonial-container">
+        <div class="swiper testimonial-swiper">
+          <div class="swiper-wrapper" id="testimonialSwiperWrapper">
+            <!-- Slides injected via JS -->
+          </div>
+        </div>
 
-
-      <div class="swiper testimonial-swiper">
-        <div class="swiper-wrapper" id="testimonialSwiperWrapper">
-          <!-- Slides injected via JS -->
+        <!-- Navigation Buttons -->
+        <div class="swiper-nav">
+          <button id="PrevBtn" class="swiper-btn">
+            <i class="fa fa-arrow-left"></i>
+          </button>
+          <button id="NextBtn" class="swiper-btn">
+            <i class="fa fa-arrow-right"></i>
+          </button>
         </div>
       </div>
-
-      <!-- Navigation Buttons -->
-      <div class="swiper-nav">
-        <button id="PrevBtn" class="swiper-btn">
-          <i class="fa fa-arrow-left"></i>
-        </button>
-        <button id="NextBtn" class="swiper-btn">
-          <i class="fa fa-arrow-right"></i>
-        </button>
-      </div>
-      </div>
-
     </section>
 
     <!-- milestone section -->
-      <section class="timeline-section">
-        <div class="container">
-            <!-- Header Section -->
-            <div class="header-section">
-                <div class="header-content" data-aos="fade-right">
-                    <h2>The path we've come through</h2>
-                    <h3>Agency Milestones Timeline</h3>
-                </div>
+    <section class="timeline-section">
+      <div class="container">
+        <!-- Header Section -->
+        <div class="header-section">
+          <div class="header-content" data-aos="fade-right">
+            <h2>The path we've come through</h2>
+            <h3>Agency Milestones Timeline</h3>
+          </div>
 
-                <!-- Step Indicator -->
-                <div class="step-indicator" id="stepIndicator">
-                    <!-- Steps will be generated by JavaScript -->
-                </div>
-            </div>
-
-            <!-- Milestones Container -->
-            <div class="milestones-container collapsed" id="milestonesContainer">
-                <div id="milestonesList">
-                    <!-- Milestones will be generated by JavaScript -->
-                </div>
-
-                <!-- Bottom Fade Effect -->
-                <div class="bottom-fade"></div>
-            </div>
-
-            <!-- Toggle Button -->
-            <div class="toggle-container">
-                <button class="toggle-button" id="toggleButton" aria-label="Toggle milestone list">
-                    <i class="fas fa-chevron-down toggle-icon" id="toggleIcon"></i>
-                </button>
-            </div>
+          <!-- Step Indicator -->
+          <div class="step-indicator" id="stepIndicator">
+            <!-- Steps will be generated by JavaScript -->
+          </div>
         </div>
+
+        <!-- Milestones Container -->
+        <div class="milestones-container collapsed" id="milestonesContainer">
+          <div id="milestonesList">
+            <!-- Milestones will be generated by JavaScript -->
+          </div>
+
+          <!-- Bottom Fade Effect -->
+          <div class="bottom-fade"></div>
+        </div>
+
+        <!-- Toggle Button -->
+        <div class="toggle-container">
+          <button
+            class="toggle-button"
+            id="toggleButton"
+            aria-label="Toggle milestone list"
+          >
+            <i class="fas fa-chevron-down toggle-icon" id="toggleIcon"></i>
+          </button>
+        </div>
+      </div>
     </section>
 
     <!-- team section  -->
@@ -476,6 +477,5 @@
 
     <script type="module" src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
   </body>
 </html>
