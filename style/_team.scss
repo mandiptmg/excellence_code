@@ -3,25 +3,32 @@
 
 // team section
 .team-section {
-  padding: 8rem;
+  
   width: 90vw;
   margin: 0 auto;
   text-align: center;
 
   @include responsive(lg) {
     width: 80vw;
+  padding: 8rem;
+
   }
 
   .section-title {
-    font-size: 1.875rem;
+    font-size: 1;
     font-weight: 600;
     margin-bottom: 2.5rem;
+
+    @include responsive(lg){
+    font-size: 1.875rem;
+    }
   }
 
   .team-swiper {
     position: relative;
     padding: 20px 0 60px;
     overflow: hidden;
+    width: 100%;
   }
 
   .swiper-slide {

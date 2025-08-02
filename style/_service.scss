@@ -3,16 +3,17 @@
 
 .vas-section {
   width: 90vw;
-  padding: 8rem 0;
   margin: auto;
+  padding: 4rem 0;
   @include grid-center;
 
   @include responsive(lg) {
     width: 80vw;
+    padding: 8rem 0;
   }
 
   .vas-heading {
-    font-size: 2rem;
+    font-size: 1.45rem;
     @include text-semibold;
     text-align: left;
     margin-bottom: 3rem;
@@ -51,10 +52,14 @@
     }
 
     .vas-subheading {
-      font-size: 1.75rem;
+      font-size: 1.4rem;
       @include text-bold;
       margin-bottom: 1.5rem;
       color: $color-secondary;
+
+      @include responsive(lg) {
+        font-size: 1.75rem;
+      }
     }
 
     .vas-values {
@@ -78,8 +83,12 @@
       }
 
       .vas-value-title {
-        font-size: 1.25rem;
+        font-size: 1rem;
         @include text-semibold;
+
+        @include responsive(lg) {
+          font-size: 1.25rem;
+        }
       }
 
       img {
@@ -102,11 +111,15 @@
         cursor: pointer;
 
         .vas-service-title {
-          font-size: 1.125rem;
+          font-size: 1rem;
           @include text-medium;
           margin-bottom: 2rem;
           margin-top: 0;
           color: $color-text-subtle;
+
+          @include responsive(lg) {
+            font-size: 1.125rem;
+          }
         }
 
         .vas-link-wrap {

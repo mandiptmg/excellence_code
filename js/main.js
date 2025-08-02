@@ -9,7 +9,7 @@ import initMilestone from "./milestone.js";
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize AOS
   AOS.init({
-    duration: 2000,
+    duration: 1000,
   });
 
   initNavbar();

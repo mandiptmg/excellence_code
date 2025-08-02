@@ -2,6 +2,7 @@
 @use "variables" as *;
 
 .navbar {
+
   position: fixed;
   padding-inline: 1rem;
   top: 2.5rem;
@@ -12,10 +13,10 @@
   border-bottom: 1px solid #e5e7eb;
   border-radius: 2rem;
   z-index: 50;
-  color: #000;
+  color: $color-secondary;
   transition: $transition;
 
-  @include responsive(xl) {
+  @include responsive(lg) {
     width: 80vw;
   }
 
@@ -29,80 +30,84 @@
     justify-content: space-between;
     height: 5rem;
     padding-inline: 1.25rem;
+  }
+  .logo-link {
+    @include flex-center;
+    gap: 0.25rem;
 
-    .logo-link {
-      @include flex-center;
-      gap: 0.25rem;
+    .logo-text {
+      font-size: 0.85rem;
+      @include text-semibold;
+      text-transform: capitalize;
+      color: #000;
 
-      .logo-text {
-        font-size: 1.125rem;
-        @include text-semibold;
-        text-transform: capitalize;
-        color: #000;
+      @include responsive(lg){
+      font-size: 1.125rem;
+
       }
     }
+  }
 
-    .nav-links {
+  .nav-links {
+    display: none;
+    list-style: none;
+    gap: 2rem;
+
+    @include responsive(xl) {
+      display: flex;
+    }
+
+    li a {
+      text-transform: capitalize;
+      font-size: 1rem;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .nav-controls {
+    @include flex-center;
+    gap: 1rem;
+
+    .consult-btn {
       display: none;
-      list-style: none;
-      gap: 2rem;
 
       @include responsive(xl) {
-        display: flex;
+        display: inline-block;
       }
 
-      li a {
-        text-transform: capitalize;
-        font-size: 1rem;
+      background: $color-primary;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: $transition;
 
-        &:hover {
-          color: $color-primary;
-        }
+      &:hover {
+        background: white;
+        color: $color-primary;
+        border: 1px solid $color-primary;
       }
     }
 
-    .nav-controls {
-      @include flex-center;
-      gap: 1rem;
+    .menu-toggle {
+      font-size: 1.5rem;
+      background: transparent;
+      border: none;
+      color: $color-primary;
+      cursor: pointer;
+      display: block;
 
-      .consult-btn {
-        display: none;
-
-        @include responsive(xl) {
-          display: inline-block;
-        }
-
-        background: $color-primary;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border-radius: 9999px;
-        text-decoration: none;
+      &:hover {
+        color: $color-secondary;
+        scale: 1.1;
         transition: $transition;
-
-        &:hover {
-          background: white;
-          color: $color-primary;
-          border: 1px solid $color-primary;
-        }
       }
 
-      .menu-toggle {
-        font-size: 1.5rem;
-        background: transparent;
-        border: none;
-        color: $color-primary;
-        cursor: pointer;
-        display: block;
-
-        &:hover {
-          color: $color-secondary;
-          scale: 1.1;
-          transition: $transition;
-        }
-
-        @include responsive(xl) {
-          display: none;
-        }
+      @include responsive(xl) {
+        display: none;
       }
     }
   }
@@ -113,14 +118,14 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 35%;
+  width: 75%;
   height: 100%;
   background-color: #fff;
   opacity: 0.95;
   transition: $transition-slow;
   z-index: 9900;
   padding: 20px;
-    box-shadow: $shadow-lg;
+  box-shadow: $shadow-lg;
 }
 
 .mobile-menu.active {

@@ -12,8 +12,10 @@
   // Header Section
   .portfolio-header {
     display: grid;
+    gap: 1rem;
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 0;
     }
   }
 

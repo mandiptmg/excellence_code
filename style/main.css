@@ -9,10 +9,10 @@
   border-bottom: 1px solid #e5e7eb;
   border-radius: 2rem;
   z-index: 50;
-  color: #000;
+  color: #111827;
   transition: all 0.3s ease;
 }
-@media (min-width: 80rem) {
+@media (min-width: 64rem) {
   .navbar {
     width: 80vw;
   }
@@ -28,40 +28,45 @@
   height: 5rem;
   padding-inline: 1.25rem;
 }
-.navbar .navbar-container .logo-link {
+.navbar .logo-link {
   display: flex;
   align-items: center;
   gap: 0.25rem;
 }
-.navbar .navbar-container .logo-link .logo-text {
-  font-size: 1.125rem;
+.navbar .logo-link .logo-text {
+  font-size: 0.85rem;
   font-weight: 500;
   text-transform: capitalize;
   color: #000;
 }
-.navbar .navbar-container .nav-links {
+@media (min-width: 64rem) {
+  .navbar .logo-link .logo-text {
+    font-size: 1.125rem;
+  }
+}
+.navbar .nav-links {
   display: none;
   list-style: none;
   gap: 2rem;
 }
 @media (min-width: 80rem) {
-  .navbar .navbar-container .nav-links {
+  .navbar .nav-links {
     display: flex;
   }
 }
-.navbar .navbar-container .nav-links li a {
+.navbar .nav-links li a {
   text-transform: capitalize;
   font-size: 1rem;
 }
-.navbar .navbar-container .nav-links li a:hover {
+.navbar .nav-links li a:hover {
   color: #ff7f50;
 }
-.navbar .navbar-container .nav-controls {
+.navbar .nav-controls {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
-.navbar .navbar-container .nav-controls .consult-btn {
+.navbar .nav-controls .consult-btn {
   display: none;
   background: #ff7f50;
   color: white;
@@ -71,16 +76,16 @@
   transition: all 0.3s ease;
 }
 @media (min-width: 80rem) {
-  .navbar .navbar-container .nav-controls .consult-btn {
+  .navbar .nav-controls .consult-btn {
     display: inline-block;
   }
 }
-.navbar .navbar-container .nav-controls .consult-btn:hover {
+.navbar .nav-controls .consult-btn:hover {
   background: white;
   color: #ff7f50;
   border: 1px solid #ff7f50;
 }
-.navbar .navbar-container .nav-controls .menu-toggle {
+.navbar .nav-controls .menu-toggle {
   font-size: 1.5rem;
   background: transparent;
   border: none;
@@ -88,13 +93,13 @@
   cursor: pointer;
   display: block;
 }
-.navbar .navbar-container .nav-controls .menu-toggle:hover {
+.navbar .nav-controls .menu-toggle:hover {
   color: #111827;
   scale: 1.1;
   transition: all 0.3s ease;
 }
 @media (min-width: 80rem) {
-  .navbar .navbar-container .nav-controls .menu-toggle {
+  .navbar .nav-controls .menu-toggle {
     display: none;
   }
 }
@@ -104,7 +109,7 @@
   position: fixed;
   top: 0;
   right: -100%;
-  width: 35%;
+  width: 75%;
   height: 100%;
   background-color: #fff;
   opacity: 0.95;
@@ -168,13 +173,13 @@
 .hero {
   position: relative;
   height: 100vh;
+  padding-top: 5rem;
   background: url("../assets/Layer.png") center/cover no-repeat;
   display: grid;
   place-items: center;
 }
 .hero .hero-container {
   width: 80vw;
-  margin-inline: auto;
 }
 @media (min-width: 64rem) {
   .hero .hero-container {
@@ -226,6 +231,9 @@
   font-size: 0.875rem;
   color: #364153;
   max-width: 32rem;
+  text-align: left;
+  padding: 0;
+  margin-inline: 0;
 }
 @media (min-width: 768px) {
   .hero .hero-container .hero-grid .hero-text p {
@@ -285,18 +293,19 @@
 
 .vas-section {
   width: 90vw;
-  padding: 8rem 0;
   margin: auto;
+  padding: 4rem 0;
   display: grid;
   place-items: center;
 }
 @media (min-width: 64rem) {
   .vas-section {
     width: 80vw;
+    padding: 8rem 0;
   }
 }
 .vas-section .vas-heading {
-  font-size: 2rem;
+  font-size: 1.45rem;
   font-weight: 500;
   text-align: left;
   margin-bottom: 3rem;
@@ -336,10 +345,15 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .vas-section .vas-grid .vas-subheading {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
   color: #111827;
+}
+@media (min-width: 64rem) {
+  .vas-section .vas-grid .vas-subheading {
+    font-size: 1.75rem;
+  }
 }
 .vas-section .vas-grid .vas-values {
   display: flex;
@@ -362,8 +376,13 @@
   background: rgba(255, 255, 255, 0.9);
 }
 .vas-section .vas-grid .vas-value-item .vas-value-title {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
+}
+@media (min-width: 64rem) {
+  .vas-section .vas-grid .vas-value-item .vas-value-title {
+    font-size: 1.25rem;
+  }
 }
 .vas-section .vas-grid .vas-value-item img {
   width: 1.5rem;
@@ -381,11 +400,16 @@
   cursor: pointer;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-title {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 300;
   margin-bottom: 2rem;
   margin-top: 0;
   color: #9ca3af;
+}
+@media (min-width: 64rem) {
+  .vas-section .vas-grid .vas-right .vas-service-item .vas-service-title {
+    font-size: 1.125rem;
+  }
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-link-wrap {
   display: flex;
@@ -460,10 +484,12 @@
 }
 .portfolio-section .portfolio-header {
   display: grid;
+  gap: 1rem;
 }
 @media (min-width: 48rem) {
   .portfolio-section .portfolio-header {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0;
   }
 }
 .portfolio-section .intro-text .subtitle {
@@ -988,7 +1014,6 @@
 }
 
 .team-section {
-  padding: 8rem;
   width: 90vw;
   margin: 0 auto;
   text-align: center;
@@ -996,17 +1021,24 @@
 @media (min-width: 64rem) {
   .team-section {
     width: 80vw;
+    padding: 8rem;
   }
 }
 .team-section .section-title {
-  font-size: 1.875rem;
+  font-size: 1;
   font-weight: 600;
   margin-bottom: 2.5rem;
+}
+@media (min-width: 64rem) {
+  .team-section .section-title {
+    font-size: 1.875rem;
+  }
 }
 .team-section .team-swiper {
   position: relative;
   padding: 20px 0 60px;
   overflow: hidden;
+  width: 100%;
 }
 .team-section .swiper-slide {
   height: auto;
@@ -1337,15 +1369,16 @@
 }
 
 .testimonial-section {
-  margin: 4rem auto;
   width: 90vw;
-  padding: 5rem;
-  position: relative;
+  margin: 0 auto;
   text-align: center;
+  position: relative;
+  padding: 4rem 1rem;
 }
 @media (min-width: 64rem) {
   .testimonial-section {
     width: 80vw;
+    padding: 5rem 0;
   }
 }
 .testimonial-section .testimonial-header {
@@ -1353,107 +1386,112 @@
   place-items: center;
 }
 .testimonial-section .testimonial-header .testimonial-left {
-  margin-bottom: 1.5rem;
   text-align: left;
+  margin-bottom: 1.5rem;
 }
 .testimonial-section .testimonial-header .testimonial-left .subheading {
+  font-size: 0.875rem;
   color: #374151;
-  font-size: 0.9rem;
 }
 .testimonial-section .testimonial-header .testimonial-left .main-heading {
   font-size: 1.875rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
-}
-@media (min-width: 64rem) {
-  .testimonial-section .testimonial-header .testimonial-left .main-heading {
-    font-size: 3rem;
-  }
 }
 @media (min-width: 48rem) {
   .testimonial-section .testimonial-header .testimonial-left .main-heading {
     font-size: 2.25rem;
   }
 }
-.testimonial-section .testimonial-swiper {
-  position: relative;
-  padding: 20px 0 60px;
-  overflow: hidden;
-}
-.testimonial-section .hover {
-  padding: 1.5rem;
-  border-radius: 1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.testimonial-section .hover:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  background: #f3f4f6;
-}
-.testimonial-section .swiper-slide {
-  height: auto;
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  border-radius: 0.75rem;
-}
-.testimonial-section .testimonial-card {
-  border-radius: 0.75rem;
-  transition: all 0.5s ease;
-  cursor: pointer;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-.testimonial-section .testimonial-divider {
-  max-width: 250px;
-  height: 1px;
-  background-color: #9ca3af;
-  margin: 0;
-  border: none;
-}
-.testimonial-section .testimonial-text {
-  font-size: 1rem;
-  color: #374151;
-  line-height: 1.7;
-  margin-bottom: 1.5rem;
-}
-.testimonial-section .testimonial-title {
-  font-size: 1.125rem;
-  font-weight: bold;
-  color: #ff7f50;
-}
-.testimonial-section .testimonial-subtitle {
-  color: #6b7280;
-  font-size: 0.85rem;
-  margin-top: 0.3rem;
+@media (min-width: 64rem) {
+  .testimonial-section .testimonial-header .testimonial-left .main-heading {
+    font-size: 3rem;
+  }
 }
 .testimonial-section .testimonial-container {
   position: relative;
 }
+.testimonial-section .testimonial-container .testimonial-swiper {
+  position: relative;
+  padding: 2rem 0 4rem;
+  overflow: hidden;
+}
+.testimonial-section .testimonial-container .swiper-wrapper {
+  display: flex;
+}
+.testimonial-section .testimonial-container .swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  border-radius: 1rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  padding: 1.5rem;
+}
+.testimonial-section .testimonial-container .swiper-slide:hover {
+  background: #f3f4f6;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.testimonial-section .testimonial-container .testimonial-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.testimonial-section .testimonial-container .testimonial-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #374151;
+  margin-bottom: 1.5rem;
+}
+.testimonial-section .testimonial-container .testimonial-footer {
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-section .testimonial-container .testimonial-divider {
+  max-width: 250px;
+  height: 1px;
+  background-color: #9ca3af;
+  margin: 0.5rem 0;
+  border: none;
+}
+.testimonial-section .testimonial-container .testimonial-title {
+  font-size: 1.125rem;
+  color: #ff7f50;
+  font-weight: bold;
+}
+.testimonial-section .testimonial-container .testimonial-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
 .testimonial-section .testimonial-container .swiper-nav {
   position: absolute;
-  z-index: 999;
   bottom: 1rem;
   right: 2rem;
+  z-index: 10;
   display: flex;
-  justify-content: center;
-  padding: 1rem 0;
   gap: 1rem;
-  margin-top: 2rem;
 }
 .testimonial-section .testimonial-container .swiper-btn {
-  padding: 0.5rem;
-  border: 2px solid #d1d5db;
-  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.25rem;
   background: #f9fafb;
+  border: 2px solid #d1d5db;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 1.25rem;
 }
 .testimonial-section .testimonial-container .swiper-btn:hover {
-  background: #e5e7eb;
+  background-color: #e5e7eb;
   transform: scale(1.1);
 }
 
@@ -1555,6 +1593,7 @@
 * {
   margin: 0;
   padding: 0;
+  margin-inline: auto;
   box-sizing: border-box;
 }
 
