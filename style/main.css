@@ -14,7 +14,7 @@
 }
 @media (min-width: 64rem) {
   .navbar {
-    width: 80vw;
+    width: 83.46vw;
   }
 }
 .navbar.scrolled {
@@ -172,18 +172,23 @@
 
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100VH;
   padding-top: 5rem;
   background: url("../assets/Layer.png") center/cover no-repeat;
   display: grid;
   place-items: center;
 }
+@media (min-width: 64rem) {
+  .hero {
+    background-position: right;
+  }
+}
 .hero .hero-container {
-  width: 80vw;
+  width: 90vw;
 }
 @media (min-width: 64rem) {
   .hero .hero-container {
-    width: 80vw;
+    width: 83.46vw;
   }
 }
 .hero .hero-container .hero-grid {
@@ -203,9 +208,7 @@
 }
 .hero .hero-container .hero-grid .hero-text h1 {
   text-transform: uppercase;
-  font-family: "ui-sans-serif", system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #101828;
-  letter-spacing: 0.35rem;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.25;
@@ -228,14 +231,15 @@
 }
 .hero .hero-container .hero-grid .hero-text p {
   margin-top: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 400;
   color: #364153;
-  max-width: 32rem;
+  max-width: 23rem;
   text-align: left;
   padding: 0;
   margin-inline: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .hero .hero-container .hero-grid .hero-text p {
     font-size: 1rem;
   }
@@ -300,14 +304,16 @@
 }
 @media (min-width: 64rem) {
   .vas-section {
-    width: 80vw;
+    width: 83.46vw;
     padding: 8rem 0;
   }
 }
 .vas-section .vas-heading {
-  font-size: 1.45rem;
-  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 37.33rem;
+  font-weight: 400;
   text-align: left;
+  line-height: normal;
   margin-bottom: 3rem;
 }
 @media (min-width: 64rem) {
@@ -401,7 +407,7 @@
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-title {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 2rem;
   margin-top: 0;
   color: #9ca3af;
@@ -479,7 +485,7 @@
 }
 @media (min-width: 64rem) {
   .portfolio-section {
-    width: 80vw;
+    width: 83.46vw;
   }
 }
 .portfolio-section .portfolio-header {
@@ -668,7 +674,7 @@
 }
 @media (min-width: 64rem) {
   .timeline-section {
-    width: 80vw;
+    width: 83.46vw;
   }
 }
 
@@ -962,8 +968,13 @@
   }
 }
 .why-choose-us .why-us-container {
-  max-width: 1200px;
+  width: 90vw;
   margin: 0 auto;
+}
+@media (min-width: 64rem) {
+  .why-choose-us .why-us-container {
+    width: 83.46vw;
+  }
 }
 .why-choose-us .heading h2 {
   font-size: 1.875rem;
@@ -1020,7 +1031,7 @@
 }
 @media (min-width: 64rem) {
   .team-section {
-    width: 80vw;
+    width: 83.46vw;
     padding: 8rem;
   }
 }
@@ -1130,9 +1141,9 @@
   padding: 8rem 0;
   margin: 0 auto;
 }
-@media (min-width: 80rem) {
+@media (min-width: 64rem) {
   .contact-container {
-    width: 80vw;
+    width: 83.46vw;
   }
 }
 
@@ -1377,7 +1388,7 @@
 }
 @media (min-width: 64rem) {
   .testimonial-section {
-    width: 80vw;
+    width: 83.46vw;
     padding: 5rem 0;
   }
 }
@@ -1506,9 +1517,9 @@
   position: relative;
   padding: 1rem;
 }
-@media (min-width: 80rem) {
+@media (min-width: 64rem) {
   .footer .footer-container {
-    width: 80vw;
+    width: 83.46vw;
   }
 }
 .footer .footer-container .footer-top {

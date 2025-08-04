@@ -3,22 +3,27 @@
 
 .hero {
   position: relative;
-  height: 100vh;
-  padding-top:5rem;
+  min-height: 100VH;
+  padding-top: 5rem;
   background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
 
+  
+
+  @include responsive(lg){
+    background-position: right;
+  }
+
   .hero-container {
-    width: 80vw;
+    width: 90vw;
 
     @include responsive(lg) {
-      width: 80vw;
+      width: 83.46vw;
     }
 
     .hero-grid {
       display: flex;
       flex-direction: column-reverse;
-      // gap: $spacing-md;
 
       @include responsive(lg) {
         @include grid-center;
@@ -31,9 +36,7 @@
 
         h1 {
           text-transform: uppercase;
-          font-family: $font-sans;
           color: $gray-900;
-          letter-spacing: 0.35rem;
           font-size: 1.5rem;
           font-weight: 600;
           line-height: 1.25;
@@ -45,7 +48,7 @@
 
           @include responsive(lg) {
             font-size: 3rem;
-          }  
+          }
           @include responsive(xl) {
             font-size: 3.75rem;
           }
@@ -53,16 +56,15 @@
 
         p {
           margin-top: $spacing-xs;
-          font-size: 0.875rem;
+          font-size: 0.8rem;
+          @include text-medium;
           color: $gray-700;
-          max-width: 32rem;
-      text-align: left;
-      padding: 0;
-      margin-inline:0 ;
+          max-width: 23rem;
+          text-align: left;
+          padding: 0;
+          margin-inline: 0;
 
-          
-
-          @media (min-width: 768px) {
+         @include responsive(md) {
             font-size: 1rem;
           }
         }
@@ -98,6 +100,7 @@
     font-size: 1.25rem;
 
     .icon {
+      
       transition: color 0.3s ease;
       color: black;
       cursor: pointer;

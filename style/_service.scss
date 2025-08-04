@@ -8,14 +8,17 @@
   @include grid-center;
 
   @include responsive(lg) {
-    width: 80vw;
+    width: 83.46vw;
     padding: 8rem 0;
   }
 
   .vas-heading {
-    font-size: 1.45rem;
-    @include text-semibold;
+    font-size: 1.2rem;
+    line-height: 37.33rem;
+
+    @include text-medium;
     text-align: left;
+    line-height: normal;
     margin-bottom: 3rem;
 
     @include responsive(lg) {

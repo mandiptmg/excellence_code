@@ -12,8 +12,8 @@
     position: relative;
     padding: 1rem;
 
-    @include responsive(xl) {
-      width: 80vw;
+    @include responsive(lg) {
+      width: 83.46vw;
     }
 
     .footer-top {
