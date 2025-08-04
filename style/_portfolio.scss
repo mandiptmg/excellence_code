@@ -20,37 +20,34 @@
   }
 
   .intro-text .subtitle {
-    font-size: 1rem;
-    @include text-semibold;
-
+    font-size: 0.75rem;
+    @include text-medium;
     color: $color-text-muted;
   }
 
   .intro-text .title {
     font-size: 1.875rem;
-    @include text-semibold;
+    @include text-medium;
 
     line-height: 1.25;
 
     @include responsive(lg) {
-      font-size: 3rem;
-    }
-
-    @include responsive(md) {
-      font-size: 2.25rem;
+      font-size: 2rem;
     }
   }
 
   .description {
+    display: grid;
+    place-self: end;
     @include responsive(md) {
       margin-top: 1.75;
+      max-width: 470px;
     }
     p {
-      font-size: 1rem;
+      font-size: 10.05pt;
       color: $color-text-base; /* text-color */
       margin-bottom: 16px;
       line-height: 1.5;
-      text-justify: auto;
     }
   }
 
@@ -63,7 +60,7 @@
   .read-more-btn {
     background-color: $bg-gray-lighter;
     color: $color-secondary;
-    padding: 12px 24px;
+    padding: 12px 35px;
     border-radius: 9999px;
     text-transform: capitalize;
     font-weight: 500;
@@ -83,8 +80,8 @@
     font-weight: bold;
     font-size: 1.5rem;
     border-radius: 9999px;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     line-height: 40px;
     text-align: center;
     transform: rotate(45deg);
@@ -158,8 +155,8 @@
   }
 
   .project-title {
-    font-size: 1.25rem;
-    font-weight: 500;
+    font-size: 16pt;
+    @include text-semibold;
     margin: 0;
 
     @include responsive(lg) {
@@ -174,11 +171,20 @@
   .project-footer {
     display: flex;
     align-items: center;
+    margin: -15px 0;
+  }
+
+  .project-subtitle{
+    font-size: 8.67pt ;
+    @include text-semibold;
+    color: $color-text-subtle;
+
   }
 
   .divider {
     width: 100%;
-    background-color: #e5e7eb;
+    background-color: $bg-gray-light;
+    margin: 0;
   }
 
   .arrow-btn {

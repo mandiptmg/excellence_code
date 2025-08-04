@@ -3,14 +3,13 @@
 
 .hero {
   position: relative;
-  min-height: 100VH;
+  min-height: 100vh;
   padding-top: 5rem;
   background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
 
-  
 
-  @include responsive(lg){
+  @include responsive(lg) {
     background-position: right;
   }
 
@@ -59,12 +58,12 @@
           font-size: 0.8rem;
           @include text-medium;
           color: $gray-700;
-          max-width: 23rem;
+          max-width: 25rem;
           text-align: left;
           padding: 0;
           margin-inline: 0;
 
-         @include responsive(md) {
+          @include responsive(md) {
             font-size: 1rem;
           }
         }
@@ -100,7 +99,6 @@
     font-size: 1.25rem;
 
     .icon {
-      
       transition: color 0.3s ease;
       color: black;
       cursor: pointer;

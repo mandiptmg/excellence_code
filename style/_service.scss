@@ -75,7 +75,7 @@
       @include flex-center;
       gap: 1rem;
       background: rgba(255, 255, 255, 0.8);
-      padding: 2rem 1.8rem;
+      padding: 2rem;
       border-radius: 0.8rem;
       box-shadow: $shadow-md;
       transition: $transition-slow;
@@ -87,10 +87,10 @@
 
       .vas-value-title {
         font-size: 1rem;
-        @include text-semibold;
+        @include text-medium;
 
         @include responsive(lg) {
-          font-size: 1.25rem;
+          font-size: 1.14rem;
         }
       }
 
@@ -114,7 +114,7 @@
         cursor: pointer;
 
         .vas-service-title {
-          font-size: 1rem;
+          font-size: 0.773rem;
           @include text-medium;
           margin-bottom: 2rem;
           margin-top: 0;
@@ -134,7 +134,7 @@
           .read-more-btn {
             background-color: #e5e7eb;
             color: $color-secondary;
-            padding: 12px 24px;
+            padding: 12px 35px;
             border-radius: 9999px;
             text-transform: capitalize;
             font-weight: 500;
@@ -154,8 +154,8 @@
             font-weight: bold;
             font-size: 1.5rem;
             border-radius: 9999px;
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             line-height: 40px;
             text-align: center;
             transform: rotate(45deg);
@@ -181,14 +181,14 @@
 
         .vas-service-title {
           color: $color-secondary;
-          @include text-semibold;
+          @include text-bold;
+          margin-bottom: 0.3rem;
         }
 
         .vas-service-paragraph {
-          color: $color-text-subtle;
-          font-size: 0.8rem;
-          margin-top: 0.5rem;
-          margin-bottom: 1.5rem;
+          color: $color-secondary;
+          margin-bottom: 1.4rem;
+          line-height: 1.2rem;
         }
       }
     }

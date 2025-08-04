@@ -4,7 +4,7 @@
 
 //why choose us section
 .why-choose-us {
-  background-color: $bg-success-dark;
+  background: $bg-success-gradient;
   padding: 8rem 1.5rem;
 
   @include responsive(md) {
@@ -28,7 +28,7 @@
     font-size: 1.875rem;
     line-height: 1.5;
     letter-spacing: 0.05em;
-    font-weight: 600;
+   @include text-bold;
     color: #fff;
 
     @include responsive(lg) {

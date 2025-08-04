@@ -14,6 +14,16 @@ $bg-gray-light: #f3f4f6;
 $bg-gray-lighter: #e5e7eb;
 $bg-success-dark: #207211;
 
+$bg-success-dark-light: lighten($bg-success-dark, 15%);
+$bg-success-dark-dark: darken($bg-success-dark, 10%);
+
+$bg-success-gradient: linear-gradient(
+  135deg,
+  $bg-success-dark-light,
+  $bg-success-dark,
+  $bg-success-dark-dark
+);
+
 $border-default: #d1d5db;
 
 $color-success: #10b981;
@@ -39,10 +49,6 @@ $spacing-lg: 3rem;
 $spacing-xl: 4rem;
 $spacing-2xl: 6rem;
 $spacing-3xl: 8rem;
-
-
-
-
 
 // Shadows
 $shadow-light: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);

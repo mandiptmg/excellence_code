@@ -172,7 +172,7 @@
 
 .hero {
   position: relative;
-  min-height: 100VH;
+  min-height: 100vh;
   padding-top: 5rem;
   background: url("../assets/Layer.png") center/cover no-repeat;
   display: grid;
@@ -234,7 +234,7 @@
   font-size: 0.8rem;
   font-weight: 400;
   color: #364153;
-  max-width: 23rem;
+  max-width: 25rem;
   text-align: left;
   padding: 0;
   margin-inline: 0;
@@ -371,7 +371,7 @@
   align-items: center;
   gap: 1rem;
   background: rgba(255, 255, 255, 0.8);
-  padding: 2rem 1.8rem;
+  padding: 2rem;
   border-radius: 0.8rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   transition: all 0.5s ease;
@@ -383,11 +383,11 @@
 }
 .vas-section .vas-grid .vas-value-item .vas-value-title {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 400;
 }
 @media (min-width: 64rem) {
   .vas-section .vas-grid .vas-value-item .vas-value-title {
-    font-size: 1.25rem;
+    font-size: 1.14rem;
   }
 }
 .vas-section .vas-grid .vas-value-item img {
@@ -406,7 +406,7 @@
   cursor: pointer;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-title {
-  font-size: 1rem;
+  font-size: 0.773rem;
   font-weight: 400;
   margin-bottom: 2rem;
   margin-top: 0;
@@ -426,7 +426,7 @@
 .vas-section .vas-grid .vas-right .vas-service-item .vas-link-wrap .read-more-btn {
   background-color: #e5e7eb;
   color: #111827;
-  padding: 12px 24px;
+  padding: 12px 35px;
   border-radius: 9999px;
   text-transform: capitalize;
   font-weight: 500;
@@ -444,8 +444,8 @@
   font-weight: bold;
   font-size: 1.5rem;
   border-radius: 9999px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   line-height: 40px;
   text-align: center;
   transform: rotate(45deg);
@@ -467,13 +467,13 @@
 }
 .vas-section .vas-grid .vas-right .vas-service-item.active .vas-service-title {
   color: #111827;
-  font-weight: 500;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
 .vas-section .vas-grid .vas-right .vas-service-item.active .vas-service-paragraph {
-  color: #9ca3af;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
+  color: #111827;
+  margin-bottom: 1.4rem;
+  line-height: 1.2rem;
 }
 
 .portfolio-section {
@@ -499,36 +499,35 @@
   }
 }
 .portfolio-section .intro-text .subtitle {
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 400;
   color: #6b7280;
 }
 .portfolio-section .intro-text .title {
   font-size: 1.875rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25;
 }
 @media (min-width: 64rem) {
   .portfolio-section .intro-text .title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
-@media (min-width: 48rem) {
-  .portfolio-section .intro-text .title {
-    font-size: 2.25rem;
-  }
+.portfolio-section .description {
+  display: grid;
+  place-self: end;
 }
 @media (min-width: 48rem) {
   .portfolio-section .description {
     margin-top: 1.75;
+    max-width: 470px;
   }
 }
 .portfolio-section .description p {
-  font-size: 1rem;
+  font-size: 10.05pt;
   color: #374151; /* text-color */
   margin-bottom: 16px;
   line-height: 1.5;
-  text-justify: auto;
 }
 .portfolio-section .read-more-group {
   display: flex;
@@ -538,7 +537,7 @@
 .portfolio-section .read-more-btn {
   background-color: #e5e7eb;
   color: #111827;
-  padding: 12px 24px;
+  padding: 12px 35px;
   border-radius: 9999px;
   text-transform: capitalize;
   font-weight: 500;
@@ -556,8 +555,8 @@
   font-weight: bold;
   font-size: 1.5rem;
   border-radius: 9999px;
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   line-height: 40px;
   text-align: center;
   transform: rotate(45deg);
@@ -624,7 +623,7 @@
   padding: 1rem;
 }
 .portfolio-section .project-title {
-  font-size: 1.25rem;
+  font-size: 16pt;
   font-weight: 500;
   margin: 0;
 }
@@ -641,10 +640,17 @@
 .portfolio-section .project-footer {
   display: flex;
   align-items: center;
+  margin: -15px 0;
+}
+.portfolio-section .project-subtitle {
+  font-size: 8.67pt;
+  font-weight: 500;
+  color: #9ca3af;
 }
 .portfolio-section .divider {
   width: 100%;
-  background-color: #e5e7eb;
+  background-color: #f3f4f6;
+  margin: 0;
 }
 .portfolio-section .arrow-btn {
   color: white;
@@ -693,13 +699,13 @@
   gap: 2rem;
 }
 
-.header-content h2 {
-  font-size: 1rem;
-  font-weight: 500;
+.header-content h3 {
+  font-size: 10pt;
+  font-weight: 400;
   color: #6b7280;
 }
 
-.header-content h3 {
+.header-content h2 {
   line-height: 1.2;
   color: #111827;
   margin-bottom: 2.5rem;
@@ -708,12 +714,12 @@
   line-height: 1.25;
 }
 @media (min-width: 64rem) {
-  .header-content h3 {
-    font-size: 3rem;
+  .header-content h2 {
+    font-size: 24pt;
   }
 }
 @media (min-width: 48rem) {
-  .header-content h3 {
+  .header-content h2 {
     font-size: 2.25rem;
   }
 }
@@ -789,7 +795,7 @@
 }
 
 .milestone-item.active {
-  background-color: #207211;
+  background: linear-gradient(135deg, rgb(50.6870229008, 180.572519084, 26.927480916), #207211, rgb(19.5419847328, 69.6183206107, 10.3816793893));
   color: #fff;
   opacity: 1;
   transform: translateY(-2px);
@@ -954,7 +960,7 @@
 }
 
 .why-choose-us {
-  background-color: #207211;
+  background: linear-gradient(135deg, rgb(50.6870229008, 180.572519084, 26.927480916), #207211, rgb(19.5419847328, 69.6183206107, 10.3816793893));
   padding: 8rem 1.5rem;
 }
 @media (min-width: 48rem) {
@@ -980,7 +986,7 @@
   font-size: 1.875rem;
   line-height: 1.5;
   letter-spacing: 0.05em;
-  font-weight: 600;
+  font-weight: bold;
   color: #fff;
 }
 @media (min-width: 64rem) {
@@ -1149,6 +1155,7 @@
 
 .contact-title {
   font-size: 1.875rem;
+  text-transform: capitalize;
   font-weight: bold;
   color: #000;
   margin-bottom: 1.75rem;
@@ -1329,8 +1336,8 @@
   transform: rotate(45deg);
   font-size: 1rem;
   border-radius: 9999px;
-  width: 2.8rem;
-  height: 2.7rem;
+  width: 50px;
+  height: 45px;
   display: grid;
   place-items: center;
   border: 1px solid transparent;
@@ -1401,12 +1408,12 @@
   margin-bottom: 1.5rem;
 }
 .testimonial-section .testimonial-header .testimonial-left .subheading {
-  font-size: 0.875rem;
+  font-size: 9pt;
   color: #374151;
 }
 .testimonial-section .testimonial-header .testimonial-left .main-heading {
   font-size: 1.875rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.25;
 }
 @media (min-width: 48rem) {
@@ -1416,7 +1423,7 @@
 }
 @media (min-width: 64rem) {
   .testimonial-section .testimonial-header .testimonial-left .main-heading {
-    font-size: 3rem;
+    font-size: 24pt;
   }
 }
 .testimonial-section .testimonial-container {
@@ -1467,7 +1474,7 @@
   max-width: 250px;
   height: 1px;
   background-color: #9ca3af;
-  margin: 0.5rem 0;
+  margin-top: 0.5rem;
   border: none;
 }
 .testimonial-section .testimonial-container .testimonial-title {
