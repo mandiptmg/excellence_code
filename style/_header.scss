@@ -49,11 +49,19 @@
   .nav-links {
     display: none;
     list-style: none;
-    gap: 2rem;
 
-    @include responsive(xl) {
+    @include responsive(lg) {
       display: flex;
+    gap: 1rem;
     }
+
+     @include responsive(xl) {
+      display: flex;
+    gap: 2rem;
+    }
+
+
+
 
     li a {
       text-transform: capitalize;
@@ -72,7 +80,7 @@
     .consult-btn {
       display: none;
 
-      @include responsive(xl) {
+      @include responsive(lg) {
         display: inline-block;
       }
 
@@ -104,7 +112,7 @@
         transition: $transition;
       }
 
-      @include responsive(xl) {
+      @include responsive(lg) {
         display: none;
       }
     }

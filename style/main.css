@@ -47,11 +47,17 @@
 .navbar .nav-links {
   display: none;
   list-style: none;
-  gap: 2rem;
+}
+@media (min-width: 64rem) {
+  .navbar .nav-links {
+    display: flex;
+    gap: 1rem;
+  }
 }
 @media (min-width: 80rem) {
   .navbar .nav-links {
     display: flex;
+    gap: 2rem;
   }
 }
 .navbar .nav-links li a {
@@ -75,7 +81,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
 }
-@media (min-width: 80rem) {
+@media (min-width: 64rem) {
   .navbar .nav-controls .consult-btn {
     display: inline-block;
   }
@@ -98,7 +104,7 @@
   scale: 1.1;
   transition: all 0.3s ease;
 }
-@media (min-width: 80rem) {
+@media (min-width: 64rem) {
   .navbar .nav-controls .menu-toggle {
     display: none;
   }
@@ -248,7 +254,7 @@
   }
 }
 .hero .hero-container .hero-grid .hero-text {
-  padding-block: 2rem;
+  padding-block: 3rem;
   text-align: start;
 }
 .hero .hero-container .hero-grid .hero-text h1 {
@@ -258,6 +264,7 @@
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 @media (min-width: 48rem) {
   .hero .hero-container .hero-grid .hero-text h1 {
@@ -275,7 +282,6 @@
   }
 }
 .hero .hero-container .hero-grid .hero-text p {
-  margin-top: 0.5rem;
   font-size: 0.8rem;
   font-weight: 400;
   color: #364153;
@@ -290,12 +296,23 @@
   }
 }
 .hero .hero-container .hero-grid .hero-text .button-wrapper {
-  margin-top: 8rem;
+  margin-top: 2rem;
+}
+@media (min-width: 64rem) {
+  .hero .hero-container .hero-grid .hero-text .button-wrapper {
+    margin-top: 6rem;
+  }
 }
 .hero .hero-container .hero-grid .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: none;
+}
+@media (min-width: 64rem) {
+  .hero .hero-container .hero-grid .hero-image {
+    display: block;
+  }
 }
 .hero .social-box {
   position: absolute;
