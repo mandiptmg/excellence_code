@@ -4,7 +4,7 @@
 // Contact Container
 .contact-container {
   width: 90vw;
-  padding: 8rem 0;
+  padding: 5rem 0;
   margin: 0 auto;
 
   @include responsive(lg) {
@@ -13,29 +13,26 @@
 }
 
 .contact-title {
-  font-size: 1.875rem;
+  font-size: 2rem;
   text-transform: capitalize;
-  @include text-bold;
-  color: #000;
+  @include text-semibold;
+  color: $color-secondary;
   margin-bottom: 1.75rem;
 
-  @include responsive(xl) {
-    font-size: 3rem;
-  }
+  
 }
 
 // Contact Form
 .contact-form {
   width: 100%;
   margin: 0 auto;
-  margin-top: 1.75rem;
   gap: 1rem;
-  padding: 1.75rem;
+  padding: 1.5rem 0;
 
   @include responsive(lg) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 2.5rem;
+    padding: 2.5rem 0;
   }
 
   @media (max-width: 1023px) {
@@ -54,7 +51,7 @@
 .form-input {
   padding: 0.75rem 1rem;
   border: 1px solid $border-default;
-  border-radius: $border-radius;
+  border-radius: 999px;
   font-size: 1rem;
   background-color: white;
   transition: $transition;

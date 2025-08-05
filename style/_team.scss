@@ -10,23 +10,18 @@
 
   @include responsive(lg) {
     width: 83.46vw;
-  padding: 8rem;
+  padding: 5rem 0;
 
   }
 
   .section-title {
-    font-size: 1;
-    font-weight: 600;
+     font-size: 2rem;
+    @include text-semibold;
     margin-bottom: 2.5rem;
-
-    @include responsive(lg){
-    font-size: 1.875rem;
-    }
   }
 
   .team-swiper {
     position: relative;
-    padding: 20px 0 60px;
     overflow: hidden;
     width: 100%;
   }
