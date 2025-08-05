@@ -1403,8 +1403,7 @@
   transform: rotate(45deg);
   font-size: 1rem;
   border-radius: 9999px;
-  width: 50px;
-  height: 45px;
+  padding: 0.8rem;
   display: grid;
   place-items: center;
   border: 1px solid transparent;
