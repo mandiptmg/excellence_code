@@ -111,68 +111,130 @@
   }
 }
 
-/* Mobile Menu Styles */
+/* Mobile Menu */
 .mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 75%;
+  width: 80%;
+  max-width: 320px;
   height: 100%;
-  background-color: #fff;
-  opacity: 0.95;
+  background-color: #ffffff;
+  opacity: 0.98;
   transition: $transition-slow;
-  z-index: 9900;
-  padding: 20px;
+  z-index: 9990;
+  padding: 1.5rem;
   box-shadow: $shadow-lg;
-}
+  overflow-y: auto;
 
-.mobile-menu.active {
-  right: 0;
-}
+  &.active {
+    right: 0;
+  }
 
-/* Close button */
-.close-btn {
-  background: $color-error;
-  border: 1px solid transparent;
-  color: white;
-  border-radius: 9999px;
-  font-size: 24px;
-  cursor: pointer;
-  float: right;
-  padding: 10px;
-  margin-bottom: 30px;
-  transition: $transition;
-}
+  ul {
+    list-style: none;
+    padding: 2rem 0 1rem;
+    margin-top: 4rem;
 
-.close-btn:hover {
-  color: $color-error;
-  transform: scale(1.1);
-  background-color: white;
-  border-color: $color-error;
-}
+    li {
+      margin-bottom: 1rem;
+    }
 
-/* Menu list */
-.mobile-menu ul {
-  list-style: none;
-  clear: both;
-  padding-top: 40px;
-}
+    a {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 6px;
+      font-size: 1.125rem;
+      color: $color-secondary;
+      text-transform: capitalize;
+      @include text-semibold;
+      transition: $transition;
 
-.mobile-menu li {
-  margin: 20px 0;
-}
+      &:hover,
+      &:focus {
+        background-color: $color-primary;
+        color: #ffffff;
+        outline: none;
+      }
+    }
+  }
 
-.mobile-menu a {
-  color: $color-secondary;
-  font-size: 18px;
-  display: block;
-  padding: 15px 20px;
-  @include text-semibold;
-  border-radius: 5px;
-  transition: $transition;
-  text-transform: capitalize;
-  &:hover {
-    background-color: $color-primary;
-    color: white;
+  hr {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #e5e7eb;
   }
 }
+
+/* Close Button */
+.close-btn {
+  background-color: $color-error;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  float: right;
+  transition: $transition;
+
+  &:hover {
+    background-color: white;
+    color: $color-error;
+    border: 1px solid $color-error;
+    transform: scale(1.1);
+  }
+}
+
+// mobile screen 
+.mobile-social {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .icon {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    color: black;
+    background-color: #f3f4f6; // subtle light gray
+    border-radius: 0.75rem; // rounded corners
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+
+    i {
+      font-size: 1.5rem;
+    }
+
+    span {
+      font-size: 1rem;
+      text-transform: capitalize;
+      @include text-semibold;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: #e5e7eb; // slightly darker on hover
+    }
+
+    &.whatsapp:hover {
+      color: $color-success;
+    }
+
+    &.facebook:hover {
+      color: #3b82f6;
+    }
+
+    &.twitter:hover {
+      color: #0ea5e9;
+    }
+
+    &.instagram:hover {
+      color: #ec4899;
+    }
+  }
+}
+

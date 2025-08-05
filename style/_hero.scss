@@ -3,14 +3,14 @@
 
 .hero {
   position: relative;
-  min-height: 100vh;
   padding-top: 5rem;
+  min-height: 65vh;
   background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
 
-
   @include responsive(lg) {
     background-position: right;
+    min-height: 100vh;
   }
 
   .hero-container {
@@ -83,15 +83,20 @@
 
   .social-box {
     position: absolute;
+
     bottom: $spacing-lg;
     right: $spacing-sm;
+    display: none;
 
-    @media (min-width: 768px) {
+    @include responsive(lg) {
+      display: inline-flex;
+    }
+
+    @include responsive(md) {
       bottom: $spacing-2xl;
       right: $spacing-2xl;
     }
 
-    display: flex;
     gap: $spacing-sm;
     background-color: rgba(255, 255, 255, 0.5);
     padding: $spacing-sm $spacing-md;
