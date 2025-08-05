@@ -114,7 +114,7 @@
         cursor: pointer;
 
         .vas-service-title {
-          font-size: 0.773rem;
+          font-size: 1rem;
           @include text-medium;
           margin-bottom: 2rem;
           margin-top: 0;
@@ -137,7 +137,11 @@
             padding: 12px 35px;
             border-radius: 9999px;
             text-transform: capitalize;
-            font-weight: 500;
+            @include text-medium;
+            font-size: 0.8rem;
+            @include responsive(lg) {
+              font-size: 1rem;
+            } 
             text-decoration: none;
             transition: all 0.3s ease;
             cursor: pointer;
@@ -153,6 +157,7 @@
             color: white;
             font-weight: bold;
             font-size: 1.5rem;
+            
             border-radius: 9999px;
             width: 45px;
             height: 45px;
@@ -189,6 +194,12 @@
           color: $color-secondary;
           margin-bottom: 1.4rem;
           line-height: 1.2rem;
+          font-size: 0.85rem;
+
+          @include responsive(lg) {
+            font-size: 1rem;
+          }
+          
         }
       }
     }
