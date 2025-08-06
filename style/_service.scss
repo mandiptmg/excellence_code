@@ -5,7 +5,7 @@
   width: 90vw;
   margin: auto;
   padding: 5rem 0;
-  @include grid-center;
+  display: grid;
 
   @include responsive(lg) {
     width: 83.46vw;
@@ -31,6 +31,7 @@
 
   .vas-grid {
     display: grid;
+
     gap: 5rem;
 
     @include responsive(lg) {
