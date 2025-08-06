@@ -20,21 +20,26 @@
   }
 
   .intro-text .subtitle {
-    font-size: 0.90rem;
+    font-size: 0.8rem;
     @include text-medium;
     letter-spacing: -0.06em;
     color: $color-text-muted;
+
+    @include responsive(md) {
+      font-size: 0.9rem;
+    }
   }
 
   .intro-text .title {
-    font-size: 2rem;
     @include text-semibold;
 
     line-height: 1.25;
-
-    
+    font-size: 1.75rem;
+    @include responsive(md) {
+      font-size: $spacing-md;
+    }
   }
-  
+
   .description {
     display: grid;
     place-self: end;
@@ -44,7 +49,7 @@
       max-width: 485px;
     }
     p {
-      font-size:0.90rem;
+      font-size: 0.9rem;
 
       color: $color-text-base; /* text-color */
       margin-bottom: 16px;

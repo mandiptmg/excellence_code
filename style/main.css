@@ -414,8 +414,8 @@
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .vas-section .vas-grid .vas-subheading {
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 1.3rem;
+  font-weight: 500;
   margin-bottom: 1.5rem;
   color: #111827;
 }
@@ -570,15 +570,25 @@
   }
 }
 .portfolio-section .intro-text .subtitle {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   letter-spacing: -0.06em;
   color: #6b7280;
 }
+@media (min-width: 48rem) {
+  .portfolio-section .intro-text .subtitle {
+    font-size: 0.9rem;
+  }
+}
 .portfolio-section .intro-text .title {
-  font-size: 2rem;
   font-weight: 500;
   line-height: 1.25;
+  font-size: 1.75rem;
+}
+@media (min-width: 48rem) {
+  .portfolio-section .intro-text .title {
+    font-size: 2rem;
+  }
 }
 .portfolio-section .description {
   display: grid;
@@ -774,19 +784,24 @@
 }
 
 .header-content h3 {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #6b7280;
   letter-spacing: -0.03em;
+}
+@media (min-width: 48rem) {
+  .header-content h3 {
+    font-size: 0.9rem;
+  }
 }
 
 .header-content h2 {
   line-height: 1.2;
   color: #111827;
   margin-bottom: 2.5rem;
-  font-size: 1.875rem;
   font-weight: 500;
   line-height: 1.25;
+  font-size: 1.75rem;
 }
 @media (min-width: 64rem) {
   .header-content h2 {
@@ -795,7 +810,7 @@
 }
 @media (min-width: 48rem) {
   .header-content h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 }
 
@@ -1049,8 +1064,13 @@
 }
 .why-choose-us .heading h2 {
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 1.85rem;
   color: #fff;
+}
+@media (min-width: 48rem) {
+  .why-choose-us .heading h2 {
+    font-size: 2.2rem;
+  }
 }
 .why-choose-us .feature-grid {
   display: grid;
@@ -1091,17 +1111,22 @@
   width: 90vw;
   margin: 0 auto;
   text-align: center;
+  padding: 5rem 0;
 }
 @media (min-width: 64rem) {
   .team-section {
     width: 83.46vw;
-    padding: 5rem 0;
   }
 }
 .team-section .section-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
   margin-bottom: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .team-section .section-title {
+    font-size: 2rem;
+  }
 }
 .team-section .team-swiper {
   position: relative;
@@ -1205,11 +1230,16 @@
 }
 
 .contact-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   text-transform: capitalize;
   font-weight: 500;
   color: #111827;
   margin-bottom: 1.75rem;
+}
+@media (min-width: 48rem) {
+  .contact-title {
+    font-size: 2rem;
+  }
 }
 
 .contact-form {
@@ -1301,7 +1331,7 @@
   background-color: white;
   border: 1px solid #d1d5db;
   border-right: none;
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 9999px 0 0 9999px;
   font-size: 0.875rem;
   white-space: nowrap;
 }
@@ -1319,7 +1349,7 @@
   padding: 0.75rem 1rem;
   background-color: white;
   border: 1px solid #d1d5db;
-  border-radius: 0 1rem 1rem 0;
+  border-radius: 0 9999px 9999px 0;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1452,14 +1482,24 @@
   margin-bottom: 1.5rem;
 }
 .testimonial-section .testimonial-header .testimonial-left .subheading {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 400;
   color: #374151;
 }
+@media (min-width: 48rem) {
+  .testimonial-section .testimonial-header .testimonial-left .subheading {
+    font-size: 0.9rem;
+  }
+}
 .testimonial-section .testimonial-header .testimonial-left .main-heading {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 500;
   line-height: 1.25;
+}
+@media (min-width: 48rem) {
+  .testimonial-section .testimonial-header .testimonial-left .main-heading {
+    font-size: 2rem;
+  }
 }
 .testimonial-section .testimonial-container {
   position: relative;

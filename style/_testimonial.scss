@@ -21,13 +21,19 @@
       margin-bottom: 1.5rem;
 
       .subheading {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+        @include responsive(md) {
+          font-size: 0.9rem;
+        }
         @include text-medium;
         color: $color-text-base;
       }
 
       .main-heading {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        @include responsive(md) {
+          font-size: $spacing-md;
+        }
         @include text-semibold;
         line-height: 1.25;
       }
