@@ -2,19 +2,21 @@
 @use "variables" as *;
 
 .vas-section {
-  width: 90vw;
   margin: auto;
   padding: 3.5rem 0;
   display: grid;
 
+  width: 90vw;
+  max-width: 1440px;
+
   @include responsive(lg) {
     width: 83.46vw;
+    max-width: 1280px;
   }
-
   .vas-heading {
     font-size: 1.2rem;
 
-    @include text-semibold;
+    @include text-medium;
     text-align: left;
     line-height: 1.2;
     margin-bottom: 3rem;

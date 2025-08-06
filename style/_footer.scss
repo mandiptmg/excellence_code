@@ -7,13 +7,15 @@
   color: white;
 
   .footer-container {
-    width: 90vw;
     margin: 2rem auto 0;
     position: relative;
     padding: 1rem;
+    width: 90vw;
+    max-width: 1440px;
 
     @include responsive(lg) {
       width: 83.46vw;
+      max-width: 1280px;
     }
 
     .footer-top {
@@ -105,8 +107,6 @@
       a {
         color: inherit;
         text-decoration: none;
-
-       
       }
     }
   }

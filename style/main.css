@@ -4,17 +4,19 @@
   top: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 90vw;
   background-color: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid #e5e7eb;
   border-radius: 2rem;
   z-index: 50;
   color: #111827;
   transition: all 0.3s ease;
+  width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .navbar {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 .navbar.scrolled {
@@ -236,10 +238,12 @@
 }
 .hero .hero-container {
   width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .hero .hero-container {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 .hero .hero-container .hero-grid {
@@ -316,7 +320,7 @@
 }
 .hero .social-box {
   position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
   right: 1rem;
   display: none;
   gap: 1rem;
@@ -363,19 +367,21 @@
 }
 
 .vas-section {
-  width: 90vw;
   margin: auto;
   padding: 3.5rem 0;
   display: grid;
+  width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .vas-section {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 .vas-section .vas-heading {
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 400;
   text-align: left;
   line-height: 1.2;
   margin-bottom: 3rem;
@@ -553,15 +559,17 @@
 }
 
 .portfolio-section {
-  width: 90vw;
   margin: 0 auto;
   padding: 3.5rem 0;
+  width: 90vw;
+  max-width: 1440px;
   /* Projects grid */
   /* Individual project card */
 }
 @media (min-width: 64rem) {
   .portfolio-section {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 .portfolio-section .portfolio-header {
@@ -776,16 +784,18 @@
 
 /* Timeline Section */
 .timeline-section {
-  width: 90vw;
   margin: 0 auto;
   padding: 3.5rem 0;
   position: relative;
   background-color: white;
   border-radius: 24px;
+  width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .timeline-section {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 
@@ -1090,12 +1100,14 @@
   padding: 3.5rem 0;
 }
 .why-choose-us .why-us-container {
-  width: 90vw;
   margin: 0 auto;
+  width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .why-choose-us .why-us-container {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 .why-choose-us .heading h2 {
@@ -1155,14 +1167,16 @@
 }
 
 .team-section {
-  width: 90vw;
   margin: 0 auto;
   text-align: center;
   padding: 3.5rem 0;
+  width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .team-section {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 .team-section .section-title {
@@ -1218,9 +1232,17 @@
   top: 0.5rem;
   right: 0.5rem;
   background: #d1d5db;
-  padding: 0.75rem;
+  padding: 1.3rem;
   border-radius: 9999px;
   transition: all 0.3s ease;
+}
+.team-section .linkedin-icon .border {
+  border: 2px solid #111827;
+  border-radius: 2px;
+  padding: 0.2rem;
+}
+.team-section .linkedin-icon .border:hover {
+  border-color: #fff;
 }
 .team-section .swiper-slide:hover .linkedin-icon {
   background: #fb923c;
@@ -1266,13 +1288,15 @@
 }
 
 .contact-container {
-  width: 90vw;
   padding: 3.5rem 0;
   margin: 0 auto;
+  width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .contact-container {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 
@@ -1507,15 +1531,17 @@
 }
 
 .testimonial-section {
-  width: 90vw;
   margin: 0 auto;
   text-align: center;
   position: relative;
   padding: 3.5rem 0;
+  width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .testimonial-section {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 .testimonial-section .testimonial-header {
@@ -1654,14 +1680,16 @@
   color: white;
 }
 .footer .footer-container {
-  width: 90vw;
   margin: 2rem auto 0;
   position: relative;
   padding: 1rem;
+  width: 90vw;
+  max-width: 1440px;
 }
 @media (min-width: 64rem) {
   .footer .footer-container {
     width: 83.46vw;
+    max-width: 1280px;
   }
 }
 .footer .footer-container .footer-top {

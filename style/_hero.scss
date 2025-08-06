@@ -17,11 +17,14 @@
   }
 
   .hero-container {
-    width: 90vw;
+ 
+  width: 90vw;
+  max-width: 1440px;
 
-    @include responsive(lg) {
-      width: 83.46vw;
-    }
+  @include responsive(lg) {
+    width: 83.46vw;
+    max-width: 1280px;
+  }
 
     .hero-grid {
       display: flex;
@@ -95,7 +98,7 @@
   .social-box {
     position: absolute;
 
-    bottom: $spacing-sm;
+    bottom: $spacing-xs;
     right: $spacing-sm;
     display: none;
 

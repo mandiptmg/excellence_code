@@ -3,15 +3,17 @@
 
 // team section
 .team-section {
-  width: 90vw;
   margin: 0 auto;
   text-align: center;
   padding: 3.5rem 0;
 
+  width: 90vw;
+  max-width: 1440px;
+
   @include responsive(lg) {
     width: 83.46vw;
+    max-width: 1280px;
   }
-
   .section-title {
     font-size: 1.75rem;
     @include responsive(md) {
@@ -71,9 +73,20 @@
     top: 0.5rem;
     right: 0.5rem;
     background: #d1d5db;
-    padding: 0.75rem;
+    padding: 1.3rem;
+
     border-radius: 9999px;
     transition: all 0.3s ease;
+
+    .border {
+      border: 2px solid $color-secondary;
+      border-radius: 2px;
+      padding: 0.2rem;
+
+      &:hover {
+        border-color: #fff; ;
+      }
+    }
   }
 
   .swiper-slide:hover .linkedin-icon {
@@ -84,6 +97,8 @@
   .linkedin-icon i {
     color: #374151;
     font-size: 1.25rem;
+
+    
   }
 
   .swiper-slide:hover .linkedin-icon i {
