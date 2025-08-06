@@ -3,13 +3,16 @@
 
 .hero {
   position: relative;
-  padding-top: 4rem;
-  min-height: 65vh;
+  padding-top: 5rem;
+
   background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
+  min-height: 728px;
 
   @include responsive(lg) {
     background-position: right;
+  }
+  @include responsive(2xl) {
     min-height: 100vh;
   }
 
