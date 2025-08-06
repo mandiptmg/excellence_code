@@ -206,7 +206,7 @@
   transition: all 0.3s ease;
 }
 .social-icons .icon.twitter:hover {
-  color: #0ea5e9;
+  color: #111827;
   scale: 1.1;
   transition: all 0.3s ease;
 }
@@ -348,7 +348,7 @@
   transition: all 0.3s ease;
 }
 .hero .social-box .icon.twitter:hover {
-  color: #0ea5e9;
+  color: #111827;
   scale: 1.1;
   transition: all 0.3s ease;
 }
@@ -1630,7 +1630,7 @@
 }
 .footer .footer-container .footer-top .social-icons a {
   color: white;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in;
 }
 .footer .footer-container .footer-top .social-icons a.whatsapp:hover {
   color: #22c55e;
@@ -1639,7 +1639,9 @@
   color: #3b82f6;
 }
 .footer .footer-container .footer-top .social-icons a.twitter:hover {
-  color: #0ea5e9;
+  color: #111827;
+  background: aliceblue;
+  border-radius: 999px;
 }
 .footer .footer-container .footer-top .social-icons a.instagram:hover {
   color: #ec4899;
