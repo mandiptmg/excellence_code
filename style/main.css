@@ -674,12 +674,17 @@
   border-radius: 16px 16px 0 0;
   overflow: hidden;
   cursor: pointer;
-  max-width: 320px;
+  width: 100%;
   transition: box-shadow 0.5s ease;
   display: flex;
   flex-direction: column;
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
+}
+@media (min-width: 48rem) {
+  .portfolio-section .project-card {
+    max-width: 320px;
+  }
 }
 .portfolio-section .project-card:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -770,7 +775,7 @@
 
 .container {
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 /* Header Section */
@@ -1465,7 +1470,7 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
-  padding: 4rem 1rem;
+  padding: 4rem 0;
 }
 @media (min-width: 64rem) {
   .testimonial-section {

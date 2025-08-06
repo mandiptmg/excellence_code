@@ -127,7 +127,11 @@
     border-radius: 16px 16px 0 0;
     overflow: hidden;
     cursor: pointer;
-    max-width: 320px;
+    width: 100%;
+    @include responsive(md) {
+         max-width: 320px;
+
+    }
     transition: box-shadow 0.5s ease;
     display: flex;
     flex-direction: column;
