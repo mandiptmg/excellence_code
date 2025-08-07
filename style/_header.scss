@@ -7,7 +7,7 @@
   top: 2.5rem;
   left: 50%;
   transform: translateX(-50%);
- 
+
   background-color: rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid #e5e7eb;
   border-radius: 2rem;
@@ -16,11 +16,10 @@
   transition: $transition;
 
   width: 90vw;
-  max-width: 1440px;
 
   @include responsive(lg) {
     width: 83.46vw;
-    max-width: 1280px;
+    max-width: 1366px;
   }
 
   &.scrolled {
