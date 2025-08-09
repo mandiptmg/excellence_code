@@ -5,29 +5,33 @@
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #d1d5db;
   border-radius: 2rem;
   z-index: 50;
   color: #111827;
-  transition: all 0.3s ease;
-  width: 90vw;
-}
-@media (min-width: 64rem) {
-  .navbar {
-    width: 83.46vw;
-    max-width: 1366px;
-  }
+  transition: all 0.5s ease;
+  width: auto;
 }
 .navbar.scrolled {
   background-color: white;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  top: 0;
+  border-radius: 0;
+  width: 100vw;
 }
 .navbar .navbar-container {
+  width: 90vw;
+  margin-inline: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 5rem;
   padding-inline: 1.25rem;
+}
+@media (min-width: 64rem) {
+  .navbar .navbar-container {
+    max-width: 1366px;
+  }
 }
 .navbar .logo-link {
   display: flex;
@@ -646,7 +650,7 @@
   margin-top: 5rem;
   display: grid;
   place-items: center;
-  gap: 1.5rem;
+  gap: 2.2rem;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 @media (min-width: 48rem) {
@@ -673,7 +677,7 @@
 }
 @media (min-width: 48rem) {
   .portfolio-section .project-card {
-    max-width: 320px;
+    max-width: 715px;
   }
 }
 .portfolio-section .project-card:hover {
@@ -690,7 +694,7 @@
 }
 @media (min-width: 64rem) {
   .portfolio-section .project-image {
-    height: 24rem;
+    max-height: 432px;
   }
 }
 .portfolio-section .project-card:hover .project-image {

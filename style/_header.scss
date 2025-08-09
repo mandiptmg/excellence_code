@@ -9,25 +9,28 @@
   transform: translateX(-50%);
 
   background-color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid $border-default;
   border-radius: 2rem;
   z-index: 50;
   color: $color-secondary;
-  transition: $transition;
+  transition: $transition-slow;
 
-  width: 90vw;
-
-  @include responsive(lg) {
-    width: 83.46vw;
-    max-width: 1366px;
-  }
+  width: auto;
 
   &.scrolled {
     background-color: white;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    top: 0;
+    border-radius: 0;
+    width: 100vw;
   }
 
   .navbar-container {
+    width: 90vw;
+    margin-inline: auto;
+    @include responsive(lg) {
+      max-width: 1366px;
+    }
     @include flex-center;
     justify-content: space-between;
     height: 5rem;
