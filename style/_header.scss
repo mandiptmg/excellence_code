@@ -218,6 +218,7 @@
         color: $color-secondary;
         text-transform: capitalize;
         @include text-semibold;
+        cursor: pointer;
         text-decoration: none;
         transition: $transition-slow;
 
