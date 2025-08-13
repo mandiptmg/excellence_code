@@ -216,10 +216,16 @@
 
 // contact-info
 .contact-info {
-  background-color: #f7faff;
+  background: radial-gradient(
+    at center bottom,
+    $color-text-muted,
+    rgb(243, 244, 246),
+    $color-text-muted
+  );
   border-radius: 2rem;
   padding: 1.5rem 2rem;
   margin-bottom: 2rem;
+
 
   p {
     @include text-semibold;

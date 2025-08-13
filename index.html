@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Excellence Code</title>
 
+    <!-- favicon  -->
+      <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+
     <!-- Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -707,6 +710,29 @@
     <!-- footer section -->
     <footer class="footer">
       <div class="footer-container">
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+          <div class="newsletter-container">
+            <div class="newsletter-text">
+              <h2>SUBSCRIBE TO OUR NEWSLETTER!</h2>
+              <p>Get notified about news, webinars, & more</p>
+            </div>
+            <form class="newsletter-form" action="#" method="post">
+              <div class="input-wrapper">
+                <span class="icon">
+                  <img src="./assets/contactIcon/gmail.png" alt="Email icon" />
+                </span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email address"
+                  required
+                />
+              </div>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </section>
         <div class="footer-top">
           <!-- Logo -->
           <a href="/" class="footer-logo">
@@ -767,20 +793,6 @@
             <li><a href="#about">service</a></li>
             <li><a href="#contact">contact</a></li>
           </ul>
-
-          <!-- Newsletter Signup -->
-          <div class="newsletter">
-            <h4>Stay Updated with Our Latest Insights</h4>
-            <form action="#" method="post" class="newsletter-form">
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter your email"
-                required
-              />
-              <button type="submit">Subscribe</button>
-            </form>
-          </div>
         </div>
 
         <hr class="footer-divider" />
