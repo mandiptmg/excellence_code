@@ -1524,7 +1524,7 @@
   border-color: #ff7f50;
 }
 .textarea-input::placeholder {
-  color: #000;
+  color: #111827;
 }
 
 @media (min-width: 64rem) {
