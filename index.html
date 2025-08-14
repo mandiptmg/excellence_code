@@ -6,7 +6,7 @@
     <title>Excellence Code</title>
 
     <!-- favicon  -->
-      <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
 
     <!-- Font Awesome CDN -->
     <link
@@ -24,8 +24,7 @@
     />
 
     <!-- aos animate  -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="./style/main.css" />
@@ -34,51 +33,53 @@
     <!-- Navbar -->
     <nav class="navbar">
       <div class="navbar-container">
-          <a href="/" class="logo-link">
-                <img src="./assets/logo-black.png" alt="Company Logo" /> <span class="logo_text">Excellence
-                    Code</span>
-            </a>
-
-        <ul class="nav-links">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li class="dropdown">
-            <span
-              class="dropbtn"
-              aria-expanded="false"
-              aria-controls="servicesSubmenu"
-              id="servicesBtn"
-              >Services</span
-            >
-            <ul class="dropdown-content">
-              <li>
-                <a href="#website-design-and-development"
-                  >Website Design and Development</a
-                >
-              </li>
-              <li><a href="#creative-design">Creative Design Services</a></li>
-              <li>
-                <a href="#digital-marketing"
-                  >Digital Marketing and Social Media Management</a
-                >
-              </li>
-              <li>
-                <a href="#events-organising"
-                  >Events and Conferences Organising</a
-                >
-              </li>
-              <li>
-                <a href="#analytics">Analytics and Performance Optimization</a>
-              </li>
-              <li><a href="#email-hosting">Email & Hosting Services</a></li>
-            </ul>
-          </li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+        <a href="/" class="logo-link">
+          <img src="./assets/logo-black.png" alt="Company Logo" />
+          <span class="logo_text">Excellence Code</span>
+        </a>
 
         <div class="nav-controls">
-          <a href="#" class="consult-btn">Get a Free Consultation</a>
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#work">Works</a></li>
+            <li><a href="#code">code</a></li>
+
+            <li class="dropdown">
+              <span
+                class="dropbtn"
+                aria-expanded="false"
+                aria-controls="servicesSubmenu"
+                id="servicesBtn"
+                >Services</span
+              >
+              <ul class="dropdown-content">
+                <li>
+                  <a href="#website-design-and-development"
+                    >Website Design and Development</a
+                  >
+                </li>
+                <li><a href="#creative-design">Creative Design Services</a></li>
+                <li>
+                  <a href="#digital-marketing"
+                    >Digital Marketing and Social Media Management</a
+                  >
+                </li>
+                <li>
+                  <a href="#events-organising"
+                    >Events and Conferences Organising</a
+                  >
+                </li>
+                <li>
+                  <a href="#analytics"
+                    >Analytics and Performance Optimization</a
+                  >
+                </li>
+                <li><a href="#email-hosting">Email & Hosting Services</a></li>
+              </ul>
+            </li>
+            <li><a href="#process">process</a></li>
+          </ul>
+
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
             <img src="./assets/bars.png" alt="meanu icon" class="icon-menu" />
           </button>
@@ -99,13 +100,13 @@
 
       <ul class="nav-menu">
         <li>
-          <a href="#hero">
+          <a href="#home">
             <img
               src="./assets/menuIcon/home.png"
               alt="Home Icon"
               class="menu-icon"
             />
-            Home
+            home
           </a>
         </li>
         <li>
@@ -116,6 +117,26 @@
               class="menu-icon"
             />
             About
+          </a>
+        </li>
+        <li>
+          <a href="#work">
+            <img
+              src="./assets/menuIcon/work.png"
+              alt="work Icon"
+              class="menu-icon"
+            />
+            work
+          </a>
+        </li>
+        <li>
+          <a href="#code">
+            <img
+              src="./assets/menuIcon/code.png"
+              alt="code Icon"
+              class="menu-icon"
+            />
+            code
           </a>
         </li>
         <li class="accordion-item">
@@ -166,32 +187,18 @@
         </li>
 
         <li>
-          <a href="#portfolio">
+          <a href="#process">
             <img
-              src="./assets/menuIcon/portfolio.png"
-              alt="Portfolio Icon"
+              src="./assets/menuIcon/process.png"
+              alt="process Icon"
               class="menu-icon"
             />
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            <img
-              src="./assets/menuIcon/contact.png"
-              alt="Contact Icon"
-              class="menu-icon"
-            />
-            Contact
+            process
           </a>
         </li>
       </ul>
 
       <hr />
-      <!-- Consultation Button -->
-      <button class="consultation-btn">
-        <a href="#" class="consult-btn">Get a Free Consultation</a>
-      </button>
 
       <!-- Social Icons -->
       <div
@@ -240,15 +247,23 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-      <img src="./assets/Layer.png" alt="layer image" class="img-layer" />
-
-      <!-- if you want to use a video background, then change the font color to white -->
-      <!-- <video autoplay muted loop playsinline>
-        <source src="assets/video/video.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video> -->
+      <!-- <img src="./assets/Layer.png" alt="layer image" class="img-layer" /> -->
 
       <div class="hero-container">
+        <div class="hero_header">
+          <div>
+            <p class="">
+              We Offer web development and web design internet
+              advertising-commerce consulting and search engine marketing
+            </p>
+            <button>Discover More</button>
+          </div>
+          <div class="">
+            <h1 class="header_title">
+              EMPOWERING BRANDS <span>SINCE 2012</span>
+            </h1>
+          </div>
+        </div>
         <div class="hero-grid">
           <!-- left -->
           <div data-aos="fade-up" class="hero-text">
@@ -319,47 +334,30 @@
       </div>
     </section>
 
-    <!-- //services section -->
+    <!-- //about section -->
     <section id="about" class="vas-section">
-      <p data-aos="fade-up" class="vas-heading">
-        We exist to redefine marketing by combining creativity, strategy, and
-        technology to build brands that stand out and succeed
-      </p>
+      <div class="about-header">
+        <h2 class="title" data-aos="fade-up">
+          development <br />
+          services
+        </h2>
+        <div class="right-side">
+          <p class="description" data-aos="fade-up">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            delectus harum laudantium, libero vitae molestias ullam <br /><br />
+            ipsum voluptatem repellat modi quisquam iste, cum laboriosam quod
+            ducimus! Eligendi repellendus natus doloremque.
+          </p>
+        </div>
+      </div>
 
       <div class="vas-grid">
         <!-- LEFT: Key Values -->
         <div
           data-aos="fade-up"
           class="vas-left"
-          style="background-image: url('./assets/Layer2.png')"
         >
-          <h3 class="vas-subheading">Key Values</h3>
-          <div class="vas-values">
-            <div class="vas-value-item">
-              <span class="vas-icon">
-                <img src="./assets/serviceIcon/icon1.png" alt="Data-Driven" />
-              </span>
-              <p class="vas-value-title">Data-Driven</p>
-            </div>
-            <div class="vas-value-item">
-              <span class="vas-icon">
-                <img
-                  src="./assets/serviceIcon/icon2.png"
-                  alt="Creative Excellence"
-                />
-              </span>
-              <p class="vas-value-title">Creative Excellence</p>
-            </div>
-            <div class="vas-value-item">
-              <span class="vas-icon">
-                <img
-                  src="./assets/serviceIcon/icon3.png"
-                  alt="Innovative Solutions"
-                />
-              </span>
-              <p class="vas-value-title">Client-Centric</p>
-            </div>
-          </div>
+        <img src="./assets/Layer2.jpg" alt="layer 2" class="about_image">
         </div>
 
         <!-- RIGHT: Services -->
@@ -373,36 +371,35 @@
 
     <!-- portfolio section -->
     <section id="portfolio" class="portfolio-section">
-      <div class="portfolio-container">
-        <!-- Header -->
-        <div class="portfolio-header">
-          <div class="intro-text" data-aos="fade-up">
-            <p class="subtitle">See our Portfolio Reels</p>
-            <h2 class="title">
-              Stunning <br />
-              Works
-            </h2>
-          </div>
+      <!-- Header -->
+      <div class="portfolio-header">
+        <h2 class="title" data-aos="fade-up">
+          CORE SERVICES <br />
+          SNAPSHOT
+        </h2>
 
+        <div class="right-side">
           <div class="description" data-aos="fade-up">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
-              ipsum suspendisse ultrices gravida.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              delectus harum laudantium, libero vitae molestias ullam ipsum
+              voluptatem repellat modi quisquam iste, cum laboriosam quod
+              ducimus! Eligendi repellendus natus doloremque.
             </p>
 
             <div class="read-more-group">
-              <a href="#" class="read-more-btn">Read More</a>
-              <span class="icon-wrapper">
-                <img src="./assets/arrow45.png" alt="Arrow Icon" />
-              </span>
+              <a href="#" class="read-more-btn">Discover More</a>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- Projects Grid -->
-        <div class="projects-grid" id="portfolioGrid">
-          <!-- Projects will be injected by JS -->
+      <!-- Projects Grid -->
+      <div class="portfolio-container">
+        <div class="swiper portfolio-swiper">
+          <div class="swiper-wrapper" id="portfolioSwiperWrapper">
+            <!-- Slides injected via JS -->
+          </div>
         </div>
       </div>
     </section>
@@ -411,9 +408,8 @@
     <section id="testimonial" class="testimonial-section">
       <div class="testimonial-header">
         <div class="testimonial-left">
-          <p data-aos="fade-up" class="subheading">See from our clients</p>
           <h2 data-aos="fade-up" class="main-heading">
-            What Our <br />
+            What valuable <br />
             Clients Says
           </h2>
         </div>
@@ -423,20 +419,6 @@
           <div class="swiper-wrapper" id="testimonialSwiperWrapper">
             <!-- Slides injected via JS -->
           </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="swiper-nav">
-          <button id="PrevBtn" class="swiper-btn">
-            <img
-              src="./assets/arrow.png"
-              alt="Previous"
-              class="icon-arrow icon-arrow-left"
-            />
-          </button>
-          <button id="NextBtn" class="swiper-btn">
-            <img src="./assets/arrow.png" alt="Next" class="icon-arrow" />
-          </button>
         </div>
       </div>
     </section>
@@ -524,113 +506,169 @@
     </section>
 
     <!-- contact section  -->
-  <section id="contact" class="contact-container">
-        <h1 data-aos="fade-up" class="contact-title">Let's work together!</h1>
+    <section id="contact" class="contact-container">
+      <h1 data-aos="fade-up" class="contact-title">Let's work together!</h1>
 
-        <div class="success-message" id="successMessage">
-            <p>Thank you! Your message has been sent successfully.</p>
+      <div class="success-message" id="successMessage">
+        <p>Thank you! Your message has been sent successfully.</p>
+      </div>
+
+      <!-- contact form -->
+      <form data-aos="fade-up" class="contact__form" id="contactForm">
+        <div class="contact__group">
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter your name"
+            class="contact__input"
+          />
         </div>
 
-        <!-- contact form -->
-        <form data-aos="fade-up" class="contact__form" id="contactForm">
-
-            <div class="contact__group">
-                <input type="text" name="name" placeholder="Enter your name" class="contact__input" />
-            </div>
-
-            <div class="contact__group">
-                <input type="email" name="email" placeholder="Enter your Email" class="contact__input" />
-            </div>
-
-            <div class="contact__group">
-                <input type="tel" name="phone" placeholder="Enter your Phone number" class="contact__input" />
-            </div>
-
-            <div class="contact__group">
-                <div class="contact__select-wrapper">
-                    <label class="contact__select-label">Choose Services</label>
-                    <div class="contact__select-container">
-                        <select name="option" required class="contact__select">
-                            <option value="" disabled selected>Select a service</option>
-                            <option value="website-design">Website Design and Development</option>
-                            <option value="creative-design">Creative Design Services</option>
-                            <option value="digital-marketing">Digital Marketing and Social Media Management</option>
-                            <option value="events-organising">Events and Conferences Organising</option>
-                            <option value="analytics">Analytics and Performance Optimization</option>
-                            <option value="email-hosting">Email & Hosting Services</option>
-                        </select>
-                        <i class="fas fa-chevron-down contact__select-icon"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="contact__group contact__group--full">
-                <textarea placeholder="Enter your Brief" name="message" rows="5" required class="contact__textarea"></textarea>
-            </div>
-
-            <div class="contact__group">
-                <div class="contact__submit-group">
-                    <button type="submit" class="contact__submit-btn">Submit</button>
-                    <span class="contact__submit-icon">
-                        <img src="./assets/arrow45.png" alt="Submit Icon" />
-                    </span>
-                </div>
-            </div>
-
-        </form>
-
-
-        <!-- contact info -->
-        <div class="contact-content">
-            <div class="contact-info" data-aos="fade-up">
-                <p>If you prefer to reach us through other channels, please feel free to do so:</p>
-                <table class="contact-table">
-                    <tbody>
-                        <tr>
-                            <td class="icon-cell"><img src="./assets/contactIcon/mobile.png"
-                                    alt="Phone icon" /></td>
-                            <td class="label-cell"><strong>Phone:</strong></td>
-                            <td class="value-cell">+971552440610</td>
-                        </tr>
-
-                        <tr>
-                            <td class="icon-cell"><img src="./assets/contactIcon/gmail.png"
-                                    alt="Email icon" /></td>
-                            <td class="label-cell"><strong>Email:</strong></td>
-                            <td class="value-cell">info@excellencecode.com</td>
-                        </tr>
-
-                        <tr>
-                            <td class="icon-cell"><img src="./assets/contactIcon/location-pin.png"
-                                    alt="Location icon" /></td>
-                            <td class="label-cell"><strong>Address:</strong></td>
-                            <td class="value-cell">706, Sobha Ivory 2, Alama&apos;al Street, Business Bay, Dubai, UAE
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <hr />
-
-                <p class="social-text">Follow us on social media</p>
-
-                <div class="social-media" aria-label="Social media links">
-                    <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"
-                        aria-label="Facebook">
-                        <img src="./assets/contactIcon/facebook.png" alt="Facebook icon" />
-                    </a>
-                    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"
-                        aria-label="Instagram">
-                        <img src="./assets/contactIcon/instagram.png" alt="Instagram icon" />
-                    </a>
-                </div>
-            </div>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.500892717052!2d55.25751967598935!3d25.186325332139916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f694c700e12f9%3A0x190ce8d857467f06!2sThe%20Exchange%20Tower!5e0!3m2!1sen!2sae!4v1752832595748!5m2!1sen!2sae"
-                    class="map-iframe" allowfullscreen loading="lazy"></iframe>
-            </div>
+        <div class="contact__group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your Email"
+            class="contact__input"
+          />
         </div>
+
+        <div class="contact__group">
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Enter your Phone number"
+            class="contact__input"
+          />
+        </div>
+
+        <div class="contact__group">
+          <div class="contact__select-wrapper">
+            <label class="contact__select-label">Choose Services</label>
+            <div class="contact__select-container">
+              <select name="option" required class="contact__select">
+                <option value="" disabled selected>Select a service</option>
+                <option value="website-design">
+                  Website Design and Development
+                </option>
+                <option value="creative-design">
+                  Creative Design Services
+                </option>
+                <option value="digital-marketing">
+                  Digital Marketing and Social Media Management
+                </option>
+                <option value="events-organising">
+                  Events and Conferences Organising
+                </option>
+                <option value="analytics">
+                  Analytics and Performance Optimization
+                </option>
+                <option value="email-hosting">Email & Hosting Services</option>
+              </select>
+              <i class="fas fa-chevron-down contact__select-icon"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__group contact__group--full">
+          <textarea
+            placeholder="Enter your Brief"
+            name="message"
+            rows="5"
+            required
+            class="contact__textarea"
+          ></textarea>
+        </div>
+
+        <div class="contact__group">
+          <div class="contact__submit-group">
+            <button type="submit" class="contact__submit-btn">Submit</button>
+            <span class="contact__submit-icon">
+              <img src="./assets/arrow45.png" alt="Submit Icon" />
+            </span>
+          </div>
+        </div>
+      </form>
+
+      <!-- contact info -->
+      <div class="contact-content">
+        <div class="contact-info" data-aos="fade-up">
+          <p>
+            If you prefer to reach us through other channels, please feel free
+            to do so:
+          </p>
+          <table class="contact-table">
+            <tbody>
+              <tr>
+                <td class="icon-cell">
+                  <img src="./assets/contactIcon/mobile.png" alt="Phone icon" />
+                </td>
+                <td class="label-cell"><strong>Phone:</strong></td>
+                <td class="value-cell">+971552440610</td>
+              </tr>
+
+              <tr>
+                <td class="icon-cell">
+                  <img src="./assets/contactIcon/gmail.png" alt="Email icon" />
+                </td>
+                <td class="label-cell"><strong>Email:</strong></td>
+                <td class="value-cell">info@excellencecode.com</td>
+              </tr>
+
+              <tr>
+                <td class="icon-cell">
+                  <img
+                    src="./assets/contactIcon/location-pin.png"
+                    alt="Location icon"
+                  />
+                </td>
+                <td class="label-cell"><strong>Address:</strong></td>
+                <td class="value-cell">
+                  706, Sobha Ivory 2, Alama&apos;al Street, Business Bay, Dubai,
+                  UAE
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <hr />
+
+          <p class="social-text">Follow us on social media</p>
+
+          <div class="social-media" aria-label="Social media links">
+            <a
+              href="https://facebook.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <img
+                src="./assets/contactIcon/facebook.png"
+                alt="Facebook icon"
+              />
+            </a>
+            <a
+              href="https://instagram.com/yourprofile"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <img
+                src="./assets/contactIcon/instagram.png"
+                alt="Instagram icon"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.500892717052!2d55.25751967598935!3d25.186325332139916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f694c700e12f9%3A0x190ce8d857467f06!2sThe%20Exchange%20Tower!5e0!3m2!1sen!2sae!4v1752832595748!5m2!1sen!2sae"
+            class="map-iframe"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
     </section>
 
     <!-- footer section -->
@@ -643,7 +681,12 @@
               <h2>SUBSCRIBE TO OUR NEWSLETTER!</h2>
               <p>Get notified about news, webinars, & more</p>
             </div>
-            <form data-aos="fade-left" class="newsletter-form" action="#" method="post">
+            <form
+              data-aos="fade-left"
+              class="newsletter-form"
+              action="#"
+              method="post"
+            >
               <div class="input-wrapper">
                 <span class="icon">
                   <img src="./assets/contactIcon/gmail.png" alt="Email icon" />
@@ -666,7 +709,8 @@
           </a>
 
           <!-- Social Icons -->
-          <div  data-aos="zoom-in"
+          <div
+            data-aos="zoom-in"
             class="social-icons"
             role="navigation"
             aria-label="Social media links"
@@ -713,7 +757,7 @@
           </div>
 
           <!-- Nav Links -->
-          <ul class="footer-links"  data-aos="zoom-in">
+          <ul class="footer-links" data-aos="zoom-in">
             <li><a href="#hero">home</a></li>
             <li><a href="#about">about</a></li>
             <li><a href="#about">service</a></li>
@@ -747,7 +791,6 @@
 
     <script type="module" src="./js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>

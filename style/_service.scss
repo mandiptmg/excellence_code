@@ -12,93 +12,71 @@
     width: 83.46vw;
     max-width: 1366px;
   }
-  .vas-heading {
-    font-size: 1.2rem;
-
-    @include text-medium;
-    text-align: left;
-    line-height: 1.2;
-    margin-bottom: 3rem;
+  // Header Section
+  .about-header {
+    display: grid;
+    place-items: start;
+    gap: 1rem;
     @include responsive(md) {
-      font-size: 2.25rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
     }
+  }
 
-    @include responsive(lg) {
-      font-size: 3rem;
+  .right-side {
+    display: grid;
+    place-items: end;
+    width: 100%;
+  }
+
+  .title {
+    @include text-semibold;
+    line-height: 1;
+    font-size: 2rem;
+    font-family: $font-bebas;
+    text-transform: uppercase;
+    @include responsive(md) {
+      font-size: $spacing-2xl;
+    }
+  }
+
+  .description {
+    display: grid;
+    place-items: start;
+    text-align: justify;
+    text-justify: inter-word;
+    @include text-medium;
+    @include responsive(md) {
+      max-width: 485px;
+    }
+    p {
+      font-size: 0.9rem;
+
+      color: $color-text-base; /* text-color */
+      margin-bottom: 16px;
+      line-height: 1.5;
     }
   }
 
   .vas-grid {
     display: grid;
+    margin: $spacing-xl 0 ;
 
     gap: 2rem;
 
-    @include responsive(lg) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+    grid-template-columns: 1fr;
 
     .vas-left {
-      background: url("../assets/Layer2.png") no-repeat;
-      background-size: cover;
-      background-position: center;
-      border-radius: 1rem;
-      padding: 2.5rem 2rem;
-      position: relative;
-      color: #333;
-      box-shadow: $shadow-lg;
-      transition: $transition-slow;
+     width: 100%;
+     height: 600px;
 
-      &:hover {
-        box-shadow: $shadow-xl;
-      }
+     .about_image{
+      object-fit: cover;
+      width: 100%;
+      height:100%;
+     }
     }
 
-    .vas-subheading {
-      font-size: 1.3rem;
-      @include text-medium;
-      margin-bottom: 1.5rem;
-      color: $color-secondary;
-
-      @include responsive(md) {
-        font-size: 3rem;
-      }
-    }
-
-    .vas-values {
-      display: flex;
-      flex-direction: column;
-      gap: 0.55rem;
-    }
-
-    .vas-value-item {
-      @include flex-center;
-      gap: 1rem;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 2rem;
-      border-radius: 0.8rem;
-      box-shadow: $shadow-md;
-      transition: $transition-slow;
-      cursor: pointer;
-      &:hover {
-        box-shadow: $shadow-lg;
-        background: rgba(255, 255, 255, 0.9);
-      }
-
-      .vas-value-title {
-        font-size: 1rem;
-        @include text-semibold;
-
-        @include responsive(lg) {
-          font-size: 1.5rem;
-        }
-      }
-
-      img {
-        width: 1.5rem;
-        height: 1.5rem;
-        object-fit: contain;
-      }
-    }
 
     .vas-right {
       .vas-section-list {
@@ -114,7 +92,7 @@
 
         .vas-service-title {
           font-size: 1rem;
-          @include text-medium;
+          @include text-bold;
           margin-bottom: 2rem;
           margin-top: 0;
           color: $color-text-subtle;
@@ -176,12 +154,10 @@
         }
       }
 
-      .vas-service-item.active {
+      .vas-service-item {
         padding: 2.3rem 1.5rem;
-        border: 1px solid $border-default;
-        border-radius: 1rem;
+        border-bottom: 1px solid $border-default;
         background-color: #fff;
-        box-shadow: $shadow-lg;
         transition: $transition-slow;
 
         .vas-service-title {

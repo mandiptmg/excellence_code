@@ -15,6 +15,7 @@
   // Header Section
   .portfolio-header {
     display: grid;
+    place-items: start;
     gap: 1rem;
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
@@ -22,34 +23,30 @@
     }
   }
 
-  .intro-text .subtitle {
-    font-size: 0.8rem;
-    @include text-medium;
-    letter-spacing: -0.06em;
-    color: $color-text-muted;
-
+  .title {
+    @include text-semibold;
+    line-height: 1;
+    font-size: 2rem;
+    font-family: $font-bebas;
+    text-transform: uppercase;
     @include responsive(md) {
-      font-size: 1.2rem;
-      letter-spacing: normal;
+      font-size: $spacing-2xl;
     }
   }
 
-  .intro-text .title {
-    @include text-semibold;
-
-    line-height: 1.25;
-    font-size: 1.75rem;
-    @include responsive(md) {
-      font-size: $spacing-lg;
-    }
+  .right-side {
+    display: grid;
+    place-items: end;
+    width: 100%;
   }
 
   .description {
     display: grid;
-    place-self: end;
+    place-items: start;
+    text-align: justify;
+  text-justify: inter-word;
     @include text-medium;
     @include responsive(md) {
-      margin-top: 1.75;
       max-width: 485px;
     }
     p {
@@ -68,13 +65,14 @@
   }
 
   .read-more-btn {
-    background-color: $bg-gray-lighter;
-    color: $color-secondary;
+    background-color: $color-primary;
+    color: white;
     padding: 12px 35px;
     border-radius: 9999px;
     text-transform: capitalize;
     @include text-semibold;
     font-size: 0.8rem;
+    border: 2px solid $color-primary;
     @include responsive(lg) {
       font-size: 1rem;
     }
@@ -84,8 +82,8 @@
   }
 
   .read-more-btn:hover {
-    background-color: $color-primary;
-    color: white;
+    background-color: $white;
+    color: $color-primary;
   }
 
   .icon-wrapper {
@@ -104,125 +102,87 @@
     background-color: white;
     color: $color-primary;
     border: 1px solid $color-primary;
-
-    img {
-      filter: invert(43%) sepia(75%) saturate(3687%) hue-rotate(7deg)
-        brightness(95%) contrast(96%);
-    }
   }
 
-  /* Projects grid */
-  .projects-grid {
-    margin-top: 5rem;
-    @include grid-center;
-    gap: 2.2rem;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+  .portfolio-container {
+    position: relative;
+    margin-top: $spacing-2xl;
 
-    @include responsive(sm) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    @include responsive(lg) {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-  }
-
-  /* Individual project card */
-  .project-card {
-    background-color: white;
-    border-radius: 16px 16px 0 0;
-    overflow: hidden;
-    cursor: pointer;
-    width: 100%;
-    @include responsive(md) {
-      max-width: 715px;
-    }
-    transition: box-shadow 0.5s ease;
-    display: flex;
-    flex-direction: column;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
-
-  .project-card:hover {
-    box-shadow: $shadow-md;
-  }
-
-  .image-wrapper {
-    overflow: hidden;
-  }
-
-  .project-image {
-    width: 100%;
-
-    object-fit: cover;
-    transition: transform 0.5s ease;
-    border-radius: 2rem;
-
-    @include responsive(lg) {
-      max-height: 432px;
-    }
-  }
-
-  .project-card:hover .project-image {
-    transform: scale(1.1);
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  .project-details {
-    padding: 1rem;
-  }
-
-  .project-title {
-    font-size: 16pt;
-    @include text-semibold;
-    margin: 0;
-
-    @include responsive(lg) {
-      font-size: 2.25rem;
+    /* Individual project card */
+    .project-card {
+      overflow: hidden;
+      width: 100%;
+      @include responsive(md) {
+        max-width: 715px;
+      }
+      transition: $transition-slow;
+      display: flex;
+      flex-direction: column;
     }
 
-    @include responsive(md) {
-      font-size: 1.875rem;
+    .image-wrapper {
+      overflow: hidden;
+      border-radius: 2rem;
     }
-  }
 
-  .project-footer {
-    display: flex;
-    align-items: center;
-    margin: -15px 0;
-  }
+    .project-image {
+      width: 100%;
 
-  .project-subtitle {
-    font-size: 0.875rem;
-    @include responsive(md) {
-      font-size: 1.2rem;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+      border-radius: 2rem;
+
+      @include responsive(lg) {
+        max-height: 480px;
+        height: 480px;
+      }
     }
-    @include text-medium;
-    color: $color-text-subtle;
-  }
 
-  .divider {
-    width: 100%;
-    background-color: $bg-gray-light;
-    margin: 0;
-  }
-
-  .arrow-btn {
-    background-color: $color-secondary;
-    transition: $transition-slow;
-    width: 2.8rem;
-    height: 2.7rem;
-    @include grid-center;
-    font-size: 1rem;
-    text-align: center;
-    border-radius: 9999px;
-    border: 1px solid $color-secondary;
-    cursor: pointer;
-    &:hover {
+    .project-card:hover .project-image {
       transform: scale(1.1);
-      box-shadow: $shadow-xl;
+    }
+
+    .project-details {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: $spacing-lg;
+    }
+
+    .project-title {
+      @include text-bold;
+      margin: 0;
+      text-transform: capitalize;
+
+      @include responsive(lg) {
+        font-size: 2.25rem;
+      }
+
+      @include responsive(md) {
+        font-size: 1.875rem;
+      }
+
+      .project_number {
+        color: $color-primary;
+        @include text-bold;
+      }
+    }
+    .arrow-btn {
+      background-color: $color-secondary;
+      transition: $transition-slow;
+      width: 2.8rem;
+      height: 2.7rem;
+      @include grid-center;
+      font-size: 1rem;
+      text-align: center;
+      border-radius: 9999px;
+      border: 1px solid $color-secondary;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: $shadow-xl;
+      }
     }
   }
 }

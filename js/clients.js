@@ -33,12 +33,21 @@ export default function initClients() {
         (client) => `
         <div class="swiper-slide hover">
           <div class="testimonial-card">
+                <img src="./assets/colon.png" alt="colon Icon" class="colon-icon" />
+          
           <p class="testimonial-desc" data-aos="fade-up">"${client.paragraph}"</p>
-          <div class="testimonial-footer" data-aos="fade-right" >
-            <h3 class="testimonial-title">${client.title}</h3>
             <hr class="testimonial-divider" />
-            <p class="testimonial-subtitle">${client.subtitle}</p>
-          </div>
+                         <div class="testimonial-author"data-aos="fade-right" >
+       
+                        <div class="author-avatar">
+                <img src="./assets/client.png" alt="colon Icon" class="client-icon" />
+                        </div>
+                        <div class="author-info">
+                            <h4>${client.title}</h4>
+                            <p>${client.subtitle}</p>
+                        </div>
+                    </div>
+        
           </div>
         </div>
       `
@@ -56,7 +65,6 @@ export default function initClients() {
           slidesPerView: 2,
           spaceBetween: 25,
         },
-      
       },
     };
   };

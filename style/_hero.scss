@@ -3,20 +3,18 @@
 
 .hero {
   position: relative;
-  padding-top: 5rem;
 
-  .img-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -9999;
-  }
+  // .img-layer {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  //   z-index: -9999;
+  // }
 
   // background-color: rgba(0, 0, 0, 0.5); if you want to use a video background, then add this line
-
 
   video {
     width: 100%;
@@ -48,6 +46,18 @@
     @include responsive(lg) {
       width: 83.46vw;
       max-width: 1366px;
+    }
+
+    .hero_header {
+     display: grid;
+     place-items: start;
+      grid-template-columns: 1fr 2fr;
+      gap: $spacing-lg;
+    }
+
+    .header_title{
+      font-size: $spacing-xl;
+
     }
 
     .hero-grid {
@@ -106,59 +116,58 @@
           }
 
           .btn-link {
-  display: inline-flex;
-  align-items: center;
-  gap: $spacing-sm;
-  text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: $spacing-sm;
+            text-decoration: none;
 
-  .btn-text {
-    text-transform: capitalize;
-    color: white;
-    background-color: $color-primary;
-    border: 1px solid transparent;
-    border-radius: 9999px;
-    padding: 0.75rem 1.5rem;
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: $transition;
+            .btn-text {
+              text-transform: capitalize;
+              color: white;
+              background-color: $color-primary;
+              border: 1px solid transparent;
+              border-radius: 9999px;
+              padding: 0.75rem 1.5rem;
+              font-size: 0.75rem;
+              cursor: pointer;
+              transition: $transition;
 
-    @media (min-width: 640px) {
-      font-size: 1rem;
-    }
-  }
+              @media (min-width: 640px) {
+                font-size: 1rem;
+              }
+            }
 
-  .btn-icon {
-    @include flex-center;
-    font-size: 1rem;
-    background-color: $color-tertiary;
-    border-radius: 9999px;
-    width: 2.7rem;
-    height: 2.7rem;
-    @include grid-center;
-    border: 1px solid transparent;
-    transition: $transition;
-    cursor: pointer;
-  }
+            .btn-icon {
+              @include flex-center;
+              font-size: 1rem;
+              background-color: $color-tertiary;
+              border-radius: 9999px;
+              width: 2.7rem;
+              height: 2.7rem;
+              @include grid-center;
+              border: 1px solid transparent;
+              transition: $transition;
+              cursor: pointer;
+            }
 
-  .btn-icon img {
-    filter: brightness(0) saturate(100%);
-  }
+            .btn-icon img {
+              filter: brightness(0) saturate(100%);
+            }
 
-  &:hover {
-    .btn-text {
-      background-color: white;
-      color: $color-primary;
-      border-color: $color-primary;
-    }
+            &:hover {
+              .btn-text {
+                background-color: white;
+                color: $color-primary;
+                border-color: $color-primary;
+              }
 
-    .btn-icon {
-      background-color: lighten($color-success, 15%);
-      transform: scale(1.1);
-      border-color: $color-success;
-    }
-  }
-}
-
+              .btn-icon {
+                background-color: lighten($color-success, 15%);
+                transform: scale(1.1);
+                border-color: $color-success;
+              }
+            }
+          }
         }
       }
     }
