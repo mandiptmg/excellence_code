@@ -11,13 +11,15 @@
 
   @include responsive(lg) {
     width: 83.46vw;
-    max-width: 1366px;
+    max-width: 1413px;
+    
+    ;
   }
 
   .title {
     @include text-semibold;
     line-height: 0.9;
-    font-size: $spacing-md;
+    font-size: $spacing-lg;
     font-family: $font-bebas;
     text-align: left;
     @include responsive(md) {

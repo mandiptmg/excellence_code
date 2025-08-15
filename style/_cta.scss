@@ -9,13 +9,13 @@
 
   @include responsive(lg) {
     width: 83.46vw;
-    max-width: 1366px;
+    max-width: 1413;
   }
 
   &__title {
     @include text-semibold;
     line-height: 0.9;
-    font-size: $spacing-md;
+    font-size: $spacing-lg;
     text-align: left;
 
     font-family: $font-bebas;
@@ -26,20 +26,25 @@
 
   &__content {
     display: flex;
+    flex-direction: column;
     align-items: end;
     gap: 2rem;
     margin: $spacing-md 0 8rem;
-    justify-content: space-between;
+    @include responsive(md) {
+    flex-direction: row;
+
+      justify-content: space-between;
+    }
   }
 
   &__text {
-    max-width: 385px;
     color: $color-secondary;
     line-height: 1.2;
     text-align: left;
-
+    max-width: auto;
     @include responsive(md) {
       font-size: $spacing-sm;
+      max-width: 385px;
     }
   }
 

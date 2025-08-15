@@ -23,7 +23,7 @@
       .main-heading {
         @include text-semibold;
         line-height: 0.9;
-        font-size: $spacing-md;
+        font-size: $spacing-lg;
         font-family: $font-bebas;
         @include responsive(md) {
           font-size: $spacing-2xl;

@@ -6,11 +6,11 @@
   overflow: hidden;
   padding: 3.5rem;
   margin: $spacing-lg auto;
-  width: 90vw;
 
   @include responsive(lg) {
     width: 83.46vw;
-    max-width: 1366px;
+        max-width: 1413px;
+
   }
 
   // Blurred background overlay

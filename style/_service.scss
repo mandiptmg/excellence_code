@@ -33,7 +33,7 @@
   .title {
     @include text-semibold;
     line-height: 0.9;
-    font-size: 2rem;
+    font-size: $spacing-lg;
     font-family: $font-bebas;
     text-transform: uppercase;
 

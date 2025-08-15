@@ -4,6 +4,9 @@
 .navbar {
   color: $color-secondary;
   transition: $transition-slow;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   width: auto;
 
   &.scrolled {

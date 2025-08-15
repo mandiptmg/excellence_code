@@ -36,7 +36,7 @@
       .title {
         @include text-semibold;
         line-height: 0.9;
-        font-size: $spacing-md;
+        font-size: $spacing-lg;
         font-family: $font-bebas;
 
         @include responsive(md) {

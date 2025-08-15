@@ -3,6 +3,9 @@
 .navbar {
   color: #111827;
   transition: all 0.5s ease;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   width: auto;
 }
 .navbar.scrolled {
@@ -433,7 +436,12 @@
   margin: 4rem 0;
   display: grid;
   background-color: #ffffff;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
+}
+@media (min-width: 48rem) {
+  .hero .hero-container .hero-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 64rem) {
   .hero .hero-container .hero-grid {
@@ -521,7 +529,7 @@
 .vas-section .title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
 }
@@ -708,7 +716,7 @@
 .portfolio-section .title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Bebas Neue", sans-serif;
 }
 @media (min-width: 48rem) {
@@ -899,7 +907,7 @@
 .why-choose-us .why-us-container .whychooseus-header .title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Bebas Neue", sans-serif;
 }
 @media (min-width: 48rem) {
@@ -1079,13 +1087,13 @@
 @media (min-width: 64rem) {
   .code-section {
     width: 83.46vw;
-    max-width: 1366px;
+    max-width: 1413px;
   }
 }
 .code-section .title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Bebas Neue", sans-serif;
   text-align: left;
 }
@@ -1171,13 +1179,13 @@
 @media (min-width: 64rem) {
   .brand-cta {
     width: 83.46vw;
-    max-width: 1366px;
+    max-width: 1413;
   }
 }
 .brand-cta__title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: left;
   font-family: "Bebas Neue", sans-serif;
 }
@@ -1188,20 +1196,27 @@
 }
 .brand-cta__content {
   display: flex;
+  flex-direction: column;
   align-items: end;
   gap: 2rem;
   margin: 2rem 0 8rem;
-  justify-content: space-between;
+}
+@media (min-width: 48rem) {
+  .brand-cta__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .brand-cta__text {
-  max-width: 385px;
   color: #111827;
   line-height: 1.2;
   text-align: left;
+  max-width: auto;
 }
 @media (min-width: 48rem) {
   .brand-cta__text {
     font-size: 1rem;
+    max-width: 385px;
   }
 }
 .brand-cta__button {
@@ -1232,14 +1247,13 @@
   overflow: hidden;
   padding: 3.5rem;
   margin: 3rem auto;
-  width: 90vw;
   display: grid;
   gap: 2rem;
 }
 @media (min-width: 64rem) {
   .contact-container {
     width: 83.46vw;
-    max-width: 1366px;
+    max-width: 1413px;
   }
 }
 .contact-container::before {
@@ -1403,7 +1417,7 @@
 .testimonial-section .testimonial-header .testimonial-left .main-heading {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Bebas Neue", sans-serif;
 }
 @media (min-width: 48rem) {
