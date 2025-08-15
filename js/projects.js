@@ -12,6 +12,11 @@ export default function initProjects() {
       title: "Logo Design",
       image: "assets/portfolio/Portfolio3.png",
     },
+     {
+      title: "Logo Design",
+      image: "assets/portfolio/Portfolio3.png",
+    },
+    
   ];
 
   const slidesContainer = document.getElementById("portfolioSwiperWrapper");
@@ -20,7 +25,7 @@ export default function initProjects() {
       .map(
         (project, index) => `
         <div class="swiper-slide">
-          <div class="project-card" data-aos="flip-right" data-index="${index}">
+          <div class="project-card"  data-index="${index}">
             <div class="project-details">
               <h3 class="project-title">
                 <span class="project_number">0${index + 1}</span> ${project.title}

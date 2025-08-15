@@ -35,9 +35,9 @@ export default function initClients() {
           <div class="testimonial-card">
                 <img src="./assets/colon.png" alt="colon Icon" class="colon-icon" />
           
-          <p class="testimonial-desc" data-aos="fade-up">"${client.paragraph}"</p>
+          <p class="testimonial-desc" >"${client.paragraph}"</p>
             <hr class="testimonial-divider" />
-                         <div class="testimonial-author"data-aos="fade-right" >
+                         <div class="testimonial-author" >
        
                         <div class="author-avatar">
                 <img src="./assets/client.png" alt="colon Icon" class="client-icon" />
@@ -59,11 +59,11 @@ export default function initClients() {
   const getResponsiveConfig = () => {
     return {
       slidesPerView: 1,
-      spaceBetween: 20,
+      spaceBetween: 30,
       breakpoints: {
         1024: {
           slidesPerView: 2,
-          spaceBetween: 25,
+          spaceBetween: 35,
         },
       },
     };
