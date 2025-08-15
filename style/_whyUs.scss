@@ -3,70 +3,93 @@
 
 //why choose us section
 .why-choose-us {
-  background: $bg-success-gradient;
-  padding: 4rem 0;
 
   .why-us-container {
-    margin: 0 auto;
+    margin: 4rem auto;
     width: 90vw;
 
     @include responsive(lg) {
       width: 83.46vw;
       max-width: 1366px;
     }
-  }
 
-  .heading h2 {
-    @include text-semibold;
-    font-size: 1.85rem;
-    line-height: 1.2;
-    @include responsive(md) {
-      font-size: 2.55rem;
-    }
-    color: #fff;
-  }
+    // Header Section
+    .whychooseus-header {
+      display: grid;
+      place-items: start;
+      gap: 1rem;
+      @include responsive(md) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0;
+      }
 
-  .feature-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-
-    @include responsive(md) {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  .feature-card {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: $shadow-light;
-    transition: $transition;
-    cursor: pointer;
-
-    &:hover {
-      background-color: #fff;
-      box-shadow: $shadow-md;
-      transform: translateY(-4px);
+      h1{
+        text-transform: uppercase;
+        font-size: $spacing-sm;
+        @include text-bold;
+      }
     }
 
-    .feature-title {
-      color: $color-secondary;
+    .title {
       @include text-semibold;
-      margin-bottom: 0.1rem;
-      font-size: 1.125rem;
-      @include responsive(lg) {
-        font-size: 1.225rem;
+      line-height: 0.9;
+      font-size: $spacing-md;
+
+      font-family: $font-bebas;
+      @include responsive(md) {
+        font-size: $spacing-2xl;
       }
     }
 
-    .feature-desc {
-      color: $color-text-base;
-      font-size: 0.9rem;
-      @include responsive(lg) {
-        font-size: 1.1rem;
+    .right-side {
+      display: grid;
+      place-items: end;
+      width: 100%;
+    }
+
+    .description {
+      display: grid;
+      place-items: start;
+      text-align: justify;
+      text-justify: inter-word;
+      @include text-medium;
+      @include responsive(md) {
+        max-width: 485px;
       }
-      line-height: 1.2;
+      p {
+        font-size: 0.9rem;
+        color: $color-text-base; /* text-color */
+        margin-bottom: 16px;
+        line-height: 1.2;
+      }
+    }
+
+    .read-more-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+F
+    .read-more-btn {
+      background-color: $color-primary;
+      color: white;
+      padding: 12px 35px;
+      border-radius: 9999px;
+      text-transform: capitalize;
+      @include text-semibold;
+      font-size: 0.8rem;
+      border: 2px solid $color-primary;
+      @include responsive(lg) {
+        font-size: 1rem;
+      }
+      text-decoration: none;
+      transition: $transition-slow;
+      cursor: pointer;
+    }
+
+    .read-more-btn:hover {
+      background-color: $white;
+      color: $color-primary;
     }
   }
 }

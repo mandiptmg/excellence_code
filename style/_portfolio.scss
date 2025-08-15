@@ -25,10 +25,10 @@
 
   .title {
     @include text-semibold;
-    line-height: 1;
-    font-size: 2rem;
+    line-height: 0.9;
+    font-size: $spacing-md;
+
     font-family: $font-bebas;
-    text-transform: uppercase;
     @include responsive(md) {
       font-size: $spacing-2xl;
     }
@@ -44,7 +44,7 @@
     display: grid;
     place-items: start;
     text-align: justify;
-  text-justify: inter-word;
+    text-justify: inter-word;
     @include text-medium;
     @include responsive(md) {
       max-width: 485px;
@@ -169,7 +169,7 @@
       }
     }
     .arrow-btn {
-      background-color: $color-secondary;
+      background-color: transparent;
       transition: $transition-slow;
       width: 2.8rem;
       height: 2.7rem;
@@ -177,11 +177,13 @@
       font-size: 1rem;
       text-align: center;
       border-radius: 9999px;
-      border: 1px solid $color-secondary;
+      @include black-filter;
       cursor: pointer;
       &:hover {
         transform: scale(1.1);
         box-shadow: $shadow-xl;
+        border: 2px solid $color-primary;
+        @include gold-filter;
       }
     }
   }

@@ -20,23 +20,19 @@
       text-align: center;
       margin-bottom: 1.5rem;
 
-     
-
       .main-heading {
+        @include text-semibold;
+        line-height: 0.9;
+        font-size: $spacing-md;
         font-family: $font-bebas;
-        font-size: 2rem;
-        text-transform: uppercase;
         @include responsive(md) {
-          font-size: $spacing-xl;
+          font-size: $spacing-2xl;
         }
-        @include text-bold;
-        line-height: 1;
       }
     }
   }
 
   .testimonial-container {
-    
     .testimonial-card {
       display: flex;
       flex-direction: column;
@@ -47,17 +43,16 @@
       cursor: pointer;
     }
 
-    
-    .colon-icon{
+    .colon-icon {
       width: 40px;
       height: 40px;
       object-fit: contain;
       margin: 0.5rem 0;
-
     }
 
     .testimonial-desc {
       font-size: 1rem;
+      text-align: left;
       @include responsive(md) {
         font-size: 1.2rem;
       }
@@ -93,9 +88,8 @@
     }
 
     .author-info h4 {
-    @include text-bold;
-      font-size:$spacing-sm;
-
+      @include text-bold;
+      font-size: $spacing-sm;
     }
 
     .author-info p {
