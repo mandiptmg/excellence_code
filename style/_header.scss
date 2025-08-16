@@ -20,11 +20,12 @@
     width: 90vw;
     margin-inline: auto;
     @include responsive(lg) {
-      max-width: 1366px;
+      width: 80.77vw;
+      max-width: 1413px;
     }
     @include flex-center;
     justify-content: space-between;
-    height: 5rem;
+    height: 5.5rem;
   }
 
   .logo-link {
@@ -38,11 +39,13 @@
       object-fit: contain;
     }
     .logo_text {
-      @include text-bold;
-      font-size: 1rem;
+      @include text-semibold;
+      font-size: 1.3rem;
       color: $color-secondary;
       text-transform: capitalize;
       font-family: serif;
+      text-align: center;
+      line-height: 1;
     }
     &:hover {
       transform: scale(1.1);
@@ -68,7 +71,7 @@
       a,
       .dropbtn {
         text-transform: uppercase;
-        font-size: $spacing-xm;
+        font-size: 0.95rem;
         cursor: pointer;
         color: $color-secondary;
         transition: color 0.3s ease;
@@ -157,6 +160,7 @@
         width: 1.5rem;
         height: 1.5rem;
         transition: transform 0.3s ease;
+        @include gold-filter;
       }
 
       &:hover img.icon-menu,

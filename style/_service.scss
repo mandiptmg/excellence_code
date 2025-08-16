@@ -8,8 +8,8 @@
   width: 90vw;
 
   @include responsive(lg) {
-    width: 83.46vw;
-    max-width: 1366px;
+        width: 80.77vw;
+      max-width: 1413px;
   }
 
   // Header Section
@@ -17,6 +17,7 @@
     display: grid;
     place-items: start;
     gap: 1rem;
+    margin-top: 4rem;
 
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
@@ -33,12 +34,12 @@
   .title {
     @include text-semibold;
     line-height: 0.9;
-    font-size: $spacing-lg;
+    font-size: $spacing-xl;
     font-family: $font-bebas;
     text-transform: uppercase;
 
-    @include responsive(md) {
-      font-size: $spacing-2xl;
+    @include responsive(lg) {
+      font-size: $spacing-3xl;
     }
   }
 
@@ -159,7 +160,7 @@
             .read-more-btn {
               background-color: $color-primary;
               color: white;
-              padding: 12px 35px;
+              padding: 10px 35px;
               border: 2px solid $color-primary;
               border-radius: 9999px;
               text-transform: capitalize;

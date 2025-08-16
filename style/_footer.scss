@@ -132,8 +132,8 @@
 
     width: 90vw;
     @include responsive(lg) {
-      width: 83.46vw;
-      max-width: 1366px;
+      width: 80.77vw;
+      max-width: 1413px;
     }
 
     .footer-top {
@@ -180,7 +180,9 @@
 
           .logo_text {
             @include text-bold;
-            font-size: $spacing-sm;
+            font-size: 1.4rem;
+            line-height: 1.2;
+            text-align: center;
             color: $color-secondary;
             text-transform: capitalize;
             font-family: serif;
@@ -233,7 +235,7 @@
             list-style: none;
 
             a {
-              display: flex;
+              display: inline-flex;
               align-items: center;
               gap: 0.5rem;
               color: $color-secondary;

@@ -8,19 +8,19 @@
   padding: 4rem 0;
 
   @include responsive(lg) {
-    width: 83.46vw;
-    max-width: 1413;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 
   &__title {
     @include text-semibold;
     line-height: 0.9;
-    font-size: $spacing-lg;
+    font-size: $spacing-xl;
     text-align: left;
 
     font-family: $font-bebas;
-    @include responsive(md) {
-      font-size: $spacing-2xl;
+    @include responsive(lg) {
+      font-size: $spacing-3xl;
     }
   }
 

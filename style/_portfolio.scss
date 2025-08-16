@@ -8,8 +8,8 @@
   width: 90vw;
 
   @include responsive(lg) {
-    width: 83.46vw;
-    max-width: 1366px;
+       width: 80.77vw;
+      max-width: 1413px;
   }
 
   // Header Section
@@ -17,6 +17,8 @@
     display: grid;
     place-items: start;
     gap: 1rem;
+    margin-top: 4rem;
+
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
       gap: 0;
@@ -26,11 +28,11 @@
   .title {
     @include text-semibold;
     line-height: 0.9;
-    font-size: $spacing-lg;
+    font-size: $spacing-xl;
 
     font-family: $font-bebas;
-    @include responsive(md) {
-      font-size: $spacing-2xl;
+    @include responsive(lg) {
+      font-size: $spacing-3xl;
     }
   }
 
@@ -47,10 +49,10 @@
     text-justify: inter-word;
     @include text-medium;
     @include responsive(md) {
-      max-width: 485px;
+      max-width: 495px;
     }
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
 
       color: $color-text-base; /* text-color */
       margin-bottom: 16px;

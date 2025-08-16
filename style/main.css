@@ -19,11 +19,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
+  height: 5.5rem;
 }
 @media (min-width: 64rem) {
   .navbar .navbar-container {
-    max-width: 1366px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 .navbar .logo-link {
@@ -38,11 +39,13 @@
   object-fit: contain;
 }
 .navbar .logo-link .logo_text {
-  font-weight: bold;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.3rem;
   color: #111827;
   text-transform: capitalize;
   font-family: serif;
+  text-align: center;
+  line-height: 1;
 }
 .navbar .logo-link:hover {
   transform: scale(1.1);
@@ -67,7 +70,7 @@
 .navbar .nav-links li a,
 .navbar .nav-links li .dropbtn {
   text-transform: uppercase;
-  font-size: 0.75rem;
+  font-size: 0.95rem;
   cursor: pointer;
   color: #111827;
   transition: color 0.3s ease;
@@ -146,6 +149,7 @@
   width: 1.5rem;
   height: 1.5rem;
   transition: transform 0.3s ease;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(3049%) hue-rotate(325deg) brightness(87%) contrast(88%);
 }
 .navbar .nav-controls .menu-toggle:hover img.icon-menu, .navbar .nav-controls .menu-toggle:focus img.icon-menu {
   transform: scale(1.1);
@@ -347,8 +351,8 @@
 }
 @media (min-width: 64rem) {
   .hero .hero-container {
-    width: 83.46vw;
-    max-width: 1366px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 .hero .hero-container .hero-header {
@@ -364,12 +368,6 @@
     justify-content: space-between;
   }
 }
-@media (min-width: 48rem) {
-  .hero .hero-container .hero-header {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
-}
 .hero .hero-container .hero-header .hero-left {
   display: flex;
   flex-direction: column;
@@ -380,55 +378,70 @@
   line-height: 1.6;
   max-width: auto;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .hero .hero-container .hero-header .description {
-    max-width: 350px;
+    max-width: 400px;
+    font-size: 1.3rem;
   }
 }
 .hero .hero-container .hero-header .description p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #374151;
   margin-bottom: 1.2rem;
+}
+@media (min-width: 48rem) {
+  .hero .hero-container .hero-header .description p {
+    font-size: 1.3rem;
+  }
 }
 .hero .hero-container .hero-header .read-more-group {
   display: flex;
   align-items: center;
 }
 .hero .hero-container .hero-header .read-more-btn {
-  background-color: #d4af37;
-  color: #fff;
+  background-color: #ffffff;
+  color: #111827;
   padding: 12px 35px;
   border-radius: 9999px;
   text-transform: capitalize;
-  font-weight: 600;
-  font-size: 0.85rem;
-  border: 2px solid #d4af37;
+  font-weight: bold;
+  font-size: 0.75rem;
+  border: 2px solid rgba(244, 231, 177, 0.7);
   text-decoration: none;
   transition: all 0.3s ease;
   cursor: pointer;
 }
+@media (min-width: 48rem) {
+  .hero .hero-container .hero-header .read-more-btn {
+    font-size: 1.3rem;
+  }
+}
 .hero .hero-container .hero-header .read-more-btn:hover {
-  background-color: #fff;
-  color: #d4af37;
+  background-color: #d4af37;
+  color: #ffffff;
+  border: 2px solid #d4af37;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 @media (min-width: 64rem) {
   .hero .hero-container .hero-header .read-more-btn {
     font-size: 1rem;
   }
 }
-.hero .hero-container .hero-header .hero-title h2 {
+.hero .hero-container .hero-header .hero-title {
+  width: 100%;
   font-family: "Bebas Neue", sans-serif;
   font-size: 4rem;
   font-weight: 500;
   line-height: 1.1;
   text-transform: uppercase;
 }
-.hero .hero-container .hero-header .hero-title h2 span {
+.hero .hero-container .hero-header .hero-title span {
   color: #d4af37;
 }
-@media (min-width: 48rem) {
-  .hero .hero-container .hero-header .hero-title h2 {
-    font-size: 6rem;
+@media (min-width: 64rem) {
+  .hero .hero-container .hero-header .hero-title {
+    width: auto;
+    font-size: 6.5rem;
   }
 }
 .hero .hero-container .hero-grid {
@@ -456,7 +469,7 @@
 }
 @media (min-width: 48rem) {
   .hero .hero-container .hero-grid .hero-box {
-    height: 200px;
+    height: 250px;
   }
 }
 .hero .hero-container .hero-grid .box-2,
@@ -470,9 +483,12 @@
 }
 .hero .hero-container .hero-grid .box-2 h4 {
   color: #d4af37;
+  font-weight: 200;
 }
 .hero .hero-container .hero-grid .box-11 {
+  font-size: 1.3rem;
   text-align: center;
+  font-weight: 200;
 }
 .hero .hero-container .hero-grid .content-box {
   display: grid;
@@ -481,14 +497,17 @@
 .hero .hero-container .hero-grid .content-box .arrow-btn {
   width: 3rem;
   height: 3rem;
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 999px;
   display: grid;
   place-items: center;
-  transform: all 0.5s ease;
-  background-color: rgba(244, 231, 177, 0.5);
+  transition: all 0.5s ease;
+  background-color: #d4af37;
 }
 .hero .hero-container .hero-grid .content-box .arrow-btn:hover {
+  scale: 1.1;
+  rotate: 45deg;
   background-color: #f4e7b1;
 }
 .hero .hero-container .hero-grid .content-box .arrow-btn .icon-wrapper {
@@ -506,14 +525,15 @@
 }
 @media (min-width: 64rem) {
   .vas-section {
-    width: 83.46vw;
-    max-width: 1366px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 .vas-section .about-header {
   display: grid;
   place-items: start;
   gap: 1rem;
+  margin-top: 4rem;
 }
 @media (min-width: 48rem) {
   .vas-section .about-header {
@@ -529,13 +549,13 @@
 .vas-section .title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Bebas Neue", sans-serif;
   text-transform: uppercase;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .vas-section .title {
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
 }
 .vas-section .description {
@@ -643,7 +663,7 @@
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap .read-more-btn {
   background-color: #d4af37;
   color: white;
-  padding: 12px 35px;
+  padding: 10px 35px;
   border: 2px solid #d4af37;
   border-radius: 9999px;
   text-transform: capitalize;
@@ -698,14 +718,15 @@
 }
 @media (min-width: 64rem) {
   .portfolio-section {
-    width: 83.46vw;
-    max-width: 1366px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 .portfolio-section .portfolio-header {
   display: grid;
   place-items: start;
   gap: 1rem;
+  margin-top: 4rem;
 }
 @media (min-width: 48rem) {
   .portfolio-section .portfolio-header {
@@ -716,12 +737,12 @@
 .portfolio-section .title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Bebas Neue", sans-serif;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .portfolio-section .title {
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
 }
 .portfolio-section .right-side {
@@ -738,11 +759,11 @@
 }
 @media (min-width: 48rem) {
   .portfolio-section .description {
-    max-width: 485px;
+    max-width: 495px;
   }
 }
 .portfolio-section .description p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #374151; /* text-color */
   margin-bottom: 16px;
   line-height: 1.5;
@@ -883,15 +904,15 @@
 }
 @media (min-width: 64rem) {
   .why-choose-us .why-us-container {
-    width: 83.46vw;
-    max-width: 1366px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 .why-choose-us .why-us-container .whychooseus-header {
   display: grid;
   place-items: start;
   gap: 1rem;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
 }
 @media (min-width: 48rem) {
   .why-choose-us .why-us-container .whychooseus-header {
@@ -907,12 +928,12 @@
 .why-choose-us .why-us-container .whychooseus-header .title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Bebas Neue", sans-serif;
 }
-@media (min-width: 48rem) {
+@media (min-width: 80rem) {
   .why-choose-us .why-us-container .whychooseus-header .title {
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
 }
 .why-choose-us .why-us-container .whychooseus-header .right-side {
@@ -952,7 +973,7 @@
   text-transform: capitalize;
   font-weight: 500;
   font-size: 0.8rem;
-  border: 2px solid #111827;
+  border: 2px solid rgba(17, 24, 39, 0.2);
   text-decoration: none;
   transition: all 0.5s ease;
   cursor: pointer;
@@ -987,11 +1008,16 @@
   background-color: #ffffff;
   padding: 2rem;
   border-radius: 1rem;
-  max-height: 250px;
+  max-height: 488px;
   display: flex;
   gap: 0.75rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+@media (min-width: 48rem) {
+  .why-choose-us .why-us-container .feature-card {
+    min-height: 488px;
+  }
 }
 .why-choose-us .why-us-container .feature-card:hover {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -999,6 +1025,7 @@
 .why-choose-us .why-us-container .feature-card h3 {
   font-size: 1.2rem;
   line-height: 1.2;
+  font-weight: bold;
 }
 @media (min-width: 48rem) {
   .why-choose-us .why-us-container .feature-card h3 {
@@ -1023,7 +1050,7 @@
   }
 }
 .why-choose-us .why-us-container .span-col .feature-image {
-  max-height: 250px;
+  max-height: 488px;
   width: 100%;
   border-radius: 1rem;
   overflow: hidden;
@@ -1036,7 +1063,11 @@
 .why-choose-us .why-us-container .read-btn {
   text-align: center;
   width: 100%;
-  margin-top: 2.5rem;
+}
+@media (min-width: 48rem) {
+  .why-choose-us .why-us-container .read-btn {
+    margin-top: 2.5rem;
+  }
 }
 .why-choose-us .why-us-container .read-btn .read-more-btn {
   background-color: #d4af37;
@@ -1059,6 +1090,10 @@
   background-color: #ffffff;
   color: #d4af37;
 }
+.why-choose-us .why-us-container .arrow-btn-wrapper {
+  display: grid;
+  place-items: end;
+}
 .why-choose-us .why-us-container .arrow-btn {
   width: 3rem;
   height: 3rem;
@@ -1066,16 +1101,23 @@
   border-radius: 999px;
   display: grid;
   place-items: center;
-  margin-top: 8rem;
-  transform: all 0.5s ease;
   background-color: rgba(244, 231, 177, 0.5);
-  filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(3049%) hue-rotate(325deg) brightness(87%) contrast(88%);
+  transition: all 0.5s ease;
+}
+.why-choose-us .why-us-container .arrow-btn:hover {
+  scale: 1.1;
+  rotate: 45deg;
+  background-color: rgba(244, 231, 177, 0.8);
 }
 .why-choose-us .why-us-container .arrow-btn .icon-wrapper {
   width: 100%;
   height: 100%;
-  filter: brightness(0) saturate(100%) invert(7%) sepia(31%) saturate(1125%) hue-rotate(182deg) brightness(95%) contrast(94%);
+  filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(3049%) hue-rotate(325deg) brightness(87%) contrast(88%);
   object-fit: contain;
+  transition: transform 0.4s ease;
+}
+.arrow-btn:hover .why-choose-us .why-us-container .arrow-btn .icon-wrapper {
+  transform: translateX(5px);
 }
 
 .code-section {
@@ -1086,20 +1128,21 @@
 }
 @media (min-width: 64rem) {
   .code-section {
-    width: 83.46vw;
+    width: 80.77vw;
     max-width: 1413px;
   }
 }
 .code-section .title {
   font-weight: 500;
+  margin-top: 4rem;
   line-height: 0.9;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Bebas Neue", sans-serif;
   text-align: left;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .code-section .title {
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
 }
 .code-section .code-grid {
@@ -1178,20 +1221,20 @@
 }
 @media (min-width: 64rem) {
   .brand-cta {
-    width: 83.46vw;
-    max-width: 1413;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 .brand-cta__title {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: left;
   font-family: "Bebas Neue", sans-serif;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .brand-cta__title {
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
 }
 .brand-cta__content {
@@ -1252,7 +1295,7 @@
 }
 @media (min-width: 64rem) {
   .contact-container {
-    width: 83.46vw;
+    width: 80.77vw;
     max-width: 1413px;
   }
 }
@@ -1276,16 +1319,19 @@
   }
 }
 .contact-container .info-section {
+  display: grid;
+  place-items: center;
   text-align: center;
   margin-bottom: 2rem;
 }
 .contact-container .info-section .contact-title {
   font-family: "Bebas Neue", sans-serif;
+  line-height: 1.3;
   font-size: 2rem;
   font-weight: 500;
   color: #111827;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .contact-container .info-section .contact-title {
     font-size: 4rem;
   }
@@ -1350,6 +1396,9 @@
   min-height: 140px;
   resize: vertical;
 }
+.contact__form .contact__textarea::placeholder {
+  font-family: "Roboto", sans-serif;
+}
 .contact__form .contact__submit-btn {
   width: 100%;
   padding: 0.9rem 1.5rem;
@@ -1402,8 +1451,8 @@
 }
 @media (min-width: 64rem) {
   .testimonial-section {
-    width: 83.46vw;
-    max-width: 1366px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 .testimonial-section .testimonial-header {
@@ -1417,12 +1466,12 @@
 .testimonial-section .testimonial-header .testimonial-left .main-heading {
   font-weight: 500;
   line-height: 0.9;
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: "Bebas Neue", sans-serif;
 }
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
   .testimonial-section .testimonial-header .testimonial-left .main-heading {
-    font-size: 6rem;
+    font-size: 6.5rem;
   }
 }
 .testimonial-section .testimonial-container .testimonial-card {
@@ -1633,8 +1682,8 @@
 }
 @media (min-width: 64rem) {
   .footer .footer-container {
-    width: 83.46vw;
-    max-width: 1366px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 .footer .footer-container .footer-top {
@@ -1687,7 +1736,9 @@
 }
 .footer .footer-container .footer-top .footer-company__logo .logo_text {
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  text-align: center;
   color: #111827;
   text-transform: capitalize;
   font-family: serif;
@@ -1735,7 +1786,7 @@
 }
 .footer .footer-container .footer-top .footer-section .footer-links li a,
 .footer .footer-container .footer-top .footer-section .footer-social li a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   color: #111827;

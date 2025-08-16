@@ -10,8 +10,8 @@
   width: 90vw;
 
   @include responsive(lg) {
-    width: 83.46vw;
-    max-width: 1366px;
+        width: 80.77vw;
+      max-width: 1413px;
   }
   .testimonial-header {
     @include grid-center;
@@ -23,10 +23,10 @@
       .main-heading {
         @include text-semibold;
         line-height: 0.9;
-        font-size: $spacing-lg;
+        font-size: $spacing-xl;
         font-family: $font-bebas;
-        @include responsive(md) {
-          font-size: $spacing-2xl;
+        @include responsive(lg) {
+          font-size: $spacing-3xl;
         }
       }
     }
