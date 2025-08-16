@@ -108,8 +108,10 @@
       gap: $spacing-sm;
       margin-top: 3rem;
 
-      grid-template-columns: repeat(2, 1fr);
-
+      grid-template-columns: 1fr;
+      @include responsive(sm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
       @include responsive(md) {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -273,15 +275,14 @@
 }
 
 @keyframes glowPulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.9;
-    box-shadow: 0 0 20px rgba($light-gold, 0.6),
-                0 0 40px rgba($light-gold, 0.3);
+    box-shadow: 0 0 20px rgba($light-gold, 0.6), 0 0 40px rgba($light-gold, 0.3);
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 40px rgba($light-gold, 0.9),
-                0 0 80px rgba($light-gold, 0.5);
+    box-shadow: 0 0 40px rgba($light-gold, 0.9), 0 0 80px rgba($light-gold, 0.5);
   }
 }
 
