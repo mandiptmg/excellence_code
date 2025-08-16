@@ -6,7 +6,7 @@ import initCode from "./code.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
-    duration: 1000,
+    duration: 1500,
   });
 
   initNavbar();

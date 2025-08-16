@@ -8,12 +8,7 @@
     $color-tertiary 0%,
     lighten($color-tertiary, 5%) 100%
   );
-  background: conic-gradient(
-    at center top,
-    rgb(21, 128, 61),
-    $color-success,
-    rgb(21, 128, 61)
-  );
+  background: conic-gradient(at left top, rgb(124, 45, 18), rgb(254, 243, 199), rgb(124, 45, 18));
 
   padding: $spacing-lg $spacing-sm;
   border-radius: $border-radius;
@@ -43,7 +38,7 @@
 
       p {
         font-size: 0.75rem;
-        color: $bg-gray-lighter;
+        color: $color-text-muted;
       }
 
       @include responsive(md) {
@@ -98,7 +93,7 @@
 
       button {
         background-color: $color-primary;
-        color: white;
+        color: $white;
         padding: 0.75rem 1rem 0.75rem 2.5rem;
 
         border-bottom-right-radius: $border-radius;
@@ -110,7 +105,7 @@
         transition: $transition;
 
         &:hover {
-          background-color: darken($color-primary, 10%);
+          background-color:rgba( $color-primary, 0.7);
         }
       }
     }
@@ -141,6 +136,7 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: 3rem;
+  
 
       @include responsive(sm) {
         grid-template-columns: repeat(2, 1fr);
@@ -149,6 +145,7 @@
         grid-template-columns: repeat(3, 1fr);
       }
       @include responsive(lg) {
+            justify-items: center;
         grid-template-columns: repeat(4, 1fr);
       }
 
@@ -243,19 +240,41 @@
               font-size: 0.95rem;
               text-decoration: none;
               transition: color 0.3s ease, transform 0.3s ease;
+              position: relative; 
+           @include text-bold;
 
+              // Hover state
               &:hover {
                 color: $color-primary;
                 transform: translateX(3px);
+                img{
+                  @include gold-filter;
+                }
+              }
+
+            
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 100%;
+                bottom: -3px;
+                height: 2px;
+                background: $color-primary;
+                transition: right 0.35s ease;
+              }
+
+              &:hover::after {
+                right: 0;
               }
 
               img {
                 width: 1.5rem;
                 height: 1.5rem;
                 object-fit: contain;
-
                 transition: transform 0.3s ease, filter 0.3s ease;
               }
+
               .social-icon {
                 @include black-filter;
               }
