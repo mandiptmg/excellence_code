@@ -108,13 +108,13 @@
       gap: $spacing-sm;
       margin-top: 3rem;
 
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, 1fr);
 
       @include responsive(md) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
 
-      @include responsive(lg) {
+      @include responsive(xl) {
         grid-template-columns: repeat(4, 1fr);
       }
     }
@@ -124,11 +124,15 @@
       padding: $spacing-md;
       border-radius: $border-radius;
       max-height: 488px;
+      height: 220px;
       display: flex;
       gap: 0.75rem;
       box-shadow: $shadow-lg;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      @include responsive(md) {
+      @include responsive(lg) {
+        min-height: 290px;
+      }
+      @include responsive(xl) {
         min-height: 488px;
       }
 
@@ -137,7 +141,7 @@
       }
 
       h3 {
-        font-size: 1.2rem;
+        font-size: 0.9rem;
         line-height: 1.2;
         @include text-bold;
 
@@ -151,16 +155,26 @@
       width: 100%;
       background-color: transparent;
       box-shadow: none;
+      display: none;
 
       &:hover {
         box-shadow: none;
       }
       grid-template-columns: 1fr;
       padding: 0;
-      display: grid;
-      @include responsive(lg) {
+      @include responsive(md) {
+        display: grid;
+      }
+      @include responsive(xl) {
         grid-column: span 2;
         grid-template-columns: 1fr 1.5fr;
+      }
+
+      .empty-card {
+        display: none;
+        @include responsive(xl) {
+          display: block;
+        }
       }
 
       .feature-image {
@@ -181,6 +195,7 @@
     .read-btn {
       text-align: center;
       width: 100%;
+      margin-top: 0.75rem;
 
       @include responsive(md) {
         margin-top: 2.5rem;

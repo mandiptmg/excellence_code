@@ -120,11 +120,7 @@
       display: grid;
       background-color: $white;
 
-      grid-template-columns: 1fr;
-
-      @include responsive(md) {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      grid-template-columns: repeat(2, 1fr);
       @include responsive(lg) {
         grid-template-columns: repeat(4, 1fr);
       }
@@ -148,15 +144,33 @@
         @include grid-center;
         padding: $spacing-md;
       }
+      .box-1,
+      .box-8,
+      .box-9,
+      .box-7,
+      .box-6,
+      .box-12 {
+        display: none;
+        @include responsive(lg){
+          display: block;
+        }
+      }
 
       .box-2 {
+      
         h4 {
           color: $color-primary;
           font-weight: 200;
         }
       }
       .box-11 {
-        font-size: 1.3rem;
+        @include responsive(xl) {
+          font-size: 1.3rem;
+        }
+        @include responsive(md) {
+          font-size: $spacing-sm;
+          padding: 0.1rem;
+        }
         text-align: center;
         font-weight: 200;
       }
