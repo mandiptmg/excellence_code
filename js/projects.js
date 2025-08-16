@@ -67,8 +67,8 @@ export default function initProjects() {
     effect: "slide",
     speed: 600,
     navigation: {
-      nextEl: "#PortfolioNextBtn",
-      prevEl: "#PortfolioPrevBtn",
+      nextEl: "#WorkNextBtn",
+      prevEl: "#WorkPrevBtn",
     },
   });
 }
