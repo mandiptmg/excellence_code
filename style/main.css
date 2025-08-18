@@ -2109,9 +2109,13 @@ body {
   background-color: #fff;
   color: #111;
   line-height: 1.6;
-  overflow-x: hidden;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 a {
