@@ -2169,11 +2169,11 @@ button {
 .scroll-top-btn.show {
   transform: translateY(0);
   pointer-events: auto;
-  animation: bounceIn 0.6s ease forwards;
 }
 @media (min-width: 40rem) {
   .scroll-top-btn.show {
     opacity: 1;
+    animation: bounceIn 0.6s ease forwards;
   }
 }
 
