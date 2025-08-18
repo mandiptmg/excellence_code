@@ -4,6 +4,8 @@ export default function initNavbar() {
   const closeMenu = document.getElementById("closeMenu");
   const navbar = document.querySelector(".navbar");
 
+
+  //footer copyrite date
   if (document.getElementById("currentYear")) {
     document.getElementById("currentYear").textContent =
       new Date().getFullYear();

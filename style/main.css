@@ -3,10 +3,10 @@
 .navbar {
   color: #111827;
   transition: all 0.5s ease;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
-  width: auto;
+  width: 100vw;
 }
 .navbar.scrolled {
   background-color: white;
@@ -336,6 +336,7 @@
 
 .hero {
   position: relative;
+  padding-top: 5rem;
   display: grid;
   place-items: center;
   min-height: 70vh;
@@ -2116,6 +2117,7 @@ body {
 html,
 body {
   overflow-x: hidden;
+  width: 100%;
 }
 
 a {

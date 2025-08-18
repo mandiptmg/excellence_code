@@ -4,15 +4,14 @@
 .navbar {
   color: $color-secondary;
   transition: $transition-slow;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 999;
-  width: auto;
+  width: 100vw;
 
   &.scrolled {
     background-color: white;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-
     border-radius: 0;
   }
 
@@ -55,99 +54,99 @@
     }
   }
 
- .nav-links {
-  display: none;
-  list-style: none;
-  position: relative;
-
-  @include responsive(lg) {
-    display: flex;
-    gap: 2rem;
-  }
-
-  li {
+  .nav-links {
+    display: none;
+    list-style: none;
     position: relative;
 
-    a,
-    .dropbtn {
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      cursor: pointer;
-      color: $color-secondary;
-      transition: color 0.3s ease;
-      padding: 0.25rem 0.5rem;
-      display: inline-block;
-      font-weight: 600;
-      text-decoration: none;
+    @include responsive(lg) {
+      display: flex;
+      gap: 2rem;
+    }
+
+    li {
       position: relative;
 
-      &:hover,
-      &:focus {
-        color: $color-primary;
-        outline: none;
-      }
+      a,
+      .dropbtn {
+        text-transform: uppercase;
+        font-size: 0.95rem;
+        cursor: pointer;
+        color: $color-secondary;
+        transition: color 0.3s ease;
+        padding: 0.25rem 0.5rem;
+        display: inline-block;
+        font-weight: 600;
+        text-decoration: none;
+        position: relative;
 
-      // Gradient underline
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 100%;
-        bottom: -3px;
-        height: 2px;
-        background: $color-primary;
-        transition: right 0.35s ease;
-      }
+        &:hover,
+        &:focus {
+          color: $color-primary;
+          outline: none;
+        }
 
-      &:hover::after {
-        right: 0;
-      }
-    }
-  }
+        // Gradient underline
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 100%;
+          bottom: -3px;
+          height: 2px;
+          background: $color-primary;
+          transition: right 0.35s ease;
+        }
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: -15rem;
-    background-color: #f7f7f7;
-    box-shadow: $shadow-lg;
-    width: 650px;
-    max-width: 650px;
-    padding: $spacing-xm;
-    border-radius: 6px;
-    z-index: 1000;
-    list-style: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    color: $color-text-base;
-    opacity: 0;
-    transform: translateY(10px);
-    pointer-events: none;
-
-    a {
-      border-radius: 4px;
-      transition: color 0.3s ease, background-color 0.3s ease;
-      padding: 0.5rem;
-      width: 100%;
-
-      &:hover,
-      &:focus {
-        background-color: rgba(0, 123, 255, 0.1);
-        outline: none;
+        &:hover::after {
+          right: 0;
+        }
       }
     }
-  }
 
-  // Show dropdown on hover/focus with smooth animation
-  .dropdown:hover .dropdown-content,
-  .dropdown:focus-within .dropdown-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -15rem;
+      background-color: #f7f7f7;
+      box-shadow: $shadow-lg;
+      width: 650px;
+      max-width: 650px;
+      padding: $spacing-xm;
+      border-radius: 6px;
+      z-index: 1000;
+      list-style: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      color: $color-text-base;
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+
+      a {
+        border-radius: 4px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        padding: 0.5rem;
+        width: 100%;
+
+        &:hover,
+        &:focus {
+          background-color: rgba(0, 123, 255, 0.1);
+          outline: none;
+        }
+      }
+    }
+
+    // Show dropdown on hover/focus with smooth animation
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
   }
-}
 
   .nav-controls {
     @include flex-center;
