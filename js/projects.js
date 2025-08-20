@@ -1,21 +1,9 @@
 export default function initProjects() {
   const projects = [
-    {
-      title: "Branding",
-      image: "./assets/portfolio/portfolio1.png",
-    },
-    {
-      title: "Product Design",
-      image: "assets/portfolio/portfolio2.png",
-    },
-    {
-      title: "Logo Design",
-      image: "assets/portfolio/portfolio3.png",
-    },
-    {
-      title: "Logo Design",
-      image: "assets/portfolio/portfolio3.png",
-    },
+    { title: "Branding", image: "./assets/portfolio/portfolio1.png" },
+    { title: "Product Design", image: "./assets/portfolio/portfolio2.png" },
+    { title: "Logo Design", image: "./assets/portfolio/portfolio3.png" },
+    { title: "UI/UX Design", image: "./assets/portfolio/portfolio3.png" },
   ];
 
   const slidesContainer = document.getElementById("portfolioSwiperWrapper");
@@ -66,9 +54,7 @@ export default function initProjects() {
   window.myProjectsSwiper = new Swiper(".portfolio-swiper", {
     ...getResponsiveConfig(),
     loop: true,
-    centeredSlides: false,
     grabCursor: true,
-    autoHeight: false,
     effect: "slide",
     speed: 600,
     navigation: {

@@ -3,13 +3,13 @@
 
 .vas-section {
   margin: auto;
-  padding: 3.5rem 0;
+  padding: 3.5rem 0 0;
   display: grid;
   width: 90vw;
 
   @include responsive(lg) {
-        width: 80.77vw;
-      max-width: 1413px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 
   // Header Section
@@ -54,31 +54,28 @@
       max-width: 485px;
     }
 
-
-      font-size: 0.9rem;
-      color: $color-text-base;
-      line-height: 1.5;
-  
+    font-size: 0.9rem;
+    color: $color-text-base;
+    line-height: 1.5;
   }
 
   .vas-grid {
     display: grid;
     grid-template-columns: 1fr;
-
+    margin: $spacing-xl 0;
     gap: $spacing-md;
+    position: relative;
+
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    margin: $spacing-xl 0;
-
     .vas-left {
       width: 100%;
-
       .about_image {
-        object-fit: cover;
         width: 100%;
-        height: 100%;
+        height: 512px;
+        object-fit: cover;
       }
     }
 
@@ -190,8 +187,6 @@
               border-radius: 9999px;
               cursor: pointer;
               transition: background-color 0.3s ease, color 0.3s ease;
-
-              
             }
 
             &:hover .icon-wrapper {

@@ -426,7 +426,7 @@
 
           <div
             class="feature-card card-excellence"
-            data-aos="fade-down"
+            data-aos="slide-up"
             data-aos-delay="800"
           >
             <h3>Creative & Technical Excellence</h3>
@@ -591,14 +591,14 @@
         <!-- Navigation Buttons -->
         <div class="swiper-nav">
           <button id="WorkPrevBtn" class="swiper-btn" data-aos="zoom-in-right">
-            <img
-              src="./assets/arrow.png"
-              alt="Previous"
-              class="icon-arrow icon-arrow"
-            />
+            <img src="./assets/arrow.png" alt="Previous" class="icon-arrow" />
           </button>
           <button id="WorkNextBtn" class="swiper-btn" data-aos="zoom-in-left">
-            <img src="./assets/arrow.png" alt="Next" class="icon-arrow-right" />
+            <img
+              src="./assets/arrow.png"
+              alt="Next"
+              class="icon-arrow icon-arrow-right"
+            />
           </button>
         </div>
       </div>
@@ -647,6 +647,20 @@
             <!-- Slides injected via JS -->
           </div>
         </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-nav">
+          <button id="PrevBtn" class="swiper-btn">
+            <img src="./assets/arrow.png" alt="Previous" class="icon-arrow" />
+          </button>
+          <button id="NextBtn" class="swiper-btn">
+            <img
+              src="./assets/arrow.png"
+              alt="Next"
+              class="icon-arrow icon-arrow-right"
+            />
+          </button>
+        </div>
       </div>
     </section>
 
@@ -678,11 +692,7 @@
               />
             </div>
 
-            <div
-              class="contact__group"
-              data-aos="zoom-in-down"
-              data-aos-delay="100"
-            >
+            <div class="contact__group" data-aos="zoom-in-down">
               <label for="email">Your Email</label>
               <input
                 type="email"
@@ -699,7 +709,9 @@
               data-aos="slide-right"
               data-aos-delay="200"
             >
-              <label for="number">Your Phone</label>
+              <label data-aos="zoom-in" data-aos-delay="300" for="number"
+                >Your Phone</label
+              >
               <input
                 type="tel"
                 id="number"
@@ -707,30 +719,28 @@
                 class="contact__input"
                 placeholder="Enter your phone"
                 pattern="[0-9]{7,15}"
+                data-aos="zoom-in"
+                data-aos-delay="300"
               />
             </div>
 
-            <div
-              class="contact__group"
-              data-aos="slide-left"
-              data-aos-delay="300"
-            >
-              <label for="company">Company</label>
+            <div class="contact__group" data-aos="slide-left">
+              <label data-aos="zoom-in" data-aos-delay="300" for="company"
+                >Company</label
+              >
               <input
                 type="text"
                 id="company"
                 name="company"
+                data-aos="zoom-in"
+                data-aos-delay="300"
                 class="contact__input"
                 placeholder="Enter your company name"
               />
             </div>
 
             <!-- Message spans 2 columns -->
-            <div
-              class="contact__group contact__group--full"
-              data-aos="flip-up"
-              data-aos-delay="400"
-            >
+            <div class="contact__group contact__group--full" data-aos="flip-up">
               <label for="message">Message</label>
               <textarea
                 id="message"
@@ -741,7 +751,7 @@
             </div>
 
             <!-- Submit button -->
-            <div class="contact__group" data-aos="zoom-in" data-aos-delay="500">
+            <div class="contact__group" data-aos="zoom-in">
               <button type="submit" class="contact__submit-btn">
                 Send Message
               </button>
@@ -759,22 +769,16 @@
         FOR BRANDS
       </h2>
 
-      <div class="brand-cta__content">
+      <div class="brand-cta__content" data-aos="fade-up" data-aos-delay="200">
         <!-- Paragraph -->
-        <p class="brand-cta__text" data-aos="slide-up" data-aos-delay="500">
+        <p class="brand-cta__text">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo
           officiis expedita repellendus laudantium dolore commodi aspernatur
           amet.
         </p>
 
         <!-- Button -->
-        <button
-          class="brand-cta__button"
-          data-aos="zoom-in"
-          data-aos-delay="400"
-        >
-          Discover More services
-        </button>
+        <button class="brand-cta__button">Discover More services</button>
       </div>
     </section>
 
@@ -797,7 +801,7 @@
               class="newsletter-form"
               action="#"
               method="post"
-              data-aos-delay="400"
+              data-aos-delay="200"
             >
               <div class="input-wrapper">
                 <!-- <span class="icon">
@@ -806,6 +810,8 @@
                 <input
                   type="email"
                   name="email"
+                  data-aos="zoom-in"
+                  data-aos-delay="300"
                   placeholder="Your email address"
                   required
                 />
