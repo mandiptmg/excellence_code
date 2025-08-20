@@ -24,12 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
     { threshold: [0.4] }
   );
 
-  // Attach observer to contact section only
-  document.querySelectorAll("#process [data-aos]").forEach((el) => {
-    el.classList.remove("aos-animate"); 
-    observer.observe(el);
+  ["#process", "#footer"].forEach((section) => {
+    document.querySelectorAll(`${section} [data-aos]`).forEach((el) => {
+      el.classList.remove("aos-animate"); // reset AOS so observer controls it
+      observer.observe(el);
+    });
   });
-
   initHero();
   initScrollTop();
   initNavbar();
