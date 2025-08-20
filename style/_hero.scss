@@ -4,14 +4,7 @@
 .hero {
   position: relative;
   padding-top: 5rem;
-
-  // background: url("../assets/Layer.png") center/cover no-repeat;
   @include grid-center;
-  min-height: 70vh;
-
-  @include responsive(md) {
-    min-height: 728px;
-  }
 
   @include responsive(lg) {
     background-position: right;
@@ -71,15 +64,16 @@
       .read-more-btn {
         background-color: $white;
         color: $color-secondary;
-        padding: 12px 35px;
+
+        padding: 10px 35px;
         border-radius: 9999px;
         text-transform: capitalize;
         @include text-bold;
-        font-size: 0.75rem;
+        font-size: 0.8rem;
         @include responsive(md) {
           font-size: 1.3rem;
         }
-        border: 2px solid rgba($light-gold, 0.7);
+        border: 2px solid rgba($light-gold, 0.8);
         text-decoration: none;
         transition: all 0.3s ease;
         cursor: pointer;
@@ -129,7 +123,7 @@
       .hero-box {
         background-color: transparent;
         height: 200px;
-        transition: all 0.3s ease;
+        transition:$transition-slow;
         border: 4px solid $white;
         opacity: 0;
         transform: scale(0) rotate(0deg) translate(0, 0);
@@ -199,13 +193,13 @@
       .box-2 {
         h4 {
           @include responsive(xl) {
-          font-size: 1.3rem;
-        }
-        @include responsive(md) {
-          font-size: $spacing-sm;
-          padding: 0.1rem;
-        }
-        font-size: $spacing-xm;
+            font-size: 1.4rem;
+          }
+          @include responsive(md) {
+            font-size: 1.2rem;
+            padding: 0.1rem;
+          }
+          font-size: $spacing-xm;
           color: $color-primary;
           font-weight: 200;
         }
