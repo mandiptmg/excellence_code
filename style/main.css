@@ -524,6 +524,7 @@
   }
 }
 .hero .hero-container .hero-grid .box-11 {
+  padding: 0.1rem;
   font-size: 0.75rem;
   text-align: center;
   font-weight: 200;
@@ -531,6 +532,7 @@
 @media (min-width: 80rem) {
   .hero .hero-container .hero-grid .box-11 {
     font-size: 1.3rem;
+    padding: 1rem;
   }
 }
 @media (min-width: 48rem) {

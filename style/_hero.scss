@@ -167,10 +167,14 @@
       .box-11 {
         @include responsive(xl) {
           font-size: 1.3rem;
+           padding: $spacing-sm;
+
         }
         @include responsive(md) {
           font-size: $spacing-sm;
+
         }
+           padding: 0.1rem;
         font-size: $spacing-xm;
         text-align: center;
         font-weight: 200;
