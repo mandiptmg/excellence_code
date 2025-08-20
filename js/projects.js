@@ -2,7 +2,7 @@ export default function initProjects() {
   const projects = [
     {
       title: "Branding",
-      image: "assets/portfolio/portfolio1.png",
+      image: "./assets/portfolio/portfolio1.png",
     },
     {
       title: "Product Design",
@@ -12,11 +12,10 @@ export default function initProjects() {
       title: "Logo Design",
       image: "assets/portfolio/portfolio3.png",
     },
-     {
+    {
       title: "Logo Design",
       image: "assets/portfolio/portfolio3.png",
     },
-    
   ];
 
   const slidesContainer = document.getElementById("portfolioSwiperWrapper");
@@ -28,14 +27,18 @@ export default function initProjects() {
           <div class="project-card"  data-index="${index}">
             <div class="project-details">
               <h3 class="project-title">
-                <span class="project_number">0${index + 1}</span> ${project.title}
+                <span class="project_number">0${index + 1}</span> ${
+          project.title
+        }
               </h3>
               <button class="arrow-btn" data-index="${index}">
                 <img src="./assets/arrow45.png" alt="Arrow Icon" />
               </button>
             </div>
             <div class="image-wrapper">
-              <img src="${project.image}" alt="${project.title}" class="project-image" />
+              <img src="${project.image}" alt="${
+          project.title
+        }" class="project-image" />
             </div>
           </div>
         </div>
@@ -63,7 +66,9 @@ export default function initProjects() {
   window.myProjectsSwiper = new Swiper(".portfolio-swiper", {
     ...getResponsiveConfig(),
     loop: true,
+    centeredSlides: false,
     grabCursor: true,
+    autoHeight: false,
     effect: "slide",
     speed: 600,
     navigation: {

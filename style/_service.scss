@@ -48,7 +48,7 @@
     place-items: start;
     text-align: justify;
     text-justify: inter-word;
-    @include text-bold;
+    @include text-semibold;
 
     @include responsive(md) {
       max-width: 485px;
@@ -57,7 +57,7 @@
 
       font-size: 0.9rem;
       color: $color-text-base;
-      line-height: 1.2;
+      line-height: 1.5;
   
   }
 
@@ -161,6 +161,7 @@
               background-color: $color-primary;
               color: white;
               padding: 10px 35px;
+              min-height: 50px;
               border: 2px solid $color-primary;
               border-radius: 9999px;
               text-transform: capitalize;
