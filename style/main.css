@@ -463,7 +463,7 @@
   background: url("../assets/hero.jpg") right/cover no-repeat;
   margin: 4rem 0;
   display: grid;
-  background-color: #ffffff;
+  background-color: transparent;
   grid-template-columns: repeat(2, 1fr);
 }
 @media (min-width: 64rem) {

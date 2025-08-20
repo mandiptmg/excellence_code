@@ -114,7 +114,7 @@
       background: url("../assets/hero.jpg") right/cover no-repeat;
       margin: 4rem 0;
       display: grid;
-      background-color: $white;
+      background-color: transparent;
       grid-template-columns: repeat(2, 1fr);
       @include responsive(lg) {
         grid-template-columns: repeat(4, 1fr);
