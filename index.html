@@ -47,49 +47,49 @@
         </a>
 
         <div class="nav-controls">
-          <ul class="nav-links">
+          <ul class="nav-links" id="navLinks">
             <li><a href="#about">About</a></li>
             <li><a href="#work">Works</a></li>
-            <li><a href="#code">code</a></li>
+            <li><a href="#code">Code</a></li>
 
             <li class="dropdown">
-              <span
+              <button
                 class="dropbtn"
                 aria-expanded="false"
                 aria-controls="servicesSubmenu"
                 id="servicesBtn"
-                >Services</span
               >
-              <ul class="dropdown-content">
+                Services
+                <img
+                  src="./assets/down-arrow.png"
+                  alt="dropdown Icon"
+                  class="dropdown-arrow"
+                />
+              </button>
+              <ul class="dropdown-content" id="servicesSubmenu">
                 <li>
                   <a href="#website-design-and-development"
-                    >Website Design and Development</a
+                    >Website Design & Development</a
                   >
                 </li>
                 <li><a href="#creative-design">Creative Design Services</a></li>
                 <li>
                   <a href="#digital-marketing"
-                    >Digital Marketing and Social Media Management</a
+                    >Digital Marketing & Social Media</a
                   >
                 </li>
-                <li>
-                  <a href="#events-organising"
-                    >Events and Conferences Organising</a
-                  >
-                </li>
-                <li>
-                  <a href="#analytics"
-                    >Analytics and Performance Optimization</a
-                  >
-                </li>
+                <li><a href="#events-organising">Events & Conferences</a></li>
+                <li><a href="#analytics">Analytics & Optimization</a></li>
                 <li><a href="#email-hosting">Email & Hosting Services</a></li>
               </ul>
             </li>
-            <li><a href="#process">process</a></li>
+
+            <li><a href="#process">Process</a></li>
           </ul>
 
+          <!-- Mobile menu button -->
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <img src="./assets/bars.png" alt="meanu icon" class="icon-menu" />
+            <img src="./assets/bars.png" alt="menu icon" class="icon-menu" />
           </button>
         </div>
       </div>
