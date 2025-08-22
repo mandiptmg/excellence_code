@@ -1379,6 +1379,7 @@
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   margin: 10px auto;
+  scale: 1.25;
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 .code-section .card.active {
