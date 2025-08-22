@@ -32,7 +32,7 @@
     place-items: start;
     margin: $spacing-xl 0;
     gap: $spacing-md;
-    min-height: 255px;
+    min-height: 325px;
 
     grid-template-columns: 1fr;
     @include responsive(md) {

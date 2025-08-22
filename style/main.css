@@ -1340,7 +1340,7 @@
   place-items: start;
   margin: 4rem 0;
   gap: 2rem;
-  min-height: 255px;
+  min-height: 325px;
   grid-template-columns: 1fr;
 }
 @media (min-width: 48rem) {
