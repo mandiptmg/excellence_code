@@ -30,15 +30,15 @@
   .code-grid {
     display: grid;
     place-items: start;
-    margin: $spacing-xl 0 ;
+    margin: $spacing-xl 0;
     gap: $spacing-md;
     min-height: 255px;
 
-    grid-template-columns:  1fr;
+    grid-template-columns: 1fr;
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
     }
-     @include responsive(lg) {
+    @include responsive(lg) {
       grid-template-columns: repeat(4, 1fr);
     }
   }
@@ -76,6 +76,10 @@
       background-color: $color-primary;
       color: $white;
 
+      .card-content{
+        color: $bg-light;
+      }
+
       .icon {
         @include white-filter;
       }
@@ -92,9 +96,15 @@
       text-align: left;
 
       @include responsive(md) {
-      font-size: $spacing-md;
-
+        font-size: $spacing-md;
+      }
     }
+    .card-content {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color:$color-text-subtle;
+      margin-top: 2px;
+      text-align: left;
     }
   }
 }

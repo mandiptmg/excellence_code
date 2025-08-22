@@ -1385,6 +1385,9 @@
   background-color: #d4af37;
   color: #ffffff;
 }
+.code-section .card.active .card-content {
+  color: #fafafa;
+}
 .code-section .card.active .icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
 }
@@ -1401,6 +1404,13 @@
   .code-section .card .card-title {
     font-size: 2rem;
   }
+}
+.code-section .card .card-content {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #9ca3af;
+  margin-top: 2px;
+  text-align: left;
 }
 
 .brand-cta {
