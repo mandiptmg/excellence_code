@@ -5,7 +5,7 @@
 .code-section {
   margin: 0 auto;
   text-align: center;
-  padding: 3.5rem 0;
+  padding: 3rem 0 0;
 
   width: 90vw;
 
@@ -30,7 +30,7 @@
   .code-grid {
     display: grid;
     place-items: start;
-    margin: $spacing-lg 0;
+    margin: $spacing-xl 0 ;
     gap: $spacing-md;
     min-height: 255px;
 

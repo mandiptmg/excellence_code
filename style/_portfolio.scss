@@ -3,7 +3,7 @@
 
 .portfolio-section {
   margin: 0 auto;
-  padding: 3.5rem 0 0;
+  padding: 3rem 0  0;
 
   width: 90vw;
 
@@ -17,7 +17,6 @@
     display: grid;
     place-items: start;
     gap: 1rem;
-    margin-top: 4rem;
 
     @include responsive(md) {
       grid-template-columns: repeat(2, 1fr);
@@ -109,7 +108,7 @@
 
   .portfolio-container {
     position: relative;
-    margin-top: $spacing-2xl;
+    margin-top: $spacing-xl;
 
     /* Individual project card */
     .project-card {

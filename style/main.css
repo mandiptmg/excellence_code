@@ -469,7 +469,7 @@
 }
 .hero .hero-container .hero-grid {
   background: url("../assets/hero.jpg") center/cover no-repeat;
-  margin: 4rem 0;
+  margin-bottom: 7rem;
   display: grid;
   background-color: transparent;
   grid-template-columns: repeat(2, 1fr);
@@ -594,7 +594,7 @@
 }
 .vas-section {
   margin: auto;
-  padding: 3.5rem 0 0;
+  padding: 3rem 0 0;
   display: grid;
   width: 90vw;
 }
@@ -788,7 +788,7 @@
 
 .portfolio-section {
   margin: 0 auto;
-  padding: 3.5rem 0 0;
+  padding: 3rem 0 0;
   width: 90vw;
 }
 @media (min-width: 64rem) {
@@ -801,7 +801,6 @@
   display: grid;
   place-items: start;
   gap: 1rem;
-  margin-top: 4rem;
 }
 @media (min-width: 48rem) {
   .portfolio-section .portfolio-header {
@@ -892,7 +891,7 @@
 }
 .portfolio-section .portfolio-container {
   position: relative;
-  margin-top: 6rem;
+  margin-top: 4rem;
   /* Individual project card */
 }
 .portfolio-section .portfolio-container .project-card {
@@ -1017,7 +1016,7 @@
   padding: 4rem 0;
 }
 .why-choose-us .why-us-container {
-  margin: 4rem auto;
+  margin: 3.5rem auto;
   width: 90vw;
 }
 @media (min-width: 64rem) {
@@ -1030,7 +1029,6 @@
   display: grid;
   place-items: start;
   gap: 1rem;
-  margin: 4rem 0;
 }
 @media (min-width: 48rem) {
   .why-choose-us .why-us-container .whychooseus-header {
@@ -1315,7 +1313,7 @@
 .code-section {
   margin: 0 auto;
   text-align: center;
-  padding: 3.5rem 0;
+  padding: 3rem 0 0;
   width: 90vw;
 }
 @media (min-width: 64rem) {
@@ -1340,7 +1338,7 @@
 .code-section .code-grid {
   display: grid;
   place-items: start;
-  margin: 3rem 0;
+  margin: 4rem 0;
   gap: 2rem;
   min-height: 255px;
   grid-template-columns: 1fr;
@@ -1409,7 +1407,7 @@
   width: 90vw;
   margin: auto;
   text-align: center;
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 @media (min-width: 64rem) {
   .brand-cta {
@@ -1484,7 +1482,7 @@
   position: relative;
   overflow: hidden;
   padding: 3.5rem 0;
-  margin: 3rem auto;
+  margin: 4rem auto;
 }
 @media (min-width: 64rem) {
   .contact-section {
@@ -1663,7 +1661,7 @@
   margin: 0 auto;
   text-align: center;
   position: relative;
-  padding: 3.5rem 0;
+  padding: 3rem 0;
   width: 90vw;
 }
 @media (min-width: 64rem) {

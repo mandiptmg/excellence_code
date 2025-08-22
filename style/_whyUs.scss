@@ -7,7 +7,7 @@
   padding: $spacing-xl 0;
 
   .why-us-container {
-    margin: 4rem auto;
+    margin: 3.5rem auto;
     width: 90vw;
 
     @include responsive(lg) {
@@ -20,7 +20,6 @@
       display: grid;
       place-items: start;
       gap: 1rem;
-      margin: 4rem 0;
 
       @include responsive(md) {
         grid-template-columns: repeat(2, 1fr);
