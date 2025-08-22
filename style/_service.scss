@@ -46,8 +46,6 @@
   .description {
     display: grid;
     place-items: start;
-    text-align: justify;
-    text-justify: inter-word;
     @include text-semibold;
 
     @include responsive(md) {
@@ -55,7 +53,8 @@
     }
 
     font-size: $spacing-sm;
-    color: $color-text-base;
+         color: $color-text-subtle;
+
     line-height: 1.5;
   }
 
@@ -143,7 +142,8 @@
           p {
             font-size: 0.9rem;
             line-height: 1.5;
-            color: $color-secondary;
+                color: $color-text-subtle;
+
             margin-bottom: 1.4rem;
             @include text-medium;
           }

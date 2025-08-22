@@ -44,15 +44,14 @@
   .description {
     display: grid;
     place-items: start;
-    text-align: justify;
-    text-justify: inter-word;
     @include text-semibold;
     @include responsive(md) {
       max-width: 485px;
     }
     p {
       font-size: $spacing-sm;
-      color: $color-text-base; /* text-color */
+            color: $color-text-subtle;
+
       margin-bottom: 16px;
       line-height: 1.5;
     }

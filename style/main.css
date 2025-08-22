@@ -636,11 +636,9 @@
 .vas-section .description {
   display: grid;
   place-items: start;
-  text-align: justify;
-  text-justify: inter-word;
   font-weight: 500;
   font-size: 1rem;
-  color: #374151;
+  color: #9ca3af;
   line-height: 1.5;
 }
 @media (min-width: 48rem) {
@@ -726,7 +724,7 @@
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content p {
   font-size: 0.9rem;
   line-height: 1.5;
-  color: #111827;
+  color: #9ca3af;
   margin-bottom: 1.4rem;
   font-weight: 400;
 }
@@ -827,8 +825,6 @@
 .portfolio-section .description {
   display: grid;
   place-items: start;
-  text-align: justify;
-  text-justify: inter-word;
   font-weight: 500;
 }
 @media (min-width: 48rem) {
@@ -838,7 +834,7 @@
 }
 .portfolio-section .description p {
   font-size: 1rem;
-  color: #374151; /* text-color */
+  color: #9ca3af;
   margin-bottom: 16px;
   line-height: 1.5;
 }
@@ -1058,8 +1054,6 @@
   width: 100%;
 }
 .why-choose-us .why-us-container .whychooseus-header .right-side .description {
-  text-align: justify;
-  text-justify: inter-word;
   font-weight: 500;
 }
 @media (min-width: 48rem) {
@@ -1072,7 +1066,7 @@
 }
 .why-choose-us .why-us-container .whychooseus-header .right-side .description p {
   font-size: 1rem;
-  color: #374151;
+  color: #9ca3af;
   margin-bottom: 16px;
   line-height: 1.5;
 }
@@ -1311,8 +1305,7 @@
   }
 }
 .code-section {
-  margin: 0 auto;
-  text-align: center;
+  margin: 4rem auto;
   padding: 3rem 0 0;
   width: 90vw;
 }
@@ -1322,25 +1315,65 @@
     max-width: 1413px;
   }
 }
-.code-section .title {
-  font-weight: 500;
-  margin-top: 4rem;
-  line-height: 0.9;
-  font-size: 4rem;
-  font-family: "Bebas Neue", sans-serif;
-  text-align: left;
+.code-section .code-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 @media (min-width: 64rem) {
-  .code-section .title {
+  .code-section .code-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+.code-section .code-info {
+  flex: 1;
+}
+.code-section .code-info .title {
+  font-weight: 500;
+  font-size: 4rem;
+  font-family: "Bebas Neue", sans-serif;
+  line-height: 0.9;
+}
+@media (min-width: 64rem) {
+  .code-section .code-info .title {
     font-size: 6.5rem;
   }
 }
-.code-section .code-grid {
+.code-section .code-info .desc {
+  margin: 1rem 0 1.5rem;
+  color: #9ca3af;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.code-section .code-info .learn-more-btn {
+  background-color: #d4af37;
+  border: 2px solid #d4af37;
+  color: #ffffff;
+  padding: 0 35px;
+  min-height: 50px;
   display: grid;
-  place-items: start;
-  margin: 4rem 0;
+  place-items: center;
+  border-radius: 9999px;
+  text-transform: capitalize;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+@media (min-width: 40rem) {
+  .code-section .code-info .learn-more-btn {
+    display: inline-flex;
+  }
+}
+.code-section .code-info .learn-more-btn:hover {
+  background-color: #ffffff;
+  color: #d4af37;
+}
+.code-section .code-grid {
+  flex: 1;
+  display: grid;
   gap: 2rem;
-  min-height: 325px;
   grid-template-columns: 1fr;
 }
 @media (min-width: 48rem) {
@@ -1348,70 +1381,41 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 64rem) {
-  .code-section .code-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 .code-section .card {
-  text-align: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
+  background: #f3f4f6;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  transition: background 0.3s, color 0.3s;
   cursor: pointer;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #f3f4f6;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: left;
 }
 .code-section .card .icon {
   width: 40px;
   height: 40px;
+  margin-bottom: 1rem;
   object-fit: contain;
   filter: brightness(0) saturate(100%) invert(7%) sepia(31%) saturate(1125%) hue-rotate(182deg) brightness(95%) contrast(94%);
-  transition: filter 0.3s ease;
 }
-.code-section .card .extra-image {
-  max-width: 200px;
-  max-height: 0;
-  opacity: 0;
-  object-fit: cover;
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  margin: 10px auto;
-  scale: 1.25;
-  transition: max-height 0.5s ease, opacity 0.5s ease;
+.code-section .card .card-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.code-section .card .card-content {
+  font-size: 0.95rem;
+  color: #9ca3af;
+  line-height: 1.5;
 }
 .code-section .card.active {
-  background-color: #d4af37;
+  background: #d4af37;
   color: #ffffff;
-}
-.code-section .card.active .card-content {
-  color: #fafafa;
 }
 .code-section .card.active .icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
 }
-.code-section .card.active .extra-image {
-  max-height: 110px;
-  opacity: 1;
-}
-.code-section .card .card-title {
-  font-size: 1rem;
-  font-weight: bold;
-  text-align: left;
-}
-@media (min-width: 48rem) {
-  .code-section .card .card-title {
-    font-size: 2rem;
-  }
-}
-.code-section .card .card-content {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #9ca3af;
-  margin-top: 2px;
-  text-align: left;
+.code-section .card.active .card-content {
+  color: #ffffff;
 }
 
 .brand-cta {
@@ -1452,7 +1456,7 @@
   }
 }
 .brand-cta__text {
-  color: #374151;
+  color: #9ca3af;
   line-height: 1.5;
   text-align: left;
   font-weight: 500;
@@ -1739,7 +1743,7 @@
   font-size: 1rem;
   text-align: left;
   line-height: 1.2;
-  color: #374151;
+  color: #9ca3af;
   margin-bottom: 1.5rem;
 }
 @media (min-width: 48rem) {
