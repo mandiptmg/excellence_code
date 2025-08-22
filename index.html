@@ -158,7 +158,7 @@
               <img
                 src="./assets/menuIcon/service.png"
                 alt="Services Icon"
-                class="menu-icon"
+                class="menu-icon service-icon"
               />
               Services
             </div>
@@ -363,10 +363,11 @@
         </div>
 
         <div class="feature-grid">
+          <!-- Card 1 -->
           <div
             class="feature-card card-experience"
             data-aos="fade-up"
-            data-aos-delay="100"
+            data-aos-delay="50"
           >
             <h3>Over 13 Years of Experience</h3>
             <div class="arrow-btn-wrapper">
@@ -375,7 +376,7 @@
                 class="arrow-btn"
                 aria-label="Learn more about our experience"
                 data-aos="zoom-in"
-                data-aos-delay="200"
+                data-aos-delay="100"
               >
                 <img
                   src="./assets/arrow45.png"
@@ -386,25 +387,27 @@
             </div>
           </div>
 
+          <!-- Card 2 -->
           <div
             class="span-col feature-card"
             data-aos="zoom-out"
-            data-aos-delay="300"
+            data-aos-delay="150"
           >
             <div
               class="empty-card"
               data-aos="fade-zoom-in"
-              data-aos-delay="400"
+              data-aos-delay="200"
             ></div>
-            <div class="feature-image" data-aos="flip-up" data-aos-delay="500">
+            <div class="feature-image" data-aos="flip-up" data-aos-delay="250">
               <img src="./assets/choose.png" alt="Abstract 3D metallic rings" />
             </div>
           </div>
 
+          <!-- Card 3 -->
           <div
             class="feature-card card-solution"
             data-aos="flip-down"
-            data-aos-delay="600"
+            data-aos-delay="300"
           >
             <h3>Tailored Client Centric Solution</h3>
             <div class="arrow-btn-wrapper">
@@ -413,7 +416,7 @@
                 class="arrow-btn"
                 aria-label="Learn more about our solutions"
                 data-aos="zoom-in"
-                data-aos-delay="700"
+                data-aos-delay="350"
               >
                 <img
                   src="./assets/arrow45.png"
@@ -424,10 +427,11 @@
             </div>
           </div>
 
+          <!-- Card 4 -->
           <div
             class="feature-card card-excellence"
             data-aos="slide-up"
-            data-aos-delay="800"
+            data-aos-delay="400"
           >
             <h3>Creative & Technical Excellence</h3>
             <div class="arrow-btn-wrapper">
@@ -436,7 +440,7 @@
                 class="arrow-btn"
                 aria-label="Learn more about our excellence"
                 data-aos="zoom-out"
-                data-aos-delay="900"
+                data-aos-delay="450"
               >
                 <img
                   src="./assets/arrow45.png"
@@ -447,10 +451,11 @@
             </div>
           </div>
 
+          <!-- Card 5 -->
           <div
             class="feature-card card-execution"
             data-aos="fade-up"
-            data-aos-delay="1000"
+            data-aos-delay="500"
           >
             <h3>End-to-End Project Execution</h3>
             <div class="arrow-btn-wrapper">
@@ -459,7 +464,7 @@
                 class="arrow-btn"
                 aria-label="Learn more about our execution"
                 data-aos="flip-up"
-                data-aos-delay="1100"
+                data-aos-delay="550"
               >
                 <img
                   src="./assets/arrow45.png"
@@ -470,14 +475,16 @@
             </div>
           </div>
 
-          <div class="read-btn" data-aos="zoom-in" data-aos-delay="1200">
+          <!-- Learn More Button (moves last on mobile) -->
+          <div class="read-btn" data-aos="zoom-in" data-aos-delay="600">
             <a href="#" class="learn-more-btn">Learn more</a>
           </div>
 
+          <!-- Card 6 -->
           <div
             class="feature-card card-record"
             data-aos="flip-down"
-            data-aos-delay="1300"
+            data-aos-delay="650"
           >
             <h3>Proven Track Record</h3>
             <div class="arrow-btn-wrapper">
@@ -486,7 +493,7 @@
                 class="arrow-btn"
                 aria-label="Learn more about our track record"
                 data-aos="fade-zoom-in"
-                data-aos-delay="1400"
+                data-aos-delay="700"
               >
                 <img
                   src="./assets/arrow45.png"
@@ -578,10 +585,7 @@
       <!-- work Grid -->
       <div class="portfolio-container">
         <div class="swiper portfolio-swiper">
-          <div
-            class="swiper-wrapper"
-            id="portfolioSwiperWrapper"
-          >
+          <div class="swiper-wrapper" id="portfolioSwiperWrapper">
             <!-- Slides injected via JS -->
           </div>
         </div>
@@ -636,11 +640,7 @@
       <div class="testimonial-container">
         <div class="swiper testimonial-swiper">
           <!-- Swiper wrapper -->
-          <div
-            class="swiper-wrapper"
-            id="testimonialSwiperWrapper"
-            
-          >
+          <div class="swiper-wrapper" id="testimonialSwiperWrapper">
             <!-- Slides injected via JS -->
           </div>
         </div>
@@ -662,86 +662,91 @@
     </section>
 
     <!-- contact section  -->
-    <section id="process" class="contact-container">
-      <!-- Info Section -->
-      <div class="info-section" data-aos="flip-left">
-        <h1 class="contact-title" data-aos="slide-up" data-aos-delay="400">
-          Let's Build Your Vision Together
-        </h1>
-        <p class="contact-subtitle" data-aos="zoom-in" data-aos-delay="500">
-          Share your ideas — we'll make them real with precision and passion.
-        </p>
-      </div>
+    <section id="process" class="contact-section">
+      <div class="contact-container">
+        <!-- Info Section -->
+        <div class="info-section" data-aos="flip-left">
+          <div class="center-info">
+            <h1 class="contact-title" data-aos="slide-up" data-aos-delay="400">
+              Let's Build Your Vision Together
+            </h1>
+            <p class="contact-subtitle" data-aos="zoom-in" data-aos-delay="500">
+              Share your ideas — we'll make them real with precision and
+              passion.
+            </p>
+          </div>
+        </div>
 
-      <!-- Form Section -->
-      <div class="form-section" data-aos="flip-right" data-aos-delay="400">
-        <div class="form-wrapper" data-aos="slide-left" data-aos-delay="500">
-          <form action="#" method="POST" class="contact__form" novalidate>
-            <div class="contact__group" data-aos="zoom-in-up">
-              <label for="name">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                class="contact__input"
-                placeholder="Enter your name"
-                required
-              />
-            </div>
+        <!-- Form Section -->
+        <div class="form-section" data-aos="flip-right" data-aos-delay="400">
+          <div class="form-wrapper" data-aos="slide-left" data-aos-delay="500">
+            <form action="#" method="POST" class="contact__form" novalidate>
+              <div class="contact__group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="contact__input"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
 
-            <div class="contact__group" data-aos="zoom-in-down">
-              <label for="email">Your Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                class="contact__input"
-                placeholder="Enter your email"
-                required
-              />
-            </div>
+              <div class="contact__group">
+                <label for="email">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="contact__input"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
 
-            <div class="contact__group" data-aos="zoom-in">
-              <label for="number">Your Phone</label>
-              <input
-                type="tel"
-                id="number"
-                name="number"
-                class="contact__input"
-                placeholder="Enter your phone"
-                pattern="[0-9]{7,15}"
-              />
-            </div>
+              <div class="contact__group">
+                <label for="number">Your Phone</label>
+                <input
+                  type="tel"
+                  id="number"
+                  name="number"
+                  class="contact__input"
+                  placeholder="Enter your phone"
+                  pattern="[0-9]{7,15}"
+                />
+              </div>
 
-            <div class="contact__group" data-aos="zoom-in">
-              <label for="company">Company</label>
-              <input
-                type="text"
-                id="company"
-                name="company"
-                class="contact__input"
-                placeholder="Enter your company name"
-              />
-            </div>
+              <div class="contact__group">
+                <label for="company">Company</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="contact__input"
+                  placeholder="Enter your company name"
+                />
+              </div>
 
-            <!-- Message spans 2 columns -->
-            <div class="contact__group contact__group--full" data-aos="flip-up">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                class="contact__textarea"
-                placeholder="Type Your Message..."
-              ></textarea>
-            </div>
+              <!-- Message spans 2 columns -->
+              <div class="contact__group contact__group--full">
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="contact__textarea"
+                  placeholder="Type Your Message..."
+                ></textarea>
+              </div>
 
-            <!-- Submit button -->
-            <div class="contact__group" data-aos="zoom-in">
-              <button type="submit" class="contact__submit-btn">
-                Send Message
-              </button>
-            </div>
-          </form>
+              <!-- Submit button -->
+              <div class="contact__group">
+                <button type="submit" class="contact__submit-btn">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </section>
@@ -831,14 +836,12 @@
             >
               Services
             </h3>
-            <ul class="footer-links">
-              <ul class="nav-links" data-aos="slide-up" data-aos-delay="500">
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Works</a></li>
-                <li><a href="#code">Code</a></li>
-                <li><a href="#about">Service</a></li>
-                <li><a href="#process">Process</a></li>
-              </ul>
+            <ul class="footer-links" data-aos="slide-up" data-aos-delay="500">
+              <li><a href="#about">About</a></li>
+              <li><a href="#work">Works</a></li>
+              <li><a href="#code">Code</a></li>
+              <li><a href="#about">Service</a></li>
+              <li><a href="#process">Process</a></li>
             </ul>
           </div>
 

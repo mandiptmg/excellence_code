@@ -54,7 +54,7 @@
       max-width: 485px;
     }
 
-    font-size: 0.9rem;
+    font-size: $spacing-sm;
     color: $color-text-base;
     line-height: 1.5;
   }
@@ -157,7 +157,8 @@
             .read-more-btn {
               background-color: $color-primary;
               color: white;
-              padding: 10px 35px;
+              padding: 0 35px;
+              @include grid-center;
               min-height: 50px;
               border: 2px solid $color-primary;
               border-radius: 9999px;
@@ -180,8 +181,8 @@
 
             .icon-wrapper {
               background-color: $color-primary;
-              width: 2.7rem;
-              height: 2.7rem;
+              width: 3rem;
+              height: 3rem;
               @include grid-center;
               font-size: 1rem;
               border-radius: 9999px;
@@ -203,8 +204,7 @@
 
         &.active .vas-service-content {
           transition: $transition-slow;
-          padding-top: 1rem;
-          padding-bottom: 1rem;
+          padding: 1rem 0;
           max-height: auto;
         }
       }

@@ -90,7 +90,7 @@
           }
 
           .dropdown-arrow {
-            width: 20px; 
+            width: 20px;
             height: 20px;
             object-fit: contain;
             transition: transform 0.3s ease;
@@ -136,9 +136,8 @@
         pointer-events: none;
         transition: opacity 0.3s ease, transform 0.3s ease;
 
-
-        @include responsive(xl){
-        left: -200%;
+        @include responsive(xl) {
+          left: -200%;
         }
         a {
           border-radius: 4px;
@@ -242,6 +241,9 @@
           background-color: $color-primary;
           color: #ffffff;
           outline: none;
+          .menu-icon {
+            @include white-filter;
+          }
         }
       }
     }
@@ -300,6 +302,13 @@
     transition: transform 0.3s ease;
   }
 
+  .accordion-item.open .menu-down {
+    color: $white;
+    .menu-icon {
+      @include white-filter;
+    }
+  }
+
   .accordion-item.open {
     background-color: $color-primary;
     color: $color-primary;
@@ -318,21 +327,15 @@
     width: 100%;
   }
 
-  .dropbtn img.menu-icon {
-    filter: brightness(0.3) sepia(1) saturate(5) hue-rotate(-20deg);
-    transition: filter 0.3s ease;
-  }
-
-  .dropbtn:hover img.menu-icon,
-  .dropbtn:focus img.menu-icon {
-    filter: brightness(1) sepia(1) saturate(5) hue-rotate(-20deg);
+  .dropbtn:hover .service-icon {
+    @include white-filter;
   }
 }
 
 /* Close Button */
 .close-btn {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border: none;
   border-radius: 9999px;
   cursor: pointer;
@@ -342,8 +345,8 @@
   @include grid-center;
 
   img {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 0.9rem;
+    height: 0.9rem;
   }
 
   &:hover,
