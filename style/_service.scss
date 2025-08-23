@@ -3,7 +3,7 @@
 
 .vas-section {
   margin: auto;
-  padding: 3rem 0  0;
+  padding: 3rem 0 0;
   display: grid;
   width: 90vw;
 
@@ -53,7 +53,7 @@
     }
 
     font-size: $spacing-sm;
-         color: $color-text-subtle;
+    color: $color-text-subtle;
 
     line-height: 1.5;
   }
@@ -140,9 +140,10 @@
           transition: $transition-slow;
 
           p {
-            font-size: 0.9rem;
+            font-size: $spacing-sm;
+
             line-height: 1.5;
-                color: $color-text-subtle;
+            color: $color-text-subtle;
 
             margin-bottom: 1.4rem;
             @include text-medium;

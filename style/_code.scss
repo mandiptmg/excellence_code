@@ -114,6 +114,7 @@
     &.active {
       background: $color-primary;
       color: $white;
+      box-shadow: $shadow-xl;
 
       .icon {
         @include white-filter;

@@ -199,16 +199,19 @@
 .mobile-menu.active {
   right: 0;
 }
-.mobile-menu ul {
-  list-style: none;
-  padding: 2rem 0 1rem;
+.mobile-menu .mobile-flex {
   margin-top: 2rem;
 }
-.mobile-menu ul li {
+.mobile-menu .mobile-flex ul {
+  list-style: none;
+  padding: 2rem 0 1rem;
+  width: 100%;
+}
+.mobile-menu .mobile-flex ul li {
   margin-bottom: 1rem;
 }
-.mobile-menu ul li a,
-.mobile-menu ul li span {
+.mobile-menu .mobile-flex ul li a,
+.mobile-menu .mobile-flex ul li span {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -222,19 +225,19 @@
   text-decoration: none;
   transition: all 0.5s ease;
 }
-.mobile-menu ul li a:hover, .mobile-menu ul li a:focus,
-.mobile-menu ul li span:hover,
-.mobile-menu ul li span:focus {
+.mobile-menu .mobile-flex ul li a:hover, .mobile-menu .mobile-flex ul li a:focus,
+.mobile-menu .mobile-flex ul li span:hover,
+.mobile-menu .mobile-flex ul li span:focus {
   background-color: #d4af37;
   color: #ffffff;
   outline: none;
 }
-.mobile-menu ul li a:hover .menu-icon, .mobile-menu ul li a:focus .menu-icon,
-.mobile-menu ul li span:hover .menu-icon,
-.mobile-menu ul li span:focus .menu-icon {
+.mobile-menu .mobile-flex ul li a:hover .menu-icon, .mobile-menu .mobile-flex ul li a:focus .menu-icon,
+.mobile-menu .mobile-flex ul li span:hover .menu-icon,
+.mobile-menu .mobile-flex ul li span:focus .menu-icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
 }
-.mobile-menu .menu-icon {
+.mobile-menu .mobile-flex .menu-icon {
   width: 20px;
   height: 20px;
   object-fit: contain;
@@ -247,6 +250,8 @@
 .mobile-menu .dropdown-menu-content {
   display: none;
   background-color: #f3f4f6;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
   padding: 0.5rem;
   margin: 0.5rem 0;
   padding-left: 1.55rem;
@@ -310,7 +315,7 @@
   cursor: pointer;
   float: right;
   transition: all 0.3s ease;
-  background-color: #ef4444;
+  background-color: #d4af37;
   display: grid;
   place-items: center;
 }
@@ -538,7 +543,6 @@
   padding: 0.1rem;
   font-size: 0.75rem;
   text-align: center;
-  font-weight: 200;
 }
 @media (min-width: 80rem) {
   .hero .hero-container .hero-grid .box-11 {
@@ -638,7 +642,7 @@
   place-items: start;
   font-weight: 500;
   font-size: 1rem;
-  color: #9ca3af;
+  color: #6b7280;
   line-height: 1.5;
 }
 @media (min-width: 48rem) {
@@ -722,9 +726,9 @@
   transition: all 0.5s ease;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
-  color: #9ca3af;
+  color: #6b7280;
   margin-bottom: 1.4rem;
   font-weight: 400;
 }
@@ -834,7 +838,7 @@
 }
 .portfolio-section .description p {
   font-size: 1rem;
-  color: #9ca3af;
+  color: #6b7280;
   margin-bottom: 16px;
   line-height: 1.5;
 }
@@ -984,7 +988,7 @@
   border-radius: 50%;
   font-size: 1.25rem;
   background: transparent;
-  color: #9ca3af;
+  color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1066,7 +1070,7 @@
 }
 .why-choose-us .why-us-container .whychooseus-header .right-side .description p {
   font-size: 1rem;
-  color: #9ca3af;
+  color: #6b7280;
   margin-bottom: 16px;
   line-height: 1.5;
 }
@@ -1343,7 +1347,7 @@
 }
 .code-section .code-info .desc {
   margin: 1rem 0 1.5rem;
-  color: #9ca3af;
+  color: #6b7280;
   line-height: 1.5;
   font-size: 1rem;
   font-weight: 500;
@@ -1405,12 +1409,13 @@
 }
 .code-section .card .card-content {
   font-size: 0.95rem;
-  color: #9ca3af;
+  color: #6b7280;
   line-height: 1.5;
 }
 .code-section .card.active {
   background: #d4af37;
   color: #ffffff;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 .code-section .card.active .icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
@@ -1457,7 +1462,7 @@
   }
 }
 .brand-cta__text {
-  color: #9ca3af;
+  color: #6b7280;
   line-height: 1.5;
   text-align: left;
   font-weight: 500;
@@ -1618,7 +1623,7 @@
 }
 .contact-section .contact-container .contact__form .contact__input::placeholder,
 .contact-section .contact-container .contact__form .contact__textarea::placeholder {
-  color: #9ca3af;
+  color: #6b7280;
 }
 .contact-section .contact-container .contact__form .contact__textarea {
   min-height: 140px;
@@ -1744,7 +1749,7 @@
   font-size: 1rem;
   text-align: left;
   line-height: 1.2;
-  color: #9ca3af;
+  color: #6b7280;
   margin-bottom: 1.5rem;
 }
 @media (min-width: 48rem) {
@@ -1754,7 +1759,7 @@
 }
 .testimonial-section .testimonial-container .testimonial-divider {
   height: 1px;
-  background-color: #9ca3af;
+  background-color: #6b7280;
   margin: 1.5rem 0;
   border: none;
 }
@@ -1804,7 +1809,7 @@
   border-radius: 50%;
   font-size: 1.25rem;
   background: transparent;
-  color: #9ca3af;
+  color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
   cursor: pointer;
   transition: all 0.3s ease;
@@ -1858,7 +1863,7 @@
 }
 .newsletter-section .newsletter-container .newsletter-text p {
   font-size: 0.75rem;
-  color: #6b7280;
+  color: #9ca3af;
 }
 @media (min-width: 48rem) {
   .newsletter-section .newsletter-container .newsletter-text h2 {
@@ -2016,7 +2021,7 @@
 .footer .footer-container .footer-top .footer-company__text {
   font-size: 0.85rem;
   line-height: 1.5;
-  color: #9ca3af;
+  color: #6b7280;
 }
 .footer .footer-container .footer-top .footer-section {
   display: flex;
@@ -2222,7 +2227,7 @@ button {
   border: none;
   display: grid;
   place-items: center;
-  background: rgba(107, 114, 128, 0.5);
+  background: rgba(156, 163, 175, 0.5);
   cursor: pointer;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transition: all 0.5s ease;

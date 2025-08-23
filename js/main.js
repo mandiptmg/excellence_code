@@ -9,9 +9,9 @@ import initScrollTop from "./scrollTopBtn.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
-    duration: 1700,
+    duration: 1500,
     easing: "ease-in-out",
-      // once: true 
+    // once: true,
   });
 
   const observer = new IntersectionObserver(

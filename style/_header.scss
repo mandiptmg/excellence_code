@@ -213,47 +213,53 @@
     right: 0;
   }
 
-  ul {
-    list-style: none;
-    padding: 2rem 0 1rem;
+  .mobile-flex {
     margin-top: 2rem;
 
-    li {
-      margin-bottom: 1rem;
 
-      a,
-      span {
-        display: flex;
-        align-items: center;
+    ul {
+      list-style: none;
+      padding: 2rem 0 1rem;
+      width: 100%;
 
-        gap: 0.5rem;
-        padding: $spacing-xm 1rem;
-        border-radius: 6px;
-        font-size: $spacing-xm;
-        color: $color-secondary;
-        text-transform: uppercase;
-        @include text-semibold;
-        cursor: pointer;
-        text-decoration: none;
-        transition: $transition-slow;
+      li {
+        margin-bottom: 1rem;
+        // border-bottom: 1px solid $border-default;
 
-        &:hover,
-        &:focus {
-          background-color: $color-primary;
-          color: #ffffff;
-          outline: none;
-          .menu-icon {
-            @include white-filter;
+        a,
+        span {
+          display: flex;
+          align-items: center;
+
+          gap: 0.5rem;
+          padding: $spacing-xm 1rem;
+          border-radius: 6px;
+          font-size: $spacing-xm;
+          color: $color-secondary;
+          text-transform: uppercase;
+          @include text-semibold;
+          cursor: pointer;
+          text-decoration: none;
+          transition: $transition-slow;
+
+          &:hover,
+          &:focus {
+            background-color: $color-primary;
+            color: #ffffff;
+            outline: none;
+            .menu-icon {
+              @include white-filter;
+            }
           }
         }
       }
     }
-  }
 
-  .menu-icon {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+    .menu-icon {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
   }
 
   .menu-down {
@@ -265,6 +271,9 @@
   .dropdown-menu-content {
     display: none;
     background-color: $bg-gray-light;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
     padding: 0.5rem;
     margin: 0.5rem 0;
 
@@ -272,8 +281,7 @@
 
     li {
       margin-bottom: 0.5rem;
-    list-style-type: circle;   
-
+      list-style-type: circle;
 
       a {
         font-size: 0.8rem;
@@ -289,9 +297,7 @@
           outline: none;
         }
       }
-
     }
-  
   }
 
   .dropdown-menu-content[hidden] {
@@ -345,7 +351,7 @@
   cursor: pointer;
   float: right;
   transition: $transition;
-  background-color: $color-error;
+  background-color: $color-primary;
   @include grid-center;
 
   img {
