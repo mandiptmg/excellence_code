@@ -106,8 +106,6 @@
         <img src="./assets/close.png" alt="Close Icon" class="close-icon" />
       </button>
 
-      <div class="mobile-flex">
-
       <ul class="nav-menu">
         <li>
           <a href="#hero">
@@ -208,7 +206,6 @@
         </li>
       </ul>
 
-
       <!-- Social Icons -->
       <div
         class="social-icons"
@@ -251,7 +248,6 @@
         >
           <img src="./assets/socialIcon/instagram.png" alt="Instagram icon" />
         </a>
-      </div>
       </div>
     </div>
 
@@ -507,7 +503,12 @@
       <div class="vas-grid" data-aos-delay="300">
         <!-- LEFT: Key Values Image -->
         <div class="vas-left" data-aos="zoom-in-up">
-          <img src="./assets/about.jpg" alt="layer 2" class="about_image" loading="lazy" />
+          <img
+            src="./assets/about.jpg"
+            alt="layer 2"
+            class="about_image"
+            loading="lazy"
+          />
         </div>
 
         <!-- RIGHT: Services List -->
@@ -640,10 +641,10 @@
 
         <!-- Navigation Buttons -->
         <div class="swiper-nav">
-          <button id="PrevBtn" class="swiper-btn" data-aos="zoom-in-right">
+          <button id="PrevBtn" class="swiper-btn" data-aos="zoom-in-right"  >
             <img src="./assets/arrow.png" alt="Previous" class="icon-arrow" />
           </button>
-          <button id="NextBtn" class="swiper-btn" data-aos="zoom-in-left">
+          <button id="NextBtn" class="swiper-btn" data-aos="zoom-in-left"  >
             <img
               src="./assets/arrow.png"
               alt="Next"
@@ -655,62 +656,139 @@
     </section>
 
     <!-- contact section  -->
-  <section id="process" class="contact-section">
-  <div class="contact-container">
-    <!-- Info Section -->
-    <div class="info-section" data-aos="fade-right" data-aos-duration="800">
-      <div class="center-info">
-        <h1 class="contact-title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
-          Let's Build Your Vision Together
-        </h1>
-        <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="400" data-aos-duration="800">
-          Share your ideas — we'll make them real with precision and passion.
-        </p>
+    <section id="process" class="contact-section">
+      <div class="contact-container">
+        <!-- Info Section -->
+        <div class="info-section" data-aos="fade-right" data-aos-duration="800">
+          <div class="center-info">
+            <h1
+              class="contact-title"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+            >
+              Let's Build Your Vision Together
+            </h1>
+            <p
+              class="contact-subtitle"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="800"
+            >
+              Share your ideas — we'll make them real with precision and
+              passion.
+            </p>
+          </div>
+        </div>
+
+        <!-- Form Section -->
+        <div
+          class="form-section"
+          data-aos="fade-left"
+          data-aos-delay="200"
+          data-aos-duration="800"
+        >
+          <div
+            class="form-wrapper"
+            data-aos="zoom-in-up"
+            data-aos-delay="400"
+            data-aos-duration="800"
+          >
+            <form action="#" method="POST" class="contact__form" novalidate>
+              <!-- Input fields -->
+              <div
+                class="contact__group"
+                data-aos="fade-up"
+                data-aos-delay="500"
+              >
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="contact__input"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+
+              <div
+                class="contact__group"
+                data-aos="fade-up"
+                data-aos-delay="600"
+              >
+                <label for="email">Your Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="contact__input"
+                  placeholder="Enter your email"
+                  required
+                />
+              </div>
+
+              <div
+                class="contact__group"
+                data-aos="fade-up"
+                data-aos-delay="700"
+              >
+                <label for="number">Your Phone</label>
+                <input
+                  type="tel"
+                  id="number"
+                  name="number"
+                  class="contact__input"
+                  placeholder="Enter your phone"
+                  pattern="[0-9]{7,15}"
+                />
+              </div>
+
+              <div
+                class="contact__group"
+                data-aos="fade-up"
+                data-aos-delay="800"
+              >
+                <label for="company">Company</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="contact__input"
+                  placeholder="Enter your company name"
+                />
+              </div>
+
+              <!-- Message -->
+              <div
+                class="contact__group contact__group--full"
+                data-aos="fade-up"
+                data-aos-delay="900"
+              >
+                <label for="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="contact__textarea"
+                  placeholder="Type Your Message..."
+                ></textarea>
+              </div>
+
+              <!-- Button -->
+              <div
+                class="contact__group"
+                data-aos="zoom-in"
+                data-aos-delay="1000"
+              >
+                <button type="submit" class="contact__submit-btn">
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- Form Section -->
-    <div class="form-section" data-aos="fade-left" data-aos-delay="200" data-aos-duration="800">
-      <div class="form-wrapper" data-aos="zoom-in-up" data-aos-delay="400" data-aos-duration="800">
-        <form action="#" method="POST" class="contact__form" novalidate>
-          
-          <!-- Input fields -->
-          <div class="contact__group" data-aos="fade-up" data-aos-delay="500">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" class="contact__input" placeholder="Enter your name" required />
-          </div>
-
-          <div class="contact__group" data-aos="fade-up" data-aos-delay="600">
-            <label for="email">Your Email</label>
-            <input type="email" id="email" name="email" class="contact__input" placeholder="Enter your email" required />
-          </div>
-
-          <div class="contact__group" data-aos="fade-up" data-aos-delay="700">
-            <label for="number">Your Phone</label>
-            <input type="tel" id="number" name="number" class="contact__input" placeholder="Enter your phone" pattern="[0-9]{7,15}" />
-          </div>
-
-          <div class="contact__group" data-aos="fade-up" data-aos-delay="800">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" class="contact__input" placeholder="Enter your company name" />
-          </div>
-
-          <!-- Message -->
-          <div class="contact__group contact__group--full" data-aos="fade-up" data-aos-delay="900">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" class="contact__textarea" placeholder="Type Your Message..."></textarea>
-          </div>
-
-          <!-- Button -->
-          <div class="contact__group" data-aos="zoom-in" data-aos-delay="1000">
-            <button type="submit" class="contact__submit-btn">Send Message</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- CTA Section -->
     <section class="brand-cta">
@@ -739,11 +817,7 @@
         <!-- Newsletter Section -->
         <section class="newsletter-section">
           <div class="newsletter-container">
-            <div
-              class="newsletter-text"
-              data-aos="flip-left"
-              data-aos-delay="500"
-            >
+            <div class="newsletter-text" data-aos="flip-left">
               <h2>SUBSCRIBE TO OUR NEWSLETTER!</h2>
               <p>Get notified about news, webinars, & more</p>
             </div>
@@ -752,7 +826,6 @@
               class="newsletter-form"
               action="#"
               method="post"
-              data-aos-delay="200"
             >
               <div class="input-wrapper">
                 <!-- <span class="icon">
@@ -762,7 +835,6 @@
                   type="email"
                   name="email"
                   data-aos="zoom-in"
-                  data-aos-delay="300"
                   placeholder="Your email address"
                   required
                 />
@@ -774,12 +846,14 @@
 
         <div class="footer-top">
           <!-- Company Info -->
-          <div class="footer-company" data-aos="flip-up">
-            <a href="/" class="footer-company__logo">
-              <img src="./assets/logo-black.png" alt="Company Logo" />
-              <span class="logo_text">Excellence<br />Code</span>
-            </a>
-            <div class="footer-company__about" data-aos="zoom-in">
+          <div class="footer-company">
+            <div data-aos="flip-right">
+              <a href="/" class="footer-company__logo">
+                <img src="./assets/logo-black.png" alt="Company Logo" />
+                <span class="logo_text">Excellence<br />Code</span>
+              </a>
+            </div>
+            <div class="footer-company__about" data-aos="zoom-in-up">
               <h2 class="footer-company__title">About Us</h2>
               <p class="footer-company__text">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -790,14 +864,10 @@
 
           <!-- Footer Links -->
           <div class="footer-section" id="footer">
-            <h3
-              class="footer-section__title"
-              data-aos="flip-right"
-              data-aos-delay="500"
-            >
+            <h3 class="footer-section__title" data-aos="flip-right">
               Services
             </h3>
-            <ul class="footer-links" data-aos="zoom-in-up" data-aos-delay="500">
+            <ul class="footer-links" data-aos="zoom-in-up">
               <li><a href="#about">About</a></li>
               <li><a href="#work">Works</a></li>
               <li><a href="#code">Code</a></li>
@@ -807,14 +877,10 @@
           </div>
 
           <div class="footer-section">
-            <h3
-              class="footer-section__title"
-              data-aos="zoom-in"
-              data-aos-delay="500"
-            >
+            <h3 class="footer-section__title" data-aos="flip-right">
               Contact Us
             </h3>
-            <ul data-aos="zoom-in" class="footer-links contact-info">
+            <ul data-aos="zoom-in-up" class="footer-links contact-info">
               <li>
                 <a href="tel:+971552440610">
                   <img src="./assets/contactIcon/mobile.png" alt="Phone icon" />
@@ -847,11 +913,11 @@
           </div>
 
           <!-- Social Media -->
-          <div class="footer-section" data-aos-delay="500">
-            <h3 class="footer-section__title" data-aos="flip-left">
+          <div class="footer-section">
+            <h3 class="footer-section__title" data-aos="flip-right">
               Follow Us
             </h3>
-            <ul class="footer-social" data-aos="fade-up">
+            <ul class="footer-social" data-aos="zoom-in-up">
               <li>
                 <a
                   href="https://wa.me/your-number"

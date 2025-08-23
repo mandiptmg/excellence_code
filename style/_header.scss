@@ -213,53 +213,51 @@
     right: 0;
   }
 
-  .mobile-flex {
+  ul {
+    list-style: none;
+    padding: 2rem 0 1rem;
     margin-top: 2rem;
+    width: 100%;
 
+    li {
+      margin-bottom: 1rem;
 
-    ul {
-      list-style: none;
-      padding: 2rem 0 1rem;
-      width: 100%;
+      a,
+      span {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $border-default;
 
-      li {
-        margin-bottom: 1rem;
-        // border-bottom: 1px solid $border-default;
+        gap: 0.5rem;
+        padding: $spacing-xm 1rem;
+        border-radius: 6px;
+        font-size: $spacing-xm;
+        color: $color-secondary;
+        text-transform: uppercase;
+        @include text-semibold;
+        cursor: pointer;
+        text-decoration: none;
+        transition: $transition-slow;
 
-        a,
-        span {
-          display: flex;
-          align-items: center;
+        &:hover,
+        &:focus {
+          background-color: $color-primary;
+          color: #ffffff;
+          outline: none;
+          border-bottom: 1px solid transparent;
 
-          gap: 0.5rem;
-          padding: $spacing-xm 1rem;
-          border-radius: 6px;
-          font-size: $spacing-xm;
-          color: $color-secondary;
-          text-transform: uppercase;
-          @include text-semibold;
-          cursor: pointer;
-          text-decoration: none;
-          transition: $transition-slow;
-
-          &:hover,
-          &:focus {
-            background-color: $color-primary;
-            color: #ffffff;
-            outline: none;
-            .menu-icon {
-              @include white-filter;
-            }
+          .menu-icon {
+            @include white-filter;
           }
         }
       }
     }
+  }
 
-    .menu-icon {
-      width: 20px;
-      height: 20px;
-      object-fit: contain;
-    }
+  .menu-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
   }
 
   .menu-down {
@@ -280,13 +278,13 @@
     padding-left: 1.55rem;
 
     li {
-      margin-bottom: 0.5rem;
       list-style-type: circle;
 
       a {
         font-size: 0.8rem;
         color: $color-secondary;
         padding: 0.5rem 0;
+        padding-left: 0.5rem;
         transition: $transition;
         text-transform: capitalize;
 
@@ -329,6 +327,9 @@
     transform: rotate(180deg);
     transition: $transition-slow;
   }
+  .accordion-item.open .dropbtn {
+    border-bottom: 1px solid transparent;
+  }
 
   .dropbtn {
     display: flex;
@@ -340,69 +341,69 @@
   .dropbtn:hover .service-icon {
     @include white-filter;
   }
-}
 
-/* Close Button */
-.close-btn {
-  width: 2rem;
-  height: 2rem;
-  border: none;
-  border-radius: 9999px;
-  cursor: pointer;
-  float: right;
-  transition: $transition;
-  background-color: $color-primary;
-  @include grid-center;
-
-  img {
-    width: 0.9rem;
-    height: 0.9rem;
-  }
-
-  &:hover,
-  &:focus {
-    border: 1px solid $color-error;
-    transform: scale(1.1);
-    outline: none;
-  }
-}
-
-// Social icons - no change, looks good
-.social-icons {
-  display: flex;
-  margin-top: 1rem;
-  justify-content: space-around;
-  gap: 1rem;
-
-  img {
-    width: 1.5rem;
-    height: 1.5rem;
-    filter: grayscale(100%) brightness(0%);
+  /* Close Button */
+  .close-btn {
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    float: right;
     transition: $transition;
-  }
-
-  a.whatsapp:hover img {
-    filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
-      brightness(90%) contrast(101%);
-  }
-
-  a.facebook:hover img {
-    filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
-      brightness(95%) contrast(97%);
-  }
-
-  a.twitter:hover {
-    border-radius: 0.5rem;
+    background-color: $color-primary;
+    @include grid-center;
 
     img {
-      filter: grayscale(100%) brightness(1000%);
-      padding: 0.1rem;
+      width: 0.9rem;
+      height: 0.9rem;
     }
-    background-color: $color-secondary;
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color-error;
+      transform: scale(1.1);
+      outline: none;
+    }
   }
 
-  a.instagram:hover img {
-    filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
-      brightness(90%) contrast(105%);
+  // Social icons - no change, looks good
+  .social-icons {
+    display: flex;
+    margin-top: 1rem;
+    justify-content: space-around;
+    gap: 1rem;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      filter: grayscale(100%) brightness(0%);
+      transition: $transition;
+    }
+
+    a.whatsapp:hover img {
+      filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg)
+        brightness(90%) contrast(101%);
+    }
+
+    a.facebook:hover img {
+      filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg)
+        brightness(95%) contrast(97%);
+    }
+
+    a.twitter:hover {
+      border-radius: 0.5rem;
+
+      img {
+        filter: grayscale(100%) brightness(1000%);
+        padding: 0.1rem;
+      }
+      background-color: $color-secondary;
+    }
+
+    a.instagram:hover img {
+      filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg)
+        brightness(90%) contrast(105%);
+    }
   }
 }

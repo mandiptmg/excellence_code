@@ -195,25 +195,25 @@
   padding: 1.5rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   overflow-y: auto;
+  /* Close Button */
 }
 .mobile-menu.active {
   right: 0;
 }
-.mobile-menu .mobile-flex {
-  margin-top: 2rem;
-}
-.mobile-menu .mobile-flex ul {
+.mobile-menu ul {
   list-style: none;
   padding: 2rem 0 1rem;
+  margin-top: 2rem;
   width: 100%;
 }
-.mobile-menu .mobile-flex ul li {
+.mobile-menu ul li {
   margin-bottom: 1rem;
 }
-.mobile-menu .mobile-flex ul li a,
-.mobile-menu .mobile-flex ul li span {
+.mobile-menu ul li a,
+.mobile-menu ul li span {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #d1d5db;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
   border-radius: 6px;
@@ -225,19 +225,20 @@
   text-decoration: none;
   transition: all 0.5s ease;
 }
-.mobile-menu .mobile-flex ul li a:hover, .mobile-menu .mobile-flex ul li a:focus,
-.mobile-menu .mobile-flex ul li span:hover,
-.mobile-menu .mobile-flex ul li span:focus {
+.mobile-menu ul li a:hover, .mobile-menu ul li a:focus,
+.mobile-menu ul li span:hover,
+.mobile-menu ul li span:focus {
   background-color: #d4af37;
   color: #ffffff;
   outline: none;
+  border-bottom: 1px solid transparent;
 }
-.mobile-menu .mobile-flex ul li a:hover .menu-icon, .mobile-menu .mobile-flex ul li a:focus .menu-icon,
-.mobile-menu .mobile-flex ul li span:hover .menu-icon,
-.mobile-menu .mobile-flex ul li span:focus .menu-icon {
+.mobile-menu ul li a:hover .menu-icon, .mobile-menu ul li a:focus .menu-icon,
+.mobile-menu ul li span:hover .menu-icon,
+.mobile-menu ul li span:focus .menu-icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
 }
-.mobile-menu .mobile-flex .menu-icon {
+.mobile-menu .menu-icon {
   width: 20px;
   height: 20px;
   object-fit: contain;
@@ -257,13 +258,13 @@
   padding-left: 1.55rem;
 }
 .mobile-menu .dropdown-menu-content li {
-  margin-bottom: 0.5rem;
   list-style-type: circle;
 }
 .mobile-menu .dropdown-menu-content li a {
   font-size: 0.8rem;
   color: #111827;
   padding: 0.5rem 0;
+  padding-left: 0.5rem;
   transition: all 0.3s ease;
   text-transform: capitalize;
 }
@@ -296,6 +297,9 @@
   transform: rotate(180deg);
   transition: all 0.5s ease;
 }
+.mobile-menu .accordion-item.open .dropbtn {
+  border-bottom: 1px solid transparent;
+}
 .mobile-menu .dropbtn {
   display: flex;
   align-items: center;
@@ -305,9 +309,7 @@
 .mobile-menu .dropbtn:hover .service-icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
 }
-
-/* Close Button */
-.close-btn {
+.mobile-menu .close-btn {
   width: 2rem;
   height: 2rem;
   border: none;
@@ -319,43 +321,42 @@
   display: grid;
   place-items: center;
 }
-.close-btn img {
+.mobile-menu .close-btn img {
   width: 0.9rem;
   height: 0.9rem;
 }
-.close-btn:hover, .close-btn:focus {
+.mobile-menu .close-btn:hover, .mobile-menu .close-btn:focus {
   border: 1px solid #ef4444;
   transform: scale(1.1);
   outline: none;
 }
-
-.social-icons {
+.mobile-menu .social-icons {
   display: flex;
   margin-top: 1rem;
   justify-content: space-around;
   gap: 1rem;
 }
-.social-icons img {
+.mobile-menu .social-icons img {
   width: 1.5rem;
   height: 1.5rem;
   filter: grayscale(100%) brightness(0%);
   transition: all 0.3s ease;
 }
-.social-icons a.whatsapp:hover img {
+.mobile-menu .social-icons a.whatsapp:hover img {
   filter: invert(29%) sepia(94%) saturate(1352%) hue-rotate(87deg) brightness(90%) contrast(101%);
 }
-.social-icons a.facebook:hover img {
+.mobile-menu .social-icons a.facebook:hover img {
   filter: invert(45%) sepia(95%) saturate(2000%) hue-rotate(192deg) brightness(95%) contrast(97%);
 }
-.social-icons a.twitter:hover {
+.mobile-menu .social-icons a.twitter:hover {
   border-radius: 0.5rem;
   background-color: #111827;
 }
-.social-icons a.twitter:hover img {
+.mobile-menu .social-icons a.twitter:hover img {
   filter: grayscale(100%) brightness(1000%);
   padding: 0.1rem;
 }
-.social-icons a.instagram:hover img {
+.mobile-menu .social-icons a.instagram:hover img {
   filter: invert(40%) sepia(90%) saturate(1500%) hue-rotate(310deg) brightness(90%) contrast(105%);
 }
 
@@ -1309,8 +1310,8 @@
   }
 }
 .code-section {
-  margin: 4rem auto;
-  padding: 3rem 0 0;
+  margin: 0 auto;
+  padding: 7rem 0 0;
   width: 90vw;
 }
 @media (min-width: 64rem) {
@@ -1813,16 +1814,16 @@
   color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 .testimonial-section .testimonial-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
+  transition: all 0.5s ease;
 }
 .testimonial-section .testimonial-container .swiper-btn img.icon-arrow {
   width: 1rem;
   height: 1rem;
   filter: brightness(0) saturate(100%) invert(7%) sepia(31%) saturate(1125%) hue-rotate(182deg) brightness(95%) contrast(94%);
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.5s ease;
 }
 .testimonial-section .testimonial-container .swiper-btn:hover {
   background-color: #d4af37;
