@@ -52,7 +52,9 @@
       color: $white;
       padding: 0 35px;
       min-height: 50px;
-      @include grid-center;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
       border-radius: 9999px;
       text-transform: capitalize;
       transition: $transition-slow;
