@@ -791,7 +791,7 @@
 
 .portfolio-section {
   margin: 0 auto;
-  padding: 3rem 0 0;
+  padding: 2.5rem 0 0;
   width: 90vw;
 }
 @media (min-width: 64rem) {
@@ -992,10 +992,10 @@
   color: #6b7280;
   border: 2px solid rgba(244, 231, 177, 0.5);
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 .portfolio-section .portfolio-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
+  transition: transform 0.5s ease-in-out;
 }
 .portfolio-section .portfolio-container .swiper-btn img.icon-arrow {
   width: 1rem;
@@ -1311,7 +1311,7 @@
 }
 .code-section {
   margin: 0 auto;
-  padding: 7rem 0 0;
+  padding: 7rem 0 4rem;
   width: 90vw;
 }
 @media (min-width: 64rem) {
@@ -1522,9 +1522,14 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: url("../assets/form-layer.png") left/cover no-repeat;
-  filter: blur(8px);
+  background: url("../assets/form-layer.png") center/cover no-repeat;
+  filter: blur(7px);
   z-index: 0;
+}
+@media (min-width: 48rem) {
+  .contact-section::before {
+    background-position: left;
+  }
 }
 .contact-section > * {
   position: relative;
@@ -1575,7 +1580,7 @@
 .contact-section .contact-container .info-section .contact-subtitle {
   font-size: 1rem;
   font-weight: 500;
-  color: #374151;
+  color: rgba(55, 65, 81, 0.6);
   margin-top: 0.5rem;
 }
 .contact-section .contact-container .contact__form {
@@ -1817,13 +1822,13 @@
 }
 .testimonial-section .testimonial-container .swiper-btn .icon-arrow-right {
   transform: rotate(180deg);
-  transition: all 0.5s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .testimonial-section .testimonial-container .swiper-btn img.icon-arrow {
   width: 1rem;
   height: 1rem;
   filter: brightness(0) saturate(100%) invert(7%) sepia(31%) saturate(1125%) hue-rotate(182deg) brightness(95%) contrast(94%);
-  transition: all 0.5s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .testimonial-section .testimonial-container .swiper-btn:hover {
   background-color: #d4af37;
@@ -1865,7 +1870,7 @@
 }
 .newsletter-section .newsletter-container .newsletter-text p {
   font-size: 0.75rem;
-  color: #9ca3af;
+  color: rgba(55, 65, 81, 0.6);
 }
 @media (min-width: 48rem) {
   .newsletter-section .newsletter-container .newsletter-text h2 {

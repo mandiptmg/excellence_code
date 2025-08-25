@@ -147,14 +147,14 @@
 
       .icon-arrow-right {
         transform: rotate(180deg);
-        transition: $transition-slow;
+        transition: transform 0.3s ease-in-out;
       }
 
       img.icon-arrow {
         width: 1rem;
         height: 1rem;
         @include black-filter;
-        transition: $transition-slow;
+        transition: transform 0.3s ease-in-out;
       }
 
       &:hover {
