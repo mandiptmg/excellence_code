@@ -340,17 +340,29 @@
 .menu-model .mobile-menu .menu-content .nav-menu .accordion-item.open .menu-down .service-icon {
   filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
 }
-.menu-model .mobile-menu .menu-content .social-icons {
+.menu-model .mobile-menu .menu-content .social-container {
+  padding: 0.5rem;
+}
+.menu-model .mobile-menu .menu-content .social-container .social-content {
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 1rem;
+  color: #d4af37;
+  padding-left: 0.5rem;
+  border-bottom: 1px solid rgba(209, 213, 219, 0.4);
+}
+.menu-model .mobile-menu .menu-content .social-container .social-icons {
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.menu-model .mobile-menu .menu-content .social-icons a {
+.menu-model .mobile-menu .menu-content .social-container .social-icons a {
   border: 1px solid rgba(209, 213, 219, 0.4);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
 }
-.menu-model .mobile-menu .menu-content .social-icons a img {
+.menu-model .mobile-menu .menu-content .social-container .social-icons a img {
   padding: 0.5rem;
   width: 2.5rem;
   height: 2.5rem;
@@ -359,7 +371,7 @@
   transition: all 0.3s ease;
   filter: brightness(0) saturate(100%) invert(7%) sepia(31%) saturate(1125%) hue-rotate(182deg) brightness(95%) contrast(94%);
 }
-.menu-model .mobile-menu .menu-content .social-icons a:hover {
+.menu-model .mobile-menu .menu-content .social-container .social-icons a:hover {
   filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(3049%) hue-rotate(325deg) brightness(87%) contrast(88%);
   scale: 1.1;
 }
