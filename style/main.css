@@ -679,7 +679,6 @@
   transition: all 0.5s ease;
   padding-left: 1.5rem;
   margin-top: 1rem;
-  cursor: pointer;
   border-bottom: 1px solid #d1d5db;
   background-color: #fff;
   padding: 0.5rem;
@@ -708,7 +707,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-header .toggle-btn:hover {
   transform: scale(1.1);
@@ -717,7 +716,7 @@
   width: 1rem;
   height: 1rem;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content {
   overflow: hidden;
@@ -734,17 +733,17 @@
   font-weight: 400;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: 1rem;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap .read-more-btn {
   background-color: #d4af37;
   color: white;
   padding: 0 35px;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 50px;
   border: 2px solid #d4af37;
   border-radius: 9999px;
@@ -760,7 +759,7 @@
     font-size: 1rem;
   }
 }
-.vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap .read-more-btn:hover {
+.vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap:hover .read-more-btn {
   background-color: #ffffff;
   color: #d4af37;
 }
