@@ -43,7 +43,7 @@
 
       p {
         font-size: 0.75rem;
-        color: rgba($color-text-base, 0.6);
+        color: $color-text-base
       }
 
       @include responsive(md) {
@@ -309,9 +309,10 @@
       margin: 0 auto;
       width: 90vw;
       @include responsive(lg) {
-        width: 83.46vw;
-        max-width: 1366px;
+        width: 80.77vw;
+        max-width: 1413px;
       }
+
       padding: $spacing-md 0;
       display: flex;
       flex-direction: column;

@@ -1595,7 +1595,7 @@
 .contact-section .contact-container .info-section .contact-subtitle {
   font-size: 1rem;
   font-weight: 500;
-  color: rgba(55, 65, 81, 0.6);
+  color: #374151;
   margin-top: 0.5rem;
 }
 .contact-section .contact-container .contact__form {
@@ -1885,7 +1885,7 @@
 }
 .newsletter-section .newsletter-container .newsletter-text p {
   font-size: 0.75rem;
-  color: rgba(55, 65, 81, 0.6);
+  color: #374151;
 }
 @media (min-width: 48rem) {
   .newsletter-section .newsletter-container .newsletter-text h2 {
@@ -2142,8 +2142,8 @@
 }
 @media (min-width: 64rem) {
   .footer .footer-bottom-container .footer-bottom {
-    width: 83.46vw;
-    max-width: 1366px;
+    width: 80.77vw;
+    max-width: 1413px;
   }
 }
 @media (min-width: 48rem) {
@@ -2220,6 +2220,12 @@ html,
 body {
   overflow-x: hidden;
   width: 100%;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 a {
