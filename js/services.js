@@ -97,7 +97,7 @@ export default function initServices() {
       const c = el.querySelector(".vas-service-content");
       const b = el.querySelector(".toggle-btn");
       el.classList.remove("active");
-      c.style.maxHeight = null; // reset to collapse
+      c.style.maxHeight = null;
       c.setAttribute("aria-hidden", "true");
       b.setAttribute("aria-expanded", "false");
       b.querySelector("img").src = "./assets/plus.png";
@@ -107,7 +107,7 @@ export default function initServices() {
     // Expand clicked one if it wasn’t active
     if (!isActive) {
       item.classList.add("active");
-      content.style.maxHeight = content.scrollHeight + "px"; // smooth expand
+      content.style.maxHeight = content.scrollHeight + "px"; 
       content.setAttribute("aria-hidden", "false");
       btn.setAttribute("aria-expanded", "true");
       btn.querySelector("img").src = "./assets/minus.png";
