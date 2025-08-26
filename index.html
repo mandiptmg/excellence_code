@@ -95,95 +95,173 @@
       </div>
     </nav>
 
-   <!-- Mobile Menu -->
-<div class="menu-model" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile Navigation">
-  <nav class="mobile-menu" aria-label="Mobile menu">
-    <!-- Header -->
-    <div class="menu-header">
-      <a href="/" class="logo-link" aria-label="Homepage">
-        <img src="./assets/logo-black.png" alt="Company Logo" />
-      </a>
-      <button class="close-btn" id="closeMenu" aria-label="Close menu">
-        <img src="./assets/close.png" alt="Close Menu Icon" class="close-icon" />
-      </button>
-    </div>
-
-    <!-- Menu Content -->
-    <div class="menu-content">
-      <ul class="nav-menu">
-        <li>
-          <a href="#hero">
-            <img src="./assets/menuIcon/home.png" alt="Home Icon" class="menu-icon" />
-            Home
+    <!-- Mobile Menu -->
+    <div
+      class="menu-model"
+      id="mobileMenu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation"
+    >
+      <nav class="mobile-menu" aria-label="Mobile menu">
+        <!-- Header -->
+        <div class="menu-header">
+          <a href="/" class="logo-link" aria-label="Homepage">
+            <img src="./assets/logo-black.png" alt="Company Logo" />
           </a>
-        </li>
-        <li>
-          <a href="#about">
-            <img src="./assets/menuIcon/about.png" alt="About Icon" class="menu-icon" />
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#work">
-            <img src="./assets/menuIcon/work.png" alt="Work Icon" class="menu-icon" />
-            Work
-          </a>
-        </li>
-        <li>
-          <a href="#code">
-            <img src="./assets/menuIcon/code.png" alt="Code Icon" class="menu-icon" />
-            Code
-          </a>
-        </li>
-
-        <!-- Accordion -->
-        <li class="accordion-item">
-          <button class="dropbtn" aria-expanded="false" aria-controls="servicesSubmenu" id="servicesBtn">
-            <span class="menu-down">
-              <img src="./assets/menuIcon/service.png" alt="Services Icon" class="menu-icon service-icon" />
-              Services
-            </span>
-            <img src="./assets/menuIcon/down.png" alt="Dropdown Arrow Icon" class="menu-icon dropdown-arrow" />
+          <button class="close-btn" id="closeMenu" aria-label="Close menu">
+            <img
+              src="./assets/close.png"
+              alt="Close Menu Icon"
+              class="close-icon"
+            />
           </button>
-          <ul class="dropdown-menu-content" id="servicesSubmenu" hidden>
-            <li><a href="#website-design">Website Design and Development</a></li>
-            <li><a href="#creative-design">Creative Design Services</a></li>
-            <li><a href="#digital-marketing">Digital Marketing & Social Media</a></li>
-            <li><a href="#events-organising">Events & Conferences</a></li>
-            <li><a href="#analytics">Analytics & Optimization</a></li>
-            <li><a href="#email-hosting">Email & Hosting</a></li>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="menu-content">
+          <ul class="nav-menu">
+            <li>
+              <a href="#hero">
+                <img
+                  src="./assets/menuIcon/home.png"
+                  alt="Home Icon"
+                  class="menu-icon"
+                />
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#about">
+                <img
+                  src="./assets/menuIcon/about.png"
+                  alt="About Icon"
+                  class="menu-icon"
+                />
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#work">
+                <img
+                  src="./assets/menuIcon/work.png"
+                  alt="Work Icon"
+                  class="menu-icon"
+                />
+                Work
+              </a>
+            </li>
+            <li>
+              <a href="#code">
+                <img
+                  src="./assets/menuIcon/code.png"
+                  alt="Code Icon"
+                  class="menu-icon"
+                />
+                Code
+              </a>
+            </li>
+
+            <!-- Accordion -->
+            <li class="accordion-item">
+              <button
+                class="dropbtn"
+                aria-expanded="false"
+                aria-controls="servicesSubmenu"
+                id="servicesBtn"
+              >
+                <span class="menu-down">
+                  <img
+                    src="./assets/menuIcon/service.png"
+                    alt="Services Icon"
+                    class="menu-icon service-icon"
+                  />
+                  Services
+                </span>
+                <img
+                  src="./assets/menuIcon/down.png"
+                  alt="Dropdown Arrow Icon"
+                  class="menu-icon dropdown-arrow"
+                />
+              </button>
+              <ul class="dropdown-menu-content" id="servicesSubmenu" hidden>
+                <li>
+                  <a href="#website-design">Website Design and Development</a>
+                </li>
+                <li><a href="#creative-design">Creative Design Services</a></li>
+                <li>
+                  <a href="#digital-marketing"
+                    >Digital Marketing & Social Media</a
+                  >
+                </li>
+                <li><a href="#events-organising">Events & Conferences</a></li>
+                <li><a href="#analytics">Analytics & Optimization</a></li>
+                <li><a href="#email-hosting">Email & Hosting</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#process">
+                <img
+                  src="./assets/menuIcon/process.png"
+                  alt="Process Icon"
+                  class="menu-icon"
+                />
+                Process
+              </a>
+            </li>
           </ul>
-        </li>
 
-        <li>
-          <a href="#process">
-            <img src="./assets/menuIcon/process.png" alt="Process Icon" class="menu-icon" />
-            Process
-          </a>
-        </li>
-      </ul>
-
-      <!-- Social Icons -->
-     <div class="social-container">
-      <h1 class="social-content">follow us </h1>
-       <div class="social-icons" role="navigation" aria-label="Social media">
-        <a href="https://wa.me/your-number" class="whatsapp" aria-label="WhatsApp">
-          <img src="./assets/socialIcon/whatsapp.png" alt="WhatsApp Icon" />
-        </a>
-        <a href="https://facebook.com/yourprofile" class="facebook" aria-label="Facebook">
-          <img src="./assets/socialIcon/facebook.png" alt="Facebook Icon" />
-        </a>
-        <a href="https://twitter.com/yourprofile" class="twitter" aria-label="Twitter">
-          <img src="./assets/socialIcon/x.png" alt="Twitter (X) Icon" />
-        </a>
-        <a href="https://instagram.com/yourprofile" class="instagram" aria-label="Instagram">
-          <img src="./assets/socialIcon/instagram.png" alt="Instagram Icon" />
-        </a>
-      </div>
-     </div>
+          <!-- Social Icons -->
+          <div class="social-container">
+            <h1 class="social-content">follow us</h1>
+            <div
+              class="social-icons"
+              role="navigation"
+              aria-label="Social media"
+            >
+              <a
+                href="https://wa.me/your-number"
+                class="whatsapp"
+                aria-label="WhatsApp"
+              >
+                <img
+                  src="./assets/socialIcon/whatsapp.png"
+                  alt="WhatsApp Icon"
+                />
+              </a>
+              <a
+                href="https://facebook.com/yourprofile"
+                class="facebook"
+                aria-label="Facebook"
+              >
+                <img
+                  src="./assets/socialIcon/facebook.png"
+                  alt="Facebook Icon"
+                />
+              </a>
+              <a
+                href="https://twitter.com/yourprofile"
+                class="twitter"
+                aria-label="Twitter"
+              >
+                <img src="./assets/socialIcon/x.png" alt="Twitter (X) Icon" />
+              </a>
+              <a
+                href="https://instagram.com/yourprofile"
+                class="instagram"
+                aria-label="Instagram"
+              >
+                <img
+                  src="./assets/socialIcon/instagram.png"
+                  alt="Instagram Icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
@@ -523,20 +601,16 @@
     <section id="code" class="code-section">
       <div class="code-wrapper">
         <!-- Left Side -->
-        <div class="code-info" data-aos="fade-right">
-          <h2 class="title">OUR CODE SPEAKS SUCCESS</h2>
-          <p class="desc">
+        <div class="code-info">
+          <h2 class="title" data-aos="fade-right">OUR CODE SPEAKS SUCCESS</h2>
+          <p class="desc" data-aos="fade-right" data-aos-delay="100">
             We craft clean, efficient, and scalable code that drives business
             growth. Every project we deliver is built with precision,
             innovation, and a focus on creating impactful digital solutions.
           </p>
-          <a
-            href="#"
-            class="learn-more-btn"
-            data-aos="fade-right"
-            data-aos-delay="150"
-            >Learn More</a
-          >
+          <button data-aos="flip-right" data-aos-delay="200">
+            <a href="#" class="learn-more-btn">Learn More</a>
+          </button>
         </div>
 
         <!-- Right Side -->
@@ -551,10 +625,14 @@
 
     <!-- testimonial section -->
     <section id="testimonial" class="testimonial-section">
-      <div class="testimonial-header">
+      <div
+        class="testimonial-header"
+        data-aos="zoom-in-up"
+        data-aos-delay="500"
+      >
         <div class="testimonial-left">
           <!-- Heading -->
-          <h2 data-aos="zoom-in-up" class="main-heading" data-aos-delay="500">
+          <h2 class="main-heading">
             What valuable <br />
             Client Say
           </h2>
