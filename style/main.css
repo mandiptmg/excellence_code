@@ -84,9 +84,8 @@
   align-items: center;
   gap: 0.25rem;
 }
-.navbar .navbar-container .nav-links li a:hover, .navbar .navbar-container .nav-links li a:focus,
-.navbar .navbar-container .nav-links li .dropbtn:hover,
-.navbar .navbar-container .nav-links li .dropbtn:focus {
+.navbar .navbar-container .nav-links li a:hover,
+.navbar .navbar-container .nav-links li .dropbtn:hover {
   color: #d4af37;
   outline: none;
 }
@@ -149,10 +148,12 @@
   background: rgba(212, 175, 55, 0.08);
   color: #d4af37;
 }
-.navbar .navbar-container .nav-links .dropdown:hover .dropdown-content,
-.navbar .navbar-container .nav-links .dropdown:focus-within .dropdown-content {
+.navbar .navbar-container .nav-links .dropdown:hover .dropbtn {
+  color: #d4af37;
+}
+.navbar .navbar-container .nav-links .dropdown:hover .dropdown-content {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(4px);
   pointer-events: auto;
 }
 .navbar .navbar-container .nav-controls {
@@ -735,20 +736,21 @@
   transition: transform 0.3s ease-in-out;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content {
-  overflow: hidden;
+  overflow: visible;
   max-height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  transition: all 0.5s ease;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease, opacity 0.3s ease;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content p {
   font-size: 1rem;
   line-height: 1.5;
   color: #6b7280;
-  margin-bottom: 1.4rem;
   font-weight: 400;
 }
 .vas-section .vas-grid .vas-right .vas-service-item .vas-service-content .vas-link-wrap {
+  margin: 1rem 0;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -799,9 +801,8 @@
   filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(3049%) hue-rotate(325deg) brightness(87%) contrast(88%);
 }
 .vas-section .vas-grid .vas-right .vas-service-item.active .vas-service-content {
-  transition: all 0.5s ease;
-  padding: 1rem 0;
-  max-height: auto;
+  opacity: 1;
+  visibility: visible;
 }
 
 .portfolio-section {
