@@ -281,7 +281,6 @@
         padding: 0.5rem;
 
         li {
-          margin-bottom: 1rem;
           img {
             width: 1.5rem;
             height: 1.5rem;
@@ -327,20 +326,25 @@
           display: none;
           background: $bg-gray-light;
           border-radius: 6px;
-          padding: 0.5rem 0 0.5rem 1.5rem;
 
-          li a {
-            font-size: 0.8rem;
-            padding: 0.5rem 0;
-            color: $color-secondary;
-            transition: $transition;
-            text-transform: capitalize;
-            border-radius: 0;
+          li {
+            a {
+              font-size: 0.8rem;
+              color: $color-secondary;
+              transition: $transition;
+              border-bottom: 1px solid $border-default;
 
-            &:hover,
-            &:focus {
-              background: rgba(0, 123, 255, 0.1);
-              color: $color-primary;
+              text-transform: capitalize;
+              border-radius: 0;
+              padding-left: 2.5rem;
+              &:hover,
+              &:focus {
+                background: rgba(0, 123, 255, 0.1);
+                color: $color-primary;
+              }
+            }
+            &:last-child a {
+              border-bottom-color: transparent;
             }
           }
         }
