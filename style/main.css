@@ -1880,20 +1880,21 @@
 .newsletter-section .newsletter-container .newsletter-text {
   flex: 1 1 300px;
 }
-.newsletter-section .newsletter-container .newsletter-text h2 {
+.newsletter-section .newsletter-container .newsletter-text h1 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   line-height: 1.3;
   font-size: 2rem;
+  color: #ffffff;
   margin: 0;
 }
 @media (min-width: 48rem) {
-  .newsletter-section .newsletter-container .newsletter-text h2 {
+  .newsletter-section .newsletter-container .newsletter-text h1 {
     font-size: 2.5rem;
   }
 }
 @media (min-width: 80rem) {
-  .newsletter-section .newsletter-container .newsletter-text h2 {
+  .newsletter-section .newsletter-container .newsletter-text h1 {
     font-size: 3rem;
   }
 }
@@ -2209,7 +2210,7 @@
 .footer .footer-bottom-container .footer-bottom {
   margin: 0 auto;
   width: 90vw;
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -2277,7 +2278,6 @@
 
 /* Newsletter Section */
 .newsletter-section {
-  background: linear-gradient(90deg, #f5f5dc 0%, rgb(250.6666666667, 250.6666666667, 239.8333333333) 100%);
   background: conic-gradient(at left top, rgb(124, 45, 18), rgb(254, 243, 199), rgb(124, 45, 18));
   padding: 3rem 1rem;
   border-radius: 1rem;
@@ -2298,23 +2298,28 @@
 .newsletter-section .newsletter-container .newsletter-text {
   flex: 1 1 300px;
 }
-.newsletter-section .newsletter-container .newsletter-text h2 {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: white;
-}
-.newsletter-section .newsletter-container .newsletter-text p {
-  font-size: 0.75rem;
-  color: rgba(55, 65, 81, 0.6);
+.newsletter-section .newsletter-container .newsletter-text h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
 }
 @media (min-width: 48rem) {
-  .newsletter-section .newsletter-container .newsletter-text h2 {
-    font-size: 2rem;
+  .newsletter-section .newsletter-container .newsletter-text h1 {
+    font-size: 2.5rem;
   }
-  .newsletter-section .newsletter-container .newsletter-text p {
-    font-size: 1rem;
+}
+@media (min-width: 80rem) {
+  .newsletter-section .newsletter-container .newsletter-text h1 {
+    font-size: 3rem;
   }
+}
+.newsletter-section .newsletter-container .newsletter-text p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
 }
 .newsletter-section .newsletter-container .newsletter-form {
   flex: 1 1 300px;
@@ -2623,7 +2628,6 @@
 
 /* Newsletter Section */
 .newsletter-section {
-  background: linear-gradient(90deg, #f5f5dc 0%, rgb(250.6666666667, 250.6666666667, 239.8333333333) 100%);
   background: conic-gradient(at left top, rgb(124, 45, 18), rgb(254, 243, 199), rgb(124, 45, 18));
   padding: 3rem 1rem;
   border-radius: 1rem;
@@ -2644,23 +2648,28 @@
 .newsletter-section .newsletter-container .newsletter-text {
   flex: 1 1 300px;
 }
-.newsletter-section .newsletter-container .newsletter-text h2 {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  color: white;
-}
-.newsletter-section .newsletter-container .newsletter-text p {
-  font-size: 0.75rem;
-  color: #374151;
+.newsletter-section .newsletter-container .newsletter-text h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 2rem;
+  color: #ffffff;
+  margin: 0;
 }
 @media (min-width: 48rem) {
-  .newsletter-section .newsletter-container .newsletter-text h2 {
-    font-size: 2rem;
+  .newsletter-section .newsletter-container .newsletter-text h1 {
+    font-size: 2.5rem;
   }
-  .newsletter-section .newsletter-container .newsletter-text p {
-    font-size: 1rem;
+}
+@media (min-width: 80rem) {
+  .newsletter-section .newsletter-container .newsletter-text h1 {
+    font-size: 3rem;
   }
+}
+.newsletter-section .newsletter-container .newsletter-text p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
 }
 .newsletter-section .newsletter-container .newsletter-form {
   flex: 1 1 300px;

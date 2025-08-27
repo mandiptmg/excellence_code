@@ -29,11 +29,12 @@
     .newsletter-text {
       flex: 1 1 300px;
 
-      h2 {
+      h1 {
         font-family: $font-bebas;
         @include text-semibold;
         line-height: 1.3;
         font-size: $spacing-md;
+        color: $white;
 
         @include responsive(md) {
           font-size: 2.5rem;
@@ -394,7 +395,7 @@
         max-width: 1413px;
       }
 
-      padding: $spacing-md 0;
+      padding: $spacing-sm 0;
       display: flex;
       flex-direction: column;
       row-gap: 1rem;
