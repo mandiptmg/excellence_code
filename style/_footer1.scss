@@ -121,7 +121,7 @@
   }
 }
 
-.footer2 {
+.footer1 {
   cursor: crosshair;
   margin-top: 4rem;
   background-color: $white;
@@ -252,7 +252,7 @@
               text-decoration: none;
               transition: color 0.3s ease, transform 0.3s ease;
               position: relative;
-              @include text-medium;
+              @include text-bold;
 
               // Hover state
               &:hover {
