@@ -187,7 +187,7 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  z-index: 999;
+  z-index: 99999;
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(6px);
   opacity: 0;
@@ -3073,16 +3073,18 @@ button {
 .mylivechat_collapsed {
   position: fixed;
   right: -5.3rem;
-  bottom: 20rem;
+  bottom: 10rem;
   rotate: 270deg;
   background-color: #d4af37 !important;
   color: #ffffff !important;
   font-family: "Poppins", sans-serif !important;
   min-width: 200px !important;
+  z-index: 99;
 }
-
-iframe[src*=poweredby] {
-  display: none !important;
+@media (min-width: 48rem) {
+  .mylivechat_collapsed {
+    bottom: 20rem;
+  }
 }
 
 .mylivechat_expanded_title {
