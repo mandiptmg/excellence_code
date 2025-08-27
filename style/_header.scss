@@ -333,10 +333,14 @@
               color: $color-secondary;
               transition: $transition;
               border-bottom: 1px solid $border-default;
-
+              .arrow-logo {
+                width: 12px;
+                height: 12px;
+                rotate: 270deg;
+              }
               text-transform: capitalize;
               border-radius: 0;
-              padding-left: 2.5rem;
+              padding-left: 1.5rem;
               &:hover,
               &:focus {
                 background: rgba(0, 123, 255, 0.1);
@@ -397,6 +401,7 @@
             border: 1px solid rgba($border-default, 0.4);
             box-shadow: $shadow-lg;
             border-radius: 6px;
+
             img {
               padding: 0.5rem;
               width: 2.5rem;

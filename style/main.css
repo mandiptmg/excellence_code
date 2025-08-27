@@ -310,7 +310,12 @@
   border-bottom: 1px solid #d1d5db;
   text-transform: capitalize;
   border-radius: 0;
-  padding-left: 2.5rem;
+  padding-left: 1.5rem;
+}
+.menu-model .mobile-menu .menu-content .nav-menu .dropdown-menu-content li a .arrow-logo {
+  width: 12px;
+  height: 12px;
+  rotate: 270deg;
 }
 .menu-model .mobile-menu .menu-content .nav-menu .dropdown-menu-content li a:hover, .menu-model .mobile-menu .menu-content .nav-menu .dropdown-menu-content li a:focus {
   background: rgba(0, 123, 255, 0.1);
@@ -3085,6 +3090,10 @@ button {
   .mylivechat_collapsed {
     bottom: 20rem;
   }
+}
+
+iframe[src*=poweredby] {
+  display: none !important;
 }
 
 .mylivechat_expanded_title {
