@@ -2809,7 +2809,7 @@
 }
 @media (min-width: 40rem) {
   .footer3 .footer-container .footer-top .footer-section .footer-links li a {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
   }
 }
 .footer3 .footer-container .footer-top .footer-section .footer-links li a:hover {
@@ -2962,6 +2962,7 @@
 .footer3 .footer-bottom-container .footer-bottom .footer-copy a {
   color: inherit;
   text-decoration: none;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
 .footer3 .footer-bottom-container .footer-bottom .footer-copy a:hover {
@@ -3054,6 +3055,106 @@ button {
     visibility: visible;
     animation: bounceIn 0.6s ease forwards;
   }
+}
+
+.mylivechat_closebtn {
+  display: none;
+}
+
+.mylivechat_collapsed {
+  position: fixed;
+  right: -5.3rem;
+  bottom: 20rem;
+  rotate: 270deg;
+  background-color: #d4af37 !important;
+  color: #ffffff !important;
+  font-family: "Poppins", sans-serif !important;
+  min-width: 200px !important;
+}
+
+iframe[src*=poweredby] {
+  display: none !important;
+}
+
+.mylivechat_expanded_title {
+  background-color: #d4af37 !important;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.mylivechat_prechat_box,
+.mylivechat_offline_box {
+  width: 100% !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+  color: #333 !important;
+  background-color: #fff !important;
+  padding: 0.6rem 1rem !important;
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  transition: border-color 0.3s ease;
+}
+.mylivechat_prechat_box::placeholder,
+.mylivechat_offline_box::placeholder {
+  color: #aaa !important;
+}
+.mylivechat_prechat_box:focus,
+.mylivechat_offline_box:focus {
+  border-color: #d4af37 !important;
+}
+
+.mylivechat_prechat_question_box,
+.mylivechat_offline_question_box,
+.mylivechat_survey_comment_box {
+  width: 100% !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+  color: #333 !important;
+  background-color: #fff !important;
+  padding: 0.6rem 1rem !important;
+  border: 1px solid #ccc !important;
+  border-radius: 6px !important;
+  box-sizing: border-box !important;
+  outline: none !important;
+  transition: border-color 0.3s ease;
+  resize: none !important;
+  min-height: 100px;
+}
+.mylivechat_prechat_question_box::placeholder,
+.mylivechat_offline_question_box::placeholder,
+.mylivechat_survey_comment_box::placeholder {
+  color: #aaa !important;
+}
+.mylivechat_prechat_question_box:focus,
+.mylivechat_offline_question_box:focus,
+.mylivechat_survey_comment_box:focus {
+  border-color: #d4af37 !important;
+}
+
+.mylivechat_survey_comment_box {
+  min-height: 80px !important;
+}
+
+.mylivechat_prechat_submit_button,
+.mylivechat_offline_submit_button,
+.mylivechat_survey_submit_button {
+  background-color: #d4af37 !important;
+  color: #ffffff !important;
+  font-family: "Poppins", sans-serif !important;
+  font-size: 14px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  padding: 10px 20px !important;
+  cursor: pointer !important;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease !important;
+}
+.mylivechat_prechat_submit_button:hover,
+.mylivechat_offline_submit_button:hover,
+.mylivechat_survey_submit_button:hover {
+  background-color: #ffffff !important;
+  border: 1px solid #d4af37 !important;
+  color: #d4af37 !important;
 }
 
 @keyframes bounceIn {
