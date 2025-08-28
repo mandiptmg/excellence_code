@@ -2,27 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Events and Conferences Organising | Excellence Code</title>
-    <link rel="stylesheet" href="../style/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Excellence Code</title>
 
     <!-- favicon  -->
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- swiper  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- aos animate  -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style/main.css" />
   </head>
   <body>
     <!-- scroll top button  -->
     <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
-      <img src="../assets/arrow.png" alt="scroll button" class="scroll-btn" />
+      <img src="./assets/arrow.png" alt="scroll button" class="scroll-btn" />
     </button>
 
-  <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar1">
       <div class="navbar-container">
         <a href="/" class="logo-link">
-          <img src="../assets/logo-black.png" alt="Company Logo" />
+          <img src="./assets/logo-black.png" alt="Company Logo" />
           <span class="logo_text"
             >Excellence <br />
             Code</span
@@ -44,39 +61,39 @@
               >
                 Services
                 <img
-                  src="../assets/down-arrow.png"
+                  src="./assets/down-arrow.png"
                   alt="dropdown Icon"
                   class="dropdown-arrow"
                 />
               </button>
               <ul class="dropdown-content" id="servicesSubmenu">
                 <li>
-                  <a href="../services/website-design-and-development.html"
+                  <a href="./services/website-design-and-development.html"
                     >Website Design & Development</a
                   >
                 </li>
                 <li>
-                  <a href="../services/creative-design-service.html"
+                  <a href="./services/creative-design-service.html"
                     >Creative Design Services</a
                   >
                 </li>
                 <li>
-                  <a href="../services/digital-marketing.html"
+                  <a href="./services/digital-marketing.html"
                     >Digital Marketing & Social Media</a
                   >
                 </li>
                 <li>
-                  <a href="../services/events-organising.html"
+                  <a href="./services/events-organising.html"
                     >Events & Conferences</a
                   >
                 </li>
                 <li>
-                  <a href="../services/analytics.html"
+                  <a href="./services/analytics.html"
                     >Analytics & Optimization</a
                   >
                 </li>
                 <li>
-                  <a href="../services/email-hosting.html"
+                  <a href="./services/email-hosting.html"
                     >Email & Hosting Services</a
                   >
                 </li>
@@ -88,7 +105,7 @@
 
           <!-- Mobile menu button -->
           <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-            <img src="../assets/bars.png" alt="menu icon" class="icon-menu" />
+            <img src="./assets/bars.png" alt="menu icon" class="icon-menu" />
           </button>
         </div>
       </div>
@@ -106,11 +123,11 @@
         <!-- Header -->
         <div class="menu-header">
           <a href="/" class="logo-link" aria-label="Homepage">
-            <img src="../assets/logo-black.png" alt="Company Logo" />
+            <img src="./assets/logo-black.png" alt="Company Logo" />
           </a>
           <button class="close-btn" id="closeMenu" aria-label="Close menu">
             <img
-              src="../assets/close.png"
+              src="./assets/close.png"
               alt="Close Menu Icon"
               class="close-icon"
             />
@@ -123,7 +140,7 @@
             <li>
               <a href="#hero">
                 <img
-                  src="../assets/menuIcon/home.png"
+                  src="./assets/menuIcon/home.png"
                   alt="Home Icon"
                   class="menu-icon"
                 />
@@ -133,7 +150,7 @@
             <li>
               <a href="#about">
                 <img
-                  src="../assets/menuIcon/about.png"
+                  src="./assets/menuIcon/about.png"
                   alt="About Icon"
                   class="menu-icon"
                 />
@@ -143,7 +160,7 @@
             <li>
               <a href="#work">
                 <img
-                  src="../assets/menuIcon/work.png"
+                  src="./assets/menuIcon/work.png"
                   alt="Work Icon"
                   class="menu-icon"
                 />
@@ -153,7 +170,7 @@
             <li>
               <a href="#code">
                 <img
-                  src="../assets/menuIcon/code.png"
+                  src="./assets/menuIcon/code.png"
                   alt="Code Icon"
                   class="menu-icon"
                 />
@@ -171,14 +188,14 @@
               >
                 <span class="menu-down">
                   <img
-                    src="../assets/menuIcon/service.png"
+                    src="./assets/menuIcon/service.png"
                     alt="Services Icon"
                     class="menu-icon service-icon"
                   />
                   Services
                 </span>
                 <img
-                  src="../assets/menuIcon/down.png"
+                  src="./assets/menuIcon/down.png"
                   alt="Dropdown Arrow Icon"
                   class="menu-icon dropdown-arrow"
                 />
@@ -186,9 +203,9 @@
 
               <ul class="dropdown-menu-content" id="servicesSubmenu" hidden>
                 <li>
-                  <a href="../services/website-design-and-development.html">
+                  <a href="./services/website-design-and-development.html">
                     <img
-                      src="../assets/down-arrow.png"
+                      src="./assets/down-arrow.png"
                       alt="arrow logo"
                       class="arrow-logo"
                     />
@@ -196,9 +213,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="../services/creative-design-service.html">
+                  <a href="./services/creative-design-service.html">
                     <img
-                      src="../assets/down-arrow.png"
+                      src="./assets/down-arrow.png"
                       alt="arrow logo"
                       class="arrow-logo"
                     />
@@ -206,9 +223,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="../services/digital-marketing.html">
+                  <a href="./services/digital-marketing.html">
                     <img
-                      src="../assets/down-arrow.png"
+                      src="./assets/down-arrow.png"
                       alt="arrow logo"
                       class="arrow-logo"
                     />
@@ -216,9 +233,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="../services/events-organising.html">
+                  <a href="./services/events-organising.html">
                     <img
-                      src="../assets/down-arrow.png"
+                      src="./assets/down-arrow.png"
                       alt="arrow logo"
                       class="arrow-logo"
                     />
@@ -226,9 +243,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="../services/analytics.html">
+                  <a href="./services/analytics.html">
                     <img
-                      src="../assets/down-arrow.png"
+                      src="./assets/down-arrow.png"
                       alt="arrow logo"
                       class="arrow-logo"
                     />
@@ -236,9 +253,9 @@
                   </a>
                 </li>
                 <li>
-                  <a href="../services/email-hosting.html">
+                  <a href="./services/email-hosting.html">
                     <img
-                      src="../assets/down-arrow.png"
+                      src="./assets/down-arrow.png"
                       alt="arrow logo"
                       class="arrow-logo"
                     />
@@ -251,7 +268,7 @@
             <li>
               <a href="./process.html">
                 <img
-                  src="../assets/menuIcon/process.png"
+                  src="./assets/menuIcon/process.png"
                   alt="Process Icon"
                   class="menu-icon"
                 />
@@ -274,7 +291,7 @@
                 aria-label="WhatsApp"
               >
                 <img
-                  src="../assets/socialIcon/whatsapp.png"
+                  src="./assets/socialIcon/whatsapp.png"
                   alt="WhatsApp Icon"
                 />
               </a>
@@ -284,7 +301,7 @@
                 aria-label="Facebook"
               >
                 <img
-                  src="../assets/socialIcon/facebook.png"
+                  src="./assets/socialIcon/facebook.png"
                   alt="Facebook Icon"
                 />
               </a>
@@ -293,7 +310,7 @@
                 class="twitter"
                 aria-label="Twitter"
               >
-                <img src="../assets/socialIcon/x.png" alt="Twitter (X) Icon" />
+                <img src="./assets/socialIcon/x.png" alt="Twitter (X) Icon" />
               </a>
               <a
                 href="https://instagram.com/yourprofile"
@@ -301,7 +318,7 @@
                 aria-label="Instagram"
               >
                 <img
-                  src="../assets/socialIcon/instagram.png"
+                  src="./assets/socialIcon/instagram.png"
                   alt="Instagram Icon"
                 />
               </a>
@@ -311,55 +328,119 @@
       </nav>
     </div>
 
-    <!-- Banner Section -->
-    <div class="banner3__section">
-      <div class="banner3__container">
-        <h1 class="banner3__text">Events and Conferences Organising</h1>
+        <!-- Banner Section -->
+    <div class="banner4__section">
+      <div class="banner4__container">
+        <h1 class="banner4__text">Our Process</h1>
       </div>
     </div>
 
-<section class="section-events">
-  <!-- Header -->
-  <div class="section-events__header">
-    <h2 class="section-events__title">
-      Elevating Experiences: Excellence Code's Event & Exhibition Solutions
-    </h2>
-    <p class="section-events__subtitle">
-      At Excellence Code, we understand that the power of in-person engagement is unparalleled in today's digital landscape. Our events and exhibition services are designed to create unforgettable experiences that leave a lasting impression on your audience.
-    </p>
-  </div>
+    <!-- process section  -->
+    <section class="section-values" aria-labelledby="values-heading">
+      <div class="container">
+        <header class="section-values__header">
+          <h2 id="values-heading" class="section-values__title">
+            Our Process & Principles
+          </h2>
+          <p class="section-values__intro">
+            We follow a human-centred process built on listening, discovery and
+            collaboration — combined with strategic thinking, strong project
+            management and quality delivery — so every project produces
+            meaningful results and lasting value.
+          </p>
+        </header>
 
-  <!-- Core Cards -->
-  <div class="section-events__core">
-    <div class="event-card">
-      <h3 class="event-card__title">Flawless Event Execution</h3>
-      <p class="event-card__text">
-        Orchestrating a successful event requires meticulous planning and seamless coordination. Our team of seasoned event professionals brings your vision to life, managing venue selection, logistics, vendor coordination, and on-site management.
-      </p>
-    </div>
+        <div class="section-values__grid">
+          <article class="value-card" id="listen">
+            <h3 class="value-card__title">Listen</h3>
+            <div class="value-card__body">
+              <p>
+                Design is only effective if it reflects the wishes, aims and
+                attitude of the client. We listen to your ideas, ask the right
+                questions and build a clear understanding so we can meet your
+                goals accurately.
+              </p>
+            </div>
+          </article>
 
-    <div class="event-card">
-      <h3 class="event-card__title">Captivating Exhibition Stands</h3>
-      <p class="event-card__text">
-        In the competitive world of trade shows and exhibitions, a visually striking and strategically designed stand can make all the difference. Our team designs custom exhibition stands aligned with your brand identity and marketing objectives.
-      </p>
-    </div>
+          <article class="value-card" id="discover">
+            <h3 class="value-card__title">Discover</h3>
+            <div class="value-card__body">
+              <p>
+                We continually learn and explore new possibilities, redefining
+                what's possible on every project and guiding clients through a
+                journey of discovery and innovation.
+              </p>
+            </div>
+          </article>
 
-    <div class="event-card">
-      <h3 class="event-card__title">Consulting Services</h3>
-      <p class="event-card__text">
-        We provide expert guidance and strategic insights to help businesses navigate complex challenges. Our consulting services include IT strategy, project management, and business process optimization for improved efficiency and innovation.
-      </p>
-    </div>
-  </div>
+          <article class="value-card" id="collaboration">
+            <h3 class="value-card__title">Collaboration</h3>
+            <div class="value-card__body">
+              <p>
+                Working together — designers, developers and clients — produces
+                better outcomes. Client engagement is central to creating
+                personalised, effective solutions.
+              </p>
+            </div>
+          </article>
 
-  <!-- Footer Note -->
-  <div class="section-events__footer">
-    <p class="section-events__note">
-      We collaborate closely with our clients to develop customized event strategies that align with their business goals. Partner with us to elevate your event and exhibition experiences and achieve impactful results.
-    </p>
-  </div>
-</section>
+          <article class="value-card" id="think">
+            <h3 class="value-card__title">Think</h3>
+            <div class="value-card__body">
+              <p>
+                We challenge convention and apply strategic thinking to ensure
+                creative ideas are useful, targeted and effective for your
+                objectives.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-card" id="focus">
+            <h3 class="value-card__title">Focus</h3>
+            <div class="value-card__body">
+              <p>
+                We are highly driven and focus on delivering real value —
+                crafting concepts that connect with your audience and produce
+                measurable engagement.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-card" id="insight">
+            <h3 class="value-card__title">Insight</h3>
+            <div class="value-card__body">
+              <p>
+                By listening and learning we produce insights aligned to client
+                goals — creating brand experiences that resonate and feel
+                personal to customers.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-card" id="trust">
+            <h3 class="value-card__title">Trust</h3>
+            <div class="value-card__body">
+              <p>
+                Trust takes time. We partner from the earliest stages to execute
+                your vision with conviction and long-term commitment.
+              </p>
+            </div>
+          </article>
+
+          <article class="value-card" id="manage">
+            <h3 class="value-card__title">Manage</h3>
+            <div class="value-card__body">
+              <p>
+                Great creativity needs excellent management. Our project
+                management keeps things on time, on budget and aligned to
+                long-term brand goals.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <!-- footer section -->
     <footer class="footer">
@@ -379,7 +460,7 @@
             >
               <div class="input-wrapper">
                 <!-- <span class="icon">
-                  <img src="../assets/contactIcon/email.png" alt="Email icon" />
+                  <img src="./assets/contactIcon/email.png" alt="Email icon" />
                 </span> -->
                 <input
                   type="email"
@@ -399,7 +480,7 @@
           <div class="footer-company">
             <div data-aos="flip-right" class="company-brand">
               <a href="/" class="footer-company__logo">
-                <img src="../assets/logo-black.png" alt="Company Logo" />
+                <img src="./assets/logo-black.png" alt="Company Logo" />
                 <span class="logo_text"
                   >Excellence <br />
                   Code</span
@@ -422,7 +503,7 @@
                   >
                     <img
                       class="social-icon"
-                      src="../assets/socialIcon/whatsapp.png"
+                      src="./assets/socialIcon/whatsapp.png"
                       alt="WhatsApp"
                     />
                   </a>
@@ -435,7 +516,7 @@
                   >
                     <img
                       class="social-icon"
-                      src="../assets/socialIcon/facebook.png"
+                      src="./assets/socialIcon/facebook.png"
                       alt="Facebook"
                     />
                   </a>
@@ -448,7 +529,7 @@
                   >
                     <img
                       class="social-icon"
-                      src="../assets/socialIcon/x.png"
+                      src="./assets/socialIcon/x.png"
                       alt="Twitter"
                     />
                   </a>
@@ -461,7 +542,7 @@
                   >
                     <img
                       class="social-icon"
-                      src="../assets/socialIcon/instagram.png"
+                      src="./assets/socialIcon/instagram.png"
                       alt="Instagram"
                     />
                   </a>
@@ -479,7 +560,7 @@
               <li>
                 <a href="#about">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -489,7 +570,7 @@
               <li>
                 <a href="#work">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -499,7 +580,7 @@
               <li>
                 <a href="#code">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -509,7 +590,7 @@
               <li>
                 <a href="#about">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -519,7 +600,7 @@
               <li>
                 <a href="./process.html">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -529,16 +610,16 @@
             </ul>
           </div>
 
-       <!-- 🔔 Services Section -->
+          <!-- 🔔 Services Section -->
           <div class="footer-section">
             <h3 class="footer-section__title" data-aos="flip-right">
               Services
             </h3>
             <ul class="footer-links" data-aos="zoom-in-up">
               <li>
-                <a href="../services/website-design-and-development.html">
+                <a href="./services/website-design-and-development.html">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -546,9 +627,9 @@
                 </a>
               </li>
               <li>
-                <a href="../services/creative-design-service.html">
+                <a href="./services/creative-design-service.html">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -556,9 +637,9 @@
                 </a>
               </li>
               <li>
-                <a href="../services/digital-marketing.html">
+                <a href="./services/digital-marketing.html">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -566,9 +647,9 @@
                 </a>
               </li>
               <li>
-                <a href="../services/events-organising.html">
+                <a href="./services/events-organising.html">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -576,9 +657,9 @@
                 </a>
               </li>
               <li>
-                <a href="../services/analytics.html">
+                <a href="./services/analytics.html">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -586,9 +667,9 @@
                 </a>
               </li>
               <li>
-                <a href="../services/email-hosting.html">
+                <a href="./services/email-hosting.html">
                   <img
-                    src="../assets/down-arrow.png"
+                    src="./assets/down-arrow.png"
                     alt="arrow logo"
                     class="arrow-logo"
                   />
@@ -609,7 +690,7 @@
                 <li>
                   <a href="tel:+971552440610">
                     <img
-                      src="../assets/contactIcon/mobile.png"
+                      src="./assets/contactIcon/mobile.png"
                       alt="Phone icon"
                     />
                     <span>+971-552440610</span>
@@ -618,7 +699,7 @@
                 <li>
                   <a href="mailto:info@excellencecode.com">
                     <img
-                      src="../assets/contactIcon/email.png"
+                      src="./assets/contactIcon/email.png"
                       alt="Email icon"
                     />
                     <span>info@excellencecode.com</span>
@@ -631,7 +712,7 @@
                     rel="noopener noreferrer"
                   >
                     <img
-                      src="../assets/contactIcon/location-pin.png"
+                      src="./assets/contactIcon/location-pin.png"
                       alt="Location icon"
                     />
                     <span>
@@ -675,8 +756,8 @@
         </div>
       </div>
     </footer>
-
-    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- MyLiveChat Integration -->

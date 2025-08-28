@@ -1927,6 +1927,112 @@
   color: #d4af37;
 }
 
+.section-values {
+  padding: 4rem 0;
+  width: 90vw;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+@media (min-width: 64rem) {
+  .section-values {
+    width: 80vw;
+    max-width: 1413px;
+  }
+}
+.section-values__header {
+  margin-bottom: 3rem;
+}
+.section-values__header .section-values__title {
+  font-family: "Bebas Neue", sans-serif;
+  color: #111827;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+@media (min-width: 64rem) {
+  .section-values__header .section-values__title {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 48rem) {
+  .section-values__header .section-values__title {
+    font-size: 2.2rem;
+  }
+}
+.section-values__header .section-values__intro {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@media (min-width: 48rem) {
+  .section-values__header .section-values__intro {
+    font-size: 1.1rem;
+  }
+}
+.section-values__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 48rem) {
+  .section-values__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+@media (min-width: 64rem) {
+  .section-values__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+.section-values .value-card {
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  border: 1px solid transparent;
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 160px;
+}
+.section-values .value-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  background: linear-gradient(#f3f4f6, #f3f4f6) padding-box, conic-gradient(from var(--border-angle), #fff 0deg, #d4af37 72deg, #fff 144deg, #ffd60a 216deg, #d4af37 288deg, #fff 360deg) border-box;
+  animation: border-rotate 4s linear infinite;
+}
+.section-values .value-card__title {
+  font-family: "Bebas Neue", sans-serif;
+  color: #d4af37;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+  font-size: 1.3rem;
+}
+@media (min-width: 48rem) {
+  .section-values .value-card__title {
+    font-size: 1.5rem;
+  }
+}
+.section-values .value-card__body {
+  color: #374151;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 48rem) {
+  .section-values .value-card__body {
+    font-size: 0.95rem;
+  }
+}
+.section-values .value-card__body:last-child {
+  margin-bottom: 0;
+}
+
 .contact-section {
   position: relative;
   overflow: hidden;
