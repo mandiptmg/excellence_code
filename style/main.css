@@ -3477,6 +3477,98 @@
   }
 }
 
+.banner3__section {
+  position: relative;
+  min-height: 45vh;
+  width: 100%;
+  background: url(../../../assets/banner/banner3.jpg) center/cover no-repeat;
+  overflow: hidden;
+}
+.banner3__section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+.banner3__container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  height: 45vh;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: end;
+  justify-content: left;
+}
+@media (min-width: 64rem) {
+  .banner3__container {
+    width: 80.77%;
+    max-width: 1413px;
+  }
+}
+.banner3__text {
+  font-weight: 500;
+  line-height: 0.9;
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffffff;
+  text-align: left;
+  font-family: "Bebas Neue", sans-serif;
+}
+@media (min-width: 80rem) {
+  .banner3__text {
+    font-size: 3rem;
+  }
+}
+
+.banner4__section {
+  position: relative;
+  min-height: 45vh;
+  width: 100%;
+  background: url(../../../assets/banner/banner4.jpg) center/cover no-repeat;
+  overflow: hidden;
+}
+.banner4__section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+.banner4__container {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  height: 45vh;
+  margin: auto;
+  padding: 2rem 0;
+  display: flex;
+  align-items: end;
+  justify-content: left;
+}
+@media (min-width: 64rem) {
+  .banner4__container {
+    width: 80.77%;
+    max-width: 1413px;
+  }
+}
+.banner4__text {
+  font-weight: 500;
+  line-height: 0.9;
+  font-size: 2rem;
+  font-family: "Bebas Neue", sans-serif;
+  color: #ffffff;
+  text-align: left;
+  font-family: "Bebas Neue", sans-serif;
+}
+@media (min-width: 80rem) {
+  .banner4__text {
+    font-size: 3rem;
+  }
+}
+
 .digital-presence {
   padding: 4rem 0;
   background-color: transparent;

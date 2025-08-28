@@ -1,10 +1,9 @@
 export default function initNavbar() {
   const menuToggle = document.getElementById("menuToggle"); // hamburger button
   const mobileMenu = document.getElementById("mobileMenu"); // overlay (menu-model)
-  const closeMenu = document.getElementById("closeMenu");   // close button
+  const closeMenu = document.getElementById("closeMenu"); // close button
   const navbar = document.querySelector(".navbar");
   const navbar1 = document.querySelector(".navbar1");
-
 
   // Footer year auto-update
   const yearEl = document.getElementById("currentYear");
@@ -25,7 +24,16 @@ export default function initNavbar() {
   // Close when clicking nav links
   const menuLinks = mobileMenu?.querySelectorAll("a");
   menuLinks?.forEach((link) => {
-    link.addEventListener("click", closeMenuFn);
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+
+      if (href && href.startsWith("#")) {
+        e.preventDefault();
+        window.location.href = `${window.location.origin}/${href}`;
+      }
+
+      closeMenuFn();
+    });
   });
 
   // Close on Escape key
@@ -33,23 +41,18 @@ export default function initNavbar() {
     if (e.key === "Escape") closeMenuFn();
   });
 
-    // --- Close menu on resize > 1024px ---
+  // --- Close menu on resize > 1024px ---
   window.addEventListener("resize", () => {
     if (window.innerWidth > 1024) {
       closeMenuFn();
     }
   });
 
-
   // --- Navbar scroll effect ---
   window.addEventListener("scroll", () => {
     navbar?.classList.toggle("scrolled", window.scrollY > 50);
     navbar1?.classList.toggle("scrolled", window.scrollY > 50);
-
   });
-
-
-
 
   // --- Accordion dropdown ---
   const accordionItems = document.querySelectorAll(".accordion-item");
@@ -72,6 +75,20 @@ export default function initNavbar() {
         item.classList.add("open");
         btn.setAttribute("aria-expanded", "true");
         submenu.hidden = false;
+      }
+    });
+  });
+
+  // --- Fix links to use hash only (navbar + navbar1) ---
+  const navLinks = document.querySelectorAll(".navbar a, .navbar1 a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const href = link.getAttribute("href");
+
+      if (href && href.includes("#")) {
+        e.preventDefault();
+        const id = href.split("#")[1]; // get "about", "code", etc.
+        window.location.href = `/#${id}`;
       }
     });
   });
