@@ -84,18 +84,35 @@
   }
 
   .card {
+    --border-angle: 0deg;
+
     padding: 1.5rem;
     border-radius: $border-radius;
-    background: $bg-gray-light;
+    border: 2px solid transparent;
+
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    transition: $transition-slow;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     cursor: pointer;
     text-align: left;
+    position: relative;
+    overflow: hidden;
 
     &:hover {
+      background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
+        conic-gradient(
+            from var(--border-angle),
+            #ffd60a 0deg,
+            #ffc300 72deg,
+            #000814 144deg,
+            #ffd60a 216deg,
+            #ffc300 288deg,
+            #000814 360deg
+          )
+          border-box;
 
-      scale: 1.05;
+      transform: scale(1.05);
       box-shadow: $shadow-xl;
+      animation: border-rotate 2s linear infinite;
     }
 
     .icon {
@@ -126,9 +143,26 @@
       .icon {
         @include white-filter;
       }
+
       .card-content {
         color: $white;
       }
     }
+  }
+}
+
+// CSS Property Definition for Animation
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
   }
 }

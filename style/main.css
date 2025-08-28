@@ -1412,17 +1412,22 @@
   }
 }
 .code-section .card {
+  --border-angle: 0deg;
   padding: 1.5rem;
   border-radius: 1rem;
-  background: #f3f4f6;
+  border: 2px solid transparent;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-  transition: all 0.5s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   cursor: pointer;
   text-align: left;
+  position: relative;
+  overflow: hidden;
 }
 .code-section .card:hover {
-  scale: 1.05;
+  background: linear-gradient(#f3f4f6, #f3f4f6) padding-box, conic-gradient(from var(--border-angle), #ffd60a 0deg, #ffc300 72deg, #000814 144deg, #ffd60a 216deg, #ffc300 288deg, #000814 360deg) border-box;
+  transform: scale(1.05);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  animation: border-rotate 2s linear infinite;
 }
 .code-section .card .icon {
   width: 40px;
@@ -1453,6 +1458,19 @@
   color: #ffffff;
 }
 
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes border-rotate {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
+  }
+}
 .brand-cta {
   width: 90vw;
   margin: auto;
