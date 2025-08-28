@@ -399,8 +399,8 @@
 
           a {
             border: 1px solid rgba($border-default, 0.4);
-            box-shadow: $shadow-lg;
             border-radius: 6px;
+            background: $color-primary;
 
             img {
               padding: 0.5rem;
@@ -408,11 +408,10 @@
               height: 2.5rem;
               @include grid-center;
               transition: $transition;
-              @include black-filter;
+              @include white-filter;
             }
 
             &:hover {
-              @include gold-filter;
               scale: 1.1;
             }
           }

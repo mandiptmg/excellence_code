@@ -365,8 +365,8 @@
 }
 .menu-model .mobile-menu .menu-content .social-container .social-icons a {
   border: 1px solid rgba(209, 213, 219, 0.4);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
+  background: #d4af37;
 }
 .menu-model .mobile-menu .menu-content .social-container .social-icons a img {
   padding: 0.5rem;
@@ -375,10 +375,9 @@
   display: grid;
   place-items: center;
   transition: all 0.3s ease;
-  filter: brightness(0) saturate(100%) invert(7%) sepia(31%) saturate(1125%) hue-rotate(182deg) brightness(95%) contrast(94%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
 }
 .menu-model .mobile-menu .menu-content .social-container .social-icons a:hover {
-  filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(3049%) hue-rotate(325deg) brightness(87%) contrast(88%);
   scale: 1.1;
 }
 
@@ -1424,7 +1423,7 @@
   overflow: hidden;
 }
 .code-section .card:hover {
-  background: linear-gradient(#f3f4f6, #f3f4f6) padding-box, conic-gradient(from var(--border-angle), #ffd60a 0deg, #ffc300 72deg, #000814 144deg, #ffd60a 216deg, #ffc300 288deg, #000814 360deg) border-box;
+  background: linear-gradient(#f3f4f6, #f3f4f6) padding-box, conic-gradient(from var(--border-angle), #fff 0deg, #d4af37 72deg, #fff 144deg, #ffd60a 216deg, #d4af37 288deg, #fff 360deg) border-box;
   transform: scale(1.05);
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   animation: border-rotate 2s linear infinite;
@@ -2177,6 +2176,9 @@
   line-height: 1.4;
 }
 .footer .footer-container .footer-top .footer-section .opening-hours {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   margin-top: 1rem;
 }
 @media (min-width: 64rem) {

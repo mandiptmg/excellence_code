@@ -101,12 +101,12 @@
       background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
         conic-gradient(
             from var(--border-angle),
-            #ffd60a 0deg,
-            #ffc300 72deg,
-            #000814 144deg,
+            #fff 0deg,
+            $color-primary 72deg,
+            #fff 144deg,
             #ffd60a 216deg,
-            #ffc300 288deg,
-            #000814 360deg
+            $color-primary 288deg,
+            #fff 360deg
           )
           border-box;
 

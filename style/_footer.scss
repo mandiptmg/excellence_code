@@ -114,8 +114,7 @@
   }
 }
 
-.footer
- {
+.footer {
   cursor: crosshair;
   margin-top: 4rem;
   // background-color: #003566;
@@ -334,6 +333,9 @@
         }
 
         .opening-hours {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
           margin-top: 1rem;
           @include responsive(lg) {
             margin-top: 0rem;
