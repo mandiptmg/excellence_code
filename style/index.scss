@@ -1,14 +1,21 @@
 @forward 'variables';
 @forward 'mixins';
-@forward 'header';
-@forward 'hero';
-@forward 'service';
-@forward 'portfolio';
-@forward 'whyUs';
-@forward 'code';
-@forward 'cta';
-@forward 'contact';
-@forward 'testimonial';
-@forward 'footer';
-@forward 'footer1';
-@forward 'footer2';
+@forward './components/header/header';
+@forward './components/header/header1';
+
+@forward './components/hero/hero';
+@forward './components/service/service';
+@forward './components/work/portfolio';
+@forward './components/choose_us/whyUs';
+@forward './components/code/code';
+@forward './components/cta/cta';
+@forward './components/contact/contact';
+@forward './components/testimonial/testimonial';
+@forward './components/footer/footer';
+@forward './components/footer/footer1';
+@forward './components/footer/footer2';
+
+
+
+@forward './components/banner/banner';
+@forward './components/service/digital-service';

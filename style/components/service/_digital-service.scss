@@ -1,0 +1,234 @@
+@use "../../mixins" as *;
+@use "../../variables" as *;
+
+.digital-presence {
+  padding: $spacing-xl 0;
+  background-color: transparent;
+  margin: auto;
+  width: 90vw;
+  transition: $transition;
+
+  &__intro {
+    margin-bottom: $spacing-xl;
+
+    p {
+      font-size: 1.15rem;
+      line-height: 1.5;
+      color: $text-light;
+      margin: 0;
+      opacity: 0.9;
+    }
+  }
+
+  &__title {
+    font-family: $font-bebas;
+    font-size: 3rem;
+    color: $color-secondary;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: $text-light;
+  }
+
+  &__core {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-lg;
+    margin-bottom: $spacing-xl;
+
+    .core-offering {
+      background: $white;
+      padding: $spacing-lg;
+      border-radius: $border-radius;
+      box-shadow: $shadow-light;
+      border: 2px solid transparent;
+
+      transition: $transition-slow;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-6px) scale(1.02);
+        background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
+          conic-gradient(
+              from var(--border-angle),
+              #fff 0deg,
+              $color-primary 72deg,
+              #fff 144deg,
+              #ffd60a 216deg,
+              $color-primary 288deg,
+              #fff 360deg
+            )
+            border-box;
+
+        box-shadow: $shadow-xl;
+        animation: border-rotate 3s linear infinite;
+      }
+
+      &__title {
+        font-family: $font-bebas;
+        font-size: 1.8rem;
+        color: $color-primary;
+        margin-bottom: $spacing-sm;
+        letter-spacing: 0.5px;
+      }
+
+      &__text {
+        color: $color-text-base;
+        line-height: 1.7;
+        margin-bottom: $spacing-sm;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        strong {
+          color: $dark-gold;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .services-list {
+    background: $white;
+    padding: $spacing-lg;
+    border-radius: $border-radius;
+    box-shadow: $shadow-light;
+    transition: box-shadow 0.3s ease;
+
+    &__title {
+      font-family: $font-bebas;
+      font-size: 2rem;
+      color: $color-secondary;
+      margin-bottom: $spacing-md;
+      letter-spacing: 0.5px;
+    }
+
+    &__items {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: $spacing-sm;
+      list-style: none;
+      padding: 0;
+      margin-bottom: 8rem;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: $spacing-xm;
+      position: relative;
+      color: $color-text-base;
+      font-weight: 500;
+      border-radius: $border-radius;
+      transition: $transition-slow;
+      border: 2px solid transparent;
+
+      &:hover {
+        transform: translateX(4px);
+        background: linear-gradient($light-gold, $light-gold) padding-box,
+          conic-gradient(
+              from var(--border-angle),
+              #fff 0deg,
+              $color-primary 72deg,
+              #fff 144deg,
+              #ffd60a 216deg,
+              $color-primary 288deg,
+              #fff 360deg
+            )
+            border-box;
+
+        box-shadow: $shadow-xl;
+        animation: border-rotate 3s linear infinite;
+      }
+
+      .arrow-logo {
+        width: 1.5rem;
+        height: 1.5rem;
+        object-fit: contain;
+        transform: rotate(270deg);
+        transition: transform 0.3s ease;
+        @include gold-filter;
+      }
+    }
+  }
+}
+
+// Large devices
+@include responsive(lg) {
+  .digital-presence {
+    width: 80.77vw;
+    max-width: 1413px;
+    margin: auto;
+
+    &__core {
+      gap: $spacing-md;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// Medium devices
+@include responsive(md) {
+  .digital-presence {
+    padding: $spacing-lg 0;
+
+    &__title {
+      font-size: 2.5rem;
+    }
+
+    .core-offering {
+      padding: $spacing-md;
+
+      &__title {
+        font-size: 1.5rem;
+      }
+    }
+
+    .services-list {
+      padding: $spacing-md;
+
+      &__title {
+        font-size: 1.8rem;
+      }
+
+      &__items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+}
+
+// Small devices
+@include responsive(sm) {
+  .digital-presence {
+    .services-list &__items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+// CSS Property Definition for Animation
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
+  }
+}

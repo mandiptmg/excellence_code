@@ -1,5 +1,5 @@
-@use "mixins" as *;
-@use "variables" as *;
+@use "../../mixins" as *;
+@use "../../variables" as *;
 
 .code-section {
   margin: 0 auto;
@@ -112,7 +112,7 @@
 
       transform: scale(1.05);
       box-shadow: $shadow-xl;
-      animation: border-rotate 2s linear infinite;
+      animation: border-rotate 3s linear infinite;
     }
 
     .icon {

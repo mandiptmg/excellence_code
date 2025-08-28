@@ -31,9 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
   //     observer.observe(el);
   //   });
   // });
+  
+  initNavbar();
   initHero();
   initScrollTop();
-  initNavbar();
   initProjects();
   initClients();
   initCode();

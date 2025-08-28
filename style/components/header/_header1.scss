@@ -1,7 +1,7 @@
-@use "mixins" as *;
-@use "variables" as *;
+@use "../../mixins" as *;
+@use "../../variables" as *;
 
-.navbar {
+.navbar1 {
   color: $color-secondary;
   transition: $transition-slow;
   position: fixed;
@@ -10,7 +10,7 @@
   width: 100vw;
 
   &.scrolled {
-    background-color: white;
+    background-color: $color-secondary;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     border-radius: 0;
   }
@@ -39,7 +39,7 @@
       .logo_text {
         @include text-semibold;
         font-size: 1.3rem;
-        color: $color-secondary;
+        color: $white;
         text-transform: capitalize;
         font-family: serif;
         text-align: center;
@@ -73,7 +73,7 @@
           font-size: 0.95rem;
           font-weight: 600;
           cursor: pointer;
-          color: $color-secondary;
+          color: $white;
           transition: color 0.3s ease;
           padding: 0.25rem 0.5rem;
           text-decoration: none;
@@ -144,6 +144,7 @@
           font-size: 0.8rem;
           width: 100%;
           transition: background-color 0.3s ease, color 0.3s ease;
+          color: $color-secondary;
 
           &:hover,
           &:focus {

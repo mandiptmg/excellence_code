@@ -3,6 +3,8 @@ export default function initNavbar() {
   const mobileMenu = document.getElementById("mobileMenu"); // overlay (menu-model)
   const closeMenu = document.getElementById("closeMenu");   // close button
   const navbar = document.querySelector(".navbar");
+  const navbar1 = document.querySelector(".navbar1");
+
 
   // Footer year auto-update
   const yearEl = document.getElementById("currentYear");
@@ -42,6 +44,8 @@ export default function initNavbar() {
   // --- Navbar scroll effect ---
   window.addEventListener("scroll", () => {
     navbar?.classList.toggle("scrolled", window.scrollY > 50);
+    navbar1?.classList.toggle("scrolled", window.scrollY > 50);
+
   });
 
 
