@@ -1,60 +1,47 @@
 @use "../../mixins" as *;
 @use "../../variables" as *;
 
-.digital-presence {
+.section-digital {
   padding: $spacing-xl 0;
-  background-color: transparent;
-  margin: auto;
   width: 90vw;
+  margin: auto;
   transition: $transition;
 
   @include responsive(lg) {
-    width: 80.77vw;
+    width: 80vw;
     max-width: 1413px;
   }
 
-  &__intro {
+  &__header {
     margin-bottom: $spacing-xl;
 
-    p {
+    .section-digital__title {
+      font-family: $font-bebas;
+      color: $color-secondary;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: $spacing-sm;
+
+      @include responsive(lg) {
+        font-size: 2.8rem;
+      }
+
+      @include responsive(md) {
+        font-size: 2.2rem;
+      }
+
+      font-size: 1.8rem;
+    }
+    .section-digital__subtitle {
       line-height: 1.5;
       color: $text-light;
+
       @include responsive(md) {
         font-size: 1.1rem;
       }
 
       font-size: 1rem;
     }
-  }
-
-  &__title {
-    font-family: $font-bebas;
-    color: $color-secondary;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin-bottom: $spacing-sm;
-
-    @include responsive(lg) {
-      font-size: 2.8rem;
-    }
-
-    @include responsive(md) {
-      font-size: 2.2rem;
-    }
-
-    font-size: 1.8rem;
-  }
-
-  &__subtitle {
-    font-size: 1.25rem;
-    line-height: 1.6;
-    color: $text-light;
-
-    @include responsive(md) {
-      font-size: 1.1rem;
-    }
-
-    font-size: 1rem;
   }
 
   &__core {
@@ -66,12 +53,11 @@
     @include responsive(lg) {
       grid-template-columns: repeat(2, 1fr);
     }
-
     @include responsive(md) {
       gap: $spacing-md;
     }
 
-    .core-offering {
+    .digital-card {
       background: $white;
       padding: $spacing-lg;
       border-radius: $border-radius;
@@ -82,6 +68,7 @@
 
       &:hover {
         transform: translateY(-6px) scale(1.02);
+        box-shadow: $shadow-xl;
         background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
           conic-gradient(
               from var(--border-angle),
@@ -93,8 +80,7 @@
               #fff 360deg
             )
             border-box;
-        box-shadow: $shadow-xl;
-        animation: border-rotate 3s linear infinite;
+        animation: border-rotate 4s linear infinite;
       }
 
       &__title {
@@ -102,7 +88,6 @@
         color: $color-primary;
         margin-bottom: $spacing-sm;
         letter-spacing: 0.5px;
-
         @include responsive(md) {
           font-size: 1.5rem;
         }
@@ -130,17 +115,31 @@
 
         font-size: 0.9rem;
       }
+
+      &__list {
+        list-style: disc;
+        margin-left: $spacing-lg;
+        color: $color-text-base;
+
+        li {
+          margin-bottom: 0.35rem;
+          font-size: 1rem;
+
+          @include responsive(md) {
+            font-size: 0.95rem;
+          }
+          @include responsive(sm) {
+            font-size: 0.9rem;
+          }
+        }
+      }
     }
   }
 
-  .services-list {
-    background: $white;
-    padding: $spacing-lg;
-    border-radius: $border-radius;
-    box-shadow: $shadow-light;
-    transition: box-shadow 0.3s ease;
+  &__services {
+    margin-top: $spacing-xl;
 
-    &__title {
+    .services-ui__title {
       font-family: $font-bebas;
       color: $color-secondary;
       margin-bottom: $spacing-md;
@@ -153,7 +152,7 @@
       font-size: 1.5rem;
     }
 
-    &__items {
+    .services-ui__list {
       display: grid;
       grid-template-columns: 1fr;
       gap: $spacing-sm;
@@ -161,15 +160,19 @@
       padding: 0;
       margin-bottom: 4rem;
 
-      @include responsive(md) {
+      @include responsive(sm) {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @include responsive(lg) {
+      @include responsive(sm) {
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .services-list__item {
+      @include responsive(lg) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .services-ui__item {
         display: flex;
         align-items: center;
         gap: 0.5rem;
@@ -199,7 +202,7 @@
           animation: border-rotate 3s linear infinite;
         }
 
-        .arrow-logo {
+        .services-ui__icon {
           width: 1rem;
           height: 1rem;
           object-fit: contain;
@@ -207,9 +210,8 @@
           transition: transform 0.3s ease;
           @include gold-filter;
         }
-
         @include responsive(md) {
-          .arrow-logo {
+          .services-ui__icon {
             font-size: 0.95rem;
             width: 1.5rem;
             height: 1.5rem;
@@ -222,7 +224,7 @@
   }
 }
 
-// CSS Property Definition for Animation
+// Animation
 @property --border-angle {
   syntax: "<angle>";
   initial-value: 0deg;
