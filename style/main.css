@@ -1983,22 +1983,27 @@
     gap: 3rem;
   }
 }
-@media (min-width: 64rem) {
-  .section-values__grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-  }
-}
 .section-values .value-card {
   background: #ffffff;
-  padding: 3rem;
+  padding: 1rem;
   border-radius: 1rem;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   border: 1px solid transparent;
   transition: all 0.5s ease;
   display: flex;
-  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
   min-height: 160px;
+}
+.section-values .value-card__image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(97%) sepia(97%) saturate(3049%) hue-rotate(325deg) brightness(87%) contrast(88%);
+}
+.section-values .value-card__content {
+  display: flex;
+  flex-direction: column;
 }
 .section-values .value-card:hover {
   transform: translateY(-6px) scale(1.02);
