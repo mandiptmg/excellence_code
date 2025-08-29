@@ -5,7 +5,8 @@ export default function initNavbar() {
   const navbar = document.querySelector(".navbar");
   const navbar1 = document.querySelector(".navbar1");
 
-  // Footer year auto-update
+   // Footer year auto-update
+
   const yearEl = document.getElementById("currentYear");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -80,14 +81,16 @@ export default function initNavbar() {
   });
 
   // --- Fix links to use hash only (navbar + navbar1) ---
-  const navLinks = document.querySelectorAll(".navbar a, .navbar1 a");
+  const navLinks = document.querySelectorAll(
+    ".navbar a, .navbar1 a, .footer-links a"
+  );
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
 
       if (href && href.includes("#")) {
         e.preventDefault();
-        const id = href.split("#")[1]; // get "about", "code", etc.
+        const id = href.split("#")[1];
         window.location.href = `/#${id}`;
       }
     });
