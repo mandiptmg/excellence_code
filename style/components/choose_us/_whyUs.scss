@@ -10,7 +10,7 @@
     margin: 3.5rem auto;
     width: 90vw;
 
-    @include responsive(lg) {
+    @include responsive(xl) {
       width: 80.77vw;
       max-width: 1413px;
     }
@@ -61,7 +61,7 @@
 
           p {
             font-size: $spacing-sm;
-                color: $color-text-subtle;
+            color: $color-text-subtle;
 
             margin-bottom: 16px;
             line-height: 1.5;
@@ -105,14 +105,15 @@
     // Feature Cards Grid
     .feature-grid {
       display: grid;
-      gap: $spacing-sm;
+      gap: $spacing-xs;
       margin-top: 3rem;
 
       grid-template-columns: 1fr;
       @include responsive(sm) {
         grid-template-columns: repeat(2, 1fr);
       }
-      @include responsive(md) {
+
+      @include responsive(lg) {
         grid-template-columns: repeat(3, 1fr);
       }
 
@@ -124,7 +125,7 @@
         order: 999; // default comes before last
       }
 
-      @include responsive(sm) {
+      @include responsive(xl) {
         .read-btn {
           order: 0; // restore normal flow on tablet/desktop
         }
@@ -135,13 +136,32 @@
       background-color: $white;
       padding: $spacing-md;
       border-radius: $border-radius;
-      max-height: 488px;
-      height: 150px;
+      min-height: 150px;
       display: flex;
       justify-content: space-between;
       gap: 0.75rem;
       box-shadow: $shadow-lg;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+
+      border: 2px solid transparent;
+
+      &:hover {
+        background: linear-gradient($bg-gray-light, $bg-gray-light) padding-box,
+          conic-gradient(
+              from var(--border-angle),
+              #fff 0deg,
+              $color-primary 72deg,
+              #fff 144deg,
+              #ffd60a 216deg,
+              $color-primary 288deg,
+              #fff 360deg
+            )
+            border-box;
+        box-shadow: $shadow-xl;
+        animation: border-rotate 3s linear infinite;
+      }
+
       @include responsive(lg) {
         min-height: 290px;
       }
@@ -161,20 +181,34 @@
         @include responsive(md) {
           font-size: 1rem;
         }
-         @include responsive(lg) {
+        @include responsive(lg) {
           font-size: 1.3rem;
+        }
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 0.7rem;
+        margin-top: 0.5rem;
+        text-align: justify;
+        color: $color-text-subtle;
+        @include responsive(md) {
+          font-size: 0.9rem;
         }
       }
     }
 
     .span-col {
       width: 100%;
-      background-color: transparent;
+      background: transparent;
       box-shadow: none;
       display: none;
+      border: none;
 
       &:hover {
         box-shadow: none;
+        background: transparent;
+        cursor: auto;
       }
       grid-template-columns: 1fr;
       padding: 0;
@@ -310,5 +344,21 @@
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
+  }
+}
+
+// CSS Property Definition for Animation
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes border-rotate {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
   }
 }

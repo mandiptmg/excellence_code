@@ -7,7 +7,7 @@
   text-align: center;
   padding: 3rem 0;
 
-  @include responsive(lg) {
+  @include responsive(xl) {
     width: 80.77vw;
     max-width: 1413px;
   }

@@ -6,16 +6,19 @@
   overflow: hidden;
   padding: 3.5rem 0;
 
-  @include responsive(lg) {
+  @include responsive(xl) {
     border-radius: $border-radius;
     width: 80.77vw;
     max-width: 1413px;
     padding: 3.5rem;
+  }
 
+   @include responsive(lg) {
+    border-radius: $border-radius;
+    width: 90vw;
+    padding: 3.5rem;
   }
   margin: $spacing-xl auto;
-
-
 
   // Blurred background overlay
   &::before {

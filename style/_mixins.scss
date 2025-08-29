@@ -5,6 +5,9 @@
   align-items: center;
 }
 
+
+
+
 @mixin button-style {
   // background-color: $bg-color;
   color: $color-secondary;
@@ -70,7 +73,7 @@
   } @else if $breakpoint == lg {
     $size: 64rem; // 1024px
   } @else if $breakpoint == xl {
-    $size: 80rem; // 1280px
+    $size: 80.1rem; // 1280px
   } @else if $breakpoint == 2xl {
     $size: 96rem; // 1536px
   }

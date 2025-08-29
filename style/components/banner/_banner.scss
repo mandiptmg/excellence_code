@@ -30,7 +30,7 @@
     align-items: end;
   justify-content: left;
 
-    @include responsive(lg) {
+    @include responsive(xl) {
       width: 80.77%;
       max-width: 1413px;
     }

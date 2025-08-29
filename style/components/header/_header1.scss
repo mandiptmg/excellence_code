@@ -18,7 +18,7 @@
   .navbar-container {
     width: 90vw;
     margin-inline: auto;
-    @include responsive(lg) {
+    @include responsive(xl) {
       width: 80.77vw;
       max-width: 1413px;
     }

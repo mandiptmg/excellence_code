@@ -303,7 +303,7 @@
     .footer-bottom {
       margin: 0 auto;
       width: 90vw;
-       @include responsive(lg) {
+      @include responsive(xl) {
         width: 80.77vw;
         max-width: 1413px;
       }
