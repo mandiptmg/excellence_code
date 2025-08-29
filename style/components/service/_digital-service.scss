@@ -73,7 +73,7 @@
 
     .core-offering {
       background: $white;
-      padding: $spacing-lg;
+      padding: $spacing-sm;
       border-radius: $border-radius;
       box-shadow: $shadow-light;
       border: 2px solid transparent;
@@ -135,7 +135,7 @@
 
   .services-list {
     background: $white;
-    padding: $spacing-lg;
+    padding: $spacing-sm;
     border-radius: $border-radius;
     box-shadow: $shadow-light;
     transition: box-shadow 0.3s ease;
