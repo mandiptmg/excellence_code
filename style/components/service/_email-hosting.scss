@@ -8,10 +8,9 @@
   transition: $transition;
 
   @include responsive(xl) {
-    width: 80vw;
+    width: 80.77vw;
     max-width: 1413px;
   }
-
   &__header {
     margin-bottom: $spacing-xl;
 

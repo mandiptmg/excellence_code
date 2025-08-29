@@ -4,6 +4,7 @@ import initClients from "./clients.js";
 import initServices from "./services.js";
 import initCode from "./code.js";
 import initHero from "./hero.js";
+import initChooseUs from "./chooseUs.js";
 
 import initScrollTop from "./scrollTopBtn.js";
 
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     easing: "ease-in-out",
     once: true,
   });
-
+  initChooseUs();
   initNavbar();
   initHero();
   initScrollTop();

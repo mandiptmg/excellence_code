@@ -6,9 +6,8 @@
   width: 90vw;
   margin: auto;
   transition: $transition;
-
   @include responsive(xl) {
-    width: 80vw;
+    width: 80.77vw;
     max-width: 1413px;
   }
 
