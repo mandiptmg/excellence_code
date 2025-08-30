@@ -1573,10 +1573,28 @@
   margin-bottom: 1rem;
 }
 .about-page .stats {
-  padding: 4rem 2rem;
+  margin: 4rem 0 0;
+}
+.about-page .stats h2 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.8px;
+  font-size: 1.8rem;
+}
+@media (min-width: 64rem) {
+  .about-page .stats h2 {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 48rem) {
+  .about-page .stats h2 {
+    font-size: 2.2rem;
+  }
 }
 .about-page .stats__grid {
   display: grid;
+  background: rgba(212, 175, 55, 0.7);
+  padding: 4rem;
+  border-radius: 1rem;
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
 }
@@ -1586,13 +1604,32 @@
   }
 }
 .about-page .stats .stat {
-  text-align: center;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
 }
-.about-page .stats .stat span {
-  font-size: 2rem;
-  color: #d4af37;
-  display: block;
-  margin-bottom: 0.5rem;
+.about-page .stats .stat:first-child {
+  border: none;
+}
+.about-page .stats .stat__value {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  line-height: 1.1;
+  color: #fff;
+}
+.about-page .stats .stat__label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #fafafa;
+}
+.about-page .stats .stat__icon {
+  width: 40px;
+  height: 40px;
+  filter: brightness(0) invert(1);
 }
 .about-page .cta {
   position: relative;
