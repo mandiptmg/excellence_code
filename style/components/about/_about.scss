@@ -33,6 +33,21 @@
     color: $white;
     position: relative;
 
+    h1 {
+      font-family: $font-bebas;
+      color: $bg-light;
+      letter-spacing: 0.8px;
+      @include responsive(lg) {
+        font-size: 2.8rem;
+      }
+
+      @include responsive(md) {
+        font-size: 2.2rem;
+      }
+
+      font-size: 1.8rem;
+    }
+
     p {
       max-width: 800px;
       margin: 1rem auto 2rem;
@@ -677,9 +692,13 @@
       padding: 4rem;
       border-radius: $border-radius;
       gap: 2rem;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
 
-      @media (min-width: 768px) {
+      @include responsive(md) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include responsive(lg) {
         grid-template-columns: repeat(4, 1fr);
       }
     }
@@ -689,10 +708,25 @@
       gap: 1rem;
       flex-direction: column;
       align-items: center;
-      border-left: 1px solid rgba(255, 255, 255, 0.3);
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
+      padding-top: 1rem;
 
       &:first-child {
         border: none;
+      }
+
+      @include responsive(md) {
+        &:nth-child(2) {
+          border: none;
+        }
+      }
+
+      @include responsive(lg) {
+        border-top: none;
+        &:nth-child(2) {
+          border-left: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        border-left: 1px solid rgba(255, 255, 255, 0.3);
       }
 
       &__value {
