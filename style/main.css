@@ -1235,8 +1235,23 @@
 .about-page .timeline {
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  margin: 4rem auto 0;
   position: relative;
+}
+.about-page .timeline h2 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.8px;
+  font-size: 1.8rem;
+}
+@media (min-width: 64rem) {
+  .about-page .timeline h2 {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 48rem) {
+  .about-page .timeline h2 {
+    font-size: 2.2rem;
+  }
 }
 .about-page .timeline__event {
   margin: 20px 0;
