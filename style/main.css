@@ -1252,7 +1252,7 @@
   border-radius: 0 6px 6px 0;
 }
 .about-page .timeline__event:nth-child(2n+1) .timeline__event__content {
-  border-radius: 6px 0 0 6px;
+  border-radius: 6px;
 }
 .about-page .timeline__event:nth-child(2n+1) .timeline__event__icon:before {
   content: "";
@@ -1265,7 +1265,7 @@
   right: auto;
   z-index: -1;
   transform: translateX(-50%);
-  animation: fillTop 2s forwards 4s ease-in-out;
+  animation: fillTop 2s forwards 1s ease-in-out;
 }
 .about-page .timeline__event:nth-child(2n+1) .timeline__event__icon:after {
   content: "";
@@ -1278,15 +1278,20 @@
   top: 50%;
   left: auto;
   transform: translateY(-50%);
-  animation: fillLeft 2s forwards 4s ease-in-out;
+  animation: fillLeft 2s forwards 1s ease-in-out;
 }
 .about-page .timeline__event__title {
-  font-size: 1.2rem;
-  line-height: 1.4;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: bold;
   color: #9251ac;
-  letter-spacing: 1.5px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1.3rem;
+}
+@media (min-width: 48rem) {
+  .about-page .timeline__event__title {
+    font-size: 1.5rem;
+  }
 }
 .about-page .timeline__event__content {
   padding: 20px;
@@ -1311,19 +1316,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #9251ac;
   padding: 40px;
   align-self: center;
   margin: 0 20px;
   background: #f6a4ec;
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
   position: relative;
   box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
 }
-.about-page .timeline__event__icon i {
-  font-size: 32px;
+.about-page .timeline__event__icon img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(64%) saturate(7%) hue-rotate(175deg) brightness(115%) contrast(100%);
 }
 .about-page .timeline__event__icon:before {
   content: "";
@@ -1335,7 +1337,7 @@
   z-index: -1;
   left: 50%;
   transform: translateX(-50%);
-  animation: fillTop 2s forwards 4s ease-in-out;
+  animation: fillTop 2s forwards 1s ease-in-out;
 }
 .about-page .timeline__event__icon:after {
   content: "";
@@ -1347,10 +1349,24 @@
   z-index: -1;
   top: 50%;
   transform: translateY(-50%);
-  animation: fillLeftOdd 2s forwards 4s ease-in-out;
+  animation: fillLeftOdd 2s forwards 1s ease-in-out;
 }
 .about-page .timeline__event__description {
   flex-basis: 60%;
+}
+.about-page .timeline__event__description p {
+  color: #374151;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 48rem) {
+  .about-page .timeline__event__description p {
+    font-size: 0.95rem;
+  }
+}
+.about-page .timeline__event__description p:last-child {
+  margin-bottom: 0;
 }
 .about-page .timeline__event--type2 .timeline__event__date {
   color: #87bbfe;
@@ -1568,8 +1584,7 @@
   border-radius: 1rem;
   margin-top: 4rem;
   margin-bottom: 12rem;
-  background: repeating-linear-gradient(45deg, rgba(254, 249, 195, 0.5), rgba(254, 249, 195, 0.5) 10px, rgba(253, 224, 71, 0.5) 10px, rgba(253, 224, 71, 0.5) 20px, rgba(234, 179, 8, 0.5) 20px, rgba(234, 179, 8, 0.5) 30px);
-  background-blend-mode: multiply;
+  background: linear-gradient(45deg, rgba(0, 29, 61, 0.5), rgba(0, 125, 255, 0.5));
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1589,21 +1604,25 @@
 .about-page .cta__content {
   position: relative;
   max-width: 700px;
-  color: #fff;
+  color: #ffffff;
 }
 .about-page .cta__content .cta__title {
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.3;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .about-page .cta__content .cta__subtitle {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: #f3f4f6;
+  color: #fafafa;
 }
 .about-page .cta .btn {
+  margin-top: 1rem;
   display: inline-block;
   padding: 0.9rem 2rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
